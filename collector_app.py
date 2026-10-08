@@ -13,6 +13,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description='SellerSprite Collector V2')
     parser.add_argument('command', nargs='?', choices=['run', 'inspect', 'clean', 'credentials', 'upload', 'check'])
     parser.add_argument('--force', action='store_true')
+    parser.add_argument('--task', help='只运行指定任务 ID，适合验证新增榜单')
     args = parser.parse_args(argv)
     os.chdir(BASE_DIR)
     command = args.command
@@ -29,10 +30,17 @@ def main(argv=None):
         config = core.load_json(config_path)
         core.load_tasks_file(config, config_path)
         core.validate_config(config)
+        if args.task:
+            config['tasks'] = [t for t in config['tasks'] if t['id'] == args.task and t.get('enabled', True)]
+            if not config['tasks']:
+                raise RuntimeError('指定任务不存在或未启用。')
         if command == 'check':
+            from playwright.sync_api import sync_playwright
+            with sync_playwright() as playwright:
+                driver_ready = playwright.chromium.name == 'chromium'
             print(json.dumps({'repository': config['repository'], 'enabledSources': sum(t.get('enabled', True) for t in config['tasks']),
                               'productGroups': len({(t['marketplace'], t['category']) for t in config['tasks'] if t.get('enabled', True)}),
-                              'baseDirectory': str(BASE_DIR)}, ensure_ascii=False, indent=2))
+                              'baseDirectory': str(BASE_DIR), 'browserDriverReady': driver_ready}, ensure_ascii=False, indent=2))
             code = 0
         elif command in ('run', 'inspect'):
             core.ensure_directories()

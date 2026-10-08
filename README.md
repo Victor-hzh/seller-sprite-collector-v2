@@ -26,6 +26,9 @@ python collector_app.py clean
 python collector_app.py upload
 ```
 
+仅测试德国新增来源：python collector_app.py run --task DE_WET_DRY_FLOOR_WASHER_2077530031。
+EXE 支持相同参数：SellerSpriteCollector.exe run --task DE_WET_DRY_FLOOR_WASHER_2077530031。
+
 浏览器初始化时需要在专用 Chrome 中安装并登录卖家精灵。验证码仍需人工完成。
 下载保持原来的浏览器、登录和导出逻辑。未自动启动真实下载；新增来源需实测。
 
@@ -58,4 +61,4 @@ Actions → Build Windows EXE → Run workflow，可下载打包 ZIP。
 
 python -m unittest discover -s tests -v
 
-EXE 构建后的 check 验证配置与导入；完整下载与无 Python 电脑运行需另行验收。
+EXE 构建后的 check 验证配置、导入和 Playwright 驱动启动；完整下载与无 Python 电脑运行需另行验收。
