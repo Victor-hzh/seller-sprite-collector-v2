@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "default": {"keep_asins": [], "exclude_asins": [], "exclude_title_patterns": []},
+  "groups": {
+    "DE/Wet-Dry-Floor-Washer": {
+      "keep_asins": [],
+      "exclude_asins": [],
+      "exclude_title_patterns": [],
+      "note": "先合并两个来源。确认非洗地机 ASIN 后加入排除名单；正则规则默认关闭。"
+    }
+  }
+}

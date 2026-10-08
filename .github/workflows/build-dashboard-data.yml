@@ -1,0 +1,43 @@
+name: Build cleaned dashboard data
+on:
+  push:
+    branches: [main]
+    paths: ['data/source/**', 'tools/**', 'tasks_v2.json', 'cleaning_rules.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: clean-data-main
+  cancel-in-progress: true
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - name: Detect uploaded Excel files
+        id: sources
+        shell: bash
+        run: |
+          if find data/source -name '*.xlsx' -print -quit 2>/dev/null | grep -q .; then
+            echo 'available=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'available=false' >> "$GITHUB_OUTPUT"
+            echo 'No Excel files uploaded yet; source code tests completed.'
+          fi
+      - if: steps.sources.outputs.available == 'true'
+        run: python tools/build_dashboard_data.py
+      - name: Commit processed data
+        if: steps.sources.outputs.available == 'true'
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f data/dashboard-data.json data/cleaning-audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Build cleaned multi-source dashboard data'
+            git push origin HEAD:main
+          fi

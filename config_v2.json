@@ -1,0 +1,58 @@
+{
+  "storage": {
+    "source_dir": "data/source"
+  },
+  "browser": {
+    "channel": "chrome",
+    "profile_dir": "runtime/chrome-profile",
+    "slow_mo_ms": 250,
+    "navigation_timeout_ms": 60000,
+    "plugin_load_timeout_ms": 180000,
+    "download_timeout_ms": 180000
+  },
+  "run": {
+    "max_attempts_per_task": 3,
+    "retry_wait_seconds": 8,
+    "keep_browser_open_on_error": false
+  },
+  "selectors": {
+    "frame_url_contains": "",
+    "cookie_accept": [
+      "#sp-cc-accept",
+      "input#sp-cc-accept",
+      "button:has-text(\"Accept all\")",
+      "button:has-text(\"Accept\")",
+      "button:has-text(\"Alle akzeptieren\")",
+      "button:has-text(\"Accepter\")",
+      "button:has-text(\"Accetta\")",
+      "button:has-text(\"Aceptar\")"
+    ],
+    "entry": [
+      "button:has-text(\"卖家精灵\")",
+      "[role=\"button\"]:has-text(\"卖家精灵\")",
+      "[aria-label*=\"卖家精灵\"]",
+      "[title*=\"卖家精灵\"]",
+      "text=卖家精灵"
+    ],
+    "loading": [
+      "text=卖家精灵插件查询中",
+      "text=预计1-2分钟",
+      "text=请稍候"
+    ],
+    "loaded": [
+      "text=ASIN数量",
+      "th:has-text(\"产品信息\")",
+      "text=加载数据 50 条"
+    ],
+    "load_more": [],
+    "export": [
+      "button:text-is(\"导出\")",
+      "[role=\"button\"]:text-is(\"导出\")",
+      "a:text-is(\"导出\")",
+      "text=导出"
+    ],
+    "row": []
+  },
+  "tasks_file": "tasks_v2.json",
+  "repository": "Victor-hzh/seller-sprite-collector-v2"
+}

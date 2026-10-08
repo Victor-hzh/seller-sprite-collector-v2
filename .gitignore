@@ -1,0 +1,10 @@
+.venv/
+runtime/
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+data/source/
+data/dashboard-data.json
+data/cleaning-audit.json

@@ -1,0 +1,21 @@
+{
+  "base": "CNY",
+  "date": "2026-08-28",
+  "source": "European Central Bank euro foreign exchange reference rates",
+  "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+  "formula": "人民币金额 = 站点原币金额 × cnyPerUnit[币种]",
+  "cnyPerUnit": {
+    "CNY": 1,
+    "USD": 6.720862,
+    "GBP": 9.128675,
+    "EUR": 7.8251,
+    "JPY": 0.042088533
+  },
+  "derivation": {
+    "EUR": "ECB: 1 EUR = 7.8251 CNY",
+    "USD": "7.8251 CNY / 1.1643 USD",
+    "GBP": "7.8251 CNY / 0.85720 GBP",
+    "JPY": "7.8251 CNY / 185.92 JPY"
+  }
+}
+
