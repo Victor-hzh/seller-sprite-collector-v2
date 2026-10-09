@@ -1,0 +1,712 @@
+{
+  "generatedAt": "2026-10-09T09:41:16+00:00",
+  "duplicatePolicy": "configured_source_priority",
+  "events": [
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-08-31",
+      "action": "excluded",
+      "asin": "B0H8Y83NN7",
+      "title": "Akku Nass-Trockensauger für Makita 18V Batterie, 18 kPa Werkstattsauger",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 2
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-08-31",
+      "action": "excluded",
+      "asin": "B0G66NWWCR",
+      "title": "Bosch Nass- und Trockensauger PAS15-200",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 5
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "excluded",
+      "asin": "B0H8Y83NN7",
+      "title": "Akku Nass-Trockensauger für Makita 18V Batterie, 18 kPa Werkstattsaugersmit HEPA-Filter, 10L Staubbehälter, Kabelloser Stau",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 5
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "excluded",
+      "asin": "B0G66NWWCR",
+      "title": "Bosch Nass- und Trockensauger PAS15-200sVerlängerungsrohre,Saugschlauch 2,2 m,Griff/Winkelrohr,Boden/Fugendüsen,Papierbeute",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 6
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-23",
+      "action": "excluded",
+      "asin": "B0G66NWWCR",
+      "title": "Bosch Allzwecksauger PAS15-200sPAS15-200 (C)",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 7
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-23",
+      "action": "excluded",
+      "asin": "B0H8Y83NN7",
+      "title": "Akku Nass-Trockensauger für Makita 18V Batterie, 18 kPa Werkstattsaugersmit HEPA-Filter, 10L Staubbehälter, Kabelloser Stau",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 9
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "excluded",
+      "asin": "B0G66NWWCR",
+      "title": "Bosch Allzwecksauger PAS15-200",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 10
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "excluded",
+      "asin": "B0H8Y83NN7",
+      "title": "Akku Nass-Trockensauger für Makita 18V Batterie, 18 kPa Werkstattsauger",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 13
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "excluded",
+      "asin": "B0BJ7SZ1W1",
+      "title": "KWD 3 S V-17/4/20/F",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0H8Y83NN7",
+      "title": "Akku Nass-Trockensauger für Makita 18V Batterie, 18 kPa Werkstattsaugersmit HEPA-Filter, 10L Staubbehälter, Kabelloser Stau",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 7
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0G66NWWCR",
+      "title": "Bosch Allzwecksauger PAS15-200sPAS15-200 (C)",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 10
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0BJ7SZ1W1",
+      "title": "KWD 3 S V-17/4/20/F",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218877962031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/218877962031",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B09MD6NFGL",
+      "title": "KÄRCHER Nass-/Trockensauger WD 2 Plus V-12/4/18/C, Kunststoffbehälter: 12 l",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 5
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0G66S1PXS",
+      "title": "Bosch PRO Akku-Staubsauger GAS18V-6LS",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 6
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B07WH4QD8H",
+      "title": "Bosch PRO Akku-Staubsauger GAS 18V-10 L",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 7
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0C573BR6H",
+      "title": "KÄRCHER Nass-/Trockensauger WD 6 P S V-30/8/35/T, für maximale Reichweite",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 8
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0BMF3LFC8",
+      "title": "Vacmaster SCA0801 Waschsauger Teppichreiniger Fleckenreiniger für Teppiche, Vorleger, Polster, Treppen und Autos | Nass-Trocken-Sauger Starke Saugkraft Wasser Waschen Dekontamination | 800 W",
+      "reason": "title_pattern:\\b(?:AdvancedVac|UniversalVac|Allessauger|Roboterstaubsauger|Teppichreiniger|Fleckenreiniger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 9
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0BCJRQ1Y4",
+      "title": "Lehmann Haddo Industriestaubsauger 2000W | Aschesauger für Kamin mit Doppelfilteranlage | Kaminsauger Ascheschlucker | Nass Trockensauger mit 20 Liter Edelstahltank, Silber",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 10
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0FLJ3KK6Q",
+      "title": "Einhell Aschesauger TC-AV 2032 DW",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 11
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0CRVVJ7L9",
+      "title": "KÄRCHER Nass-/ Trockensauger WD 4 P V-20/5/22, 1.100 Watt",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 14
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0FWC5BMY8",
+      "title": "Dyson Cyclone V10 Submarine Kabelloser Nass-Trockensauger, 150 Air Watt",
+      "reason": "explicit_exclude",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 17
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0G2BGPNM5",
+      "title": "Einhell Professional Akku-Nass-Trockensauger TP-VC 18/10 Li BL L-Solo",
+      "reason": "title_pattern:\\b(?:TP-VC|TE-VC)\\b|\\b(?:Nilfisk\\s+Multi|K[ÄA]RCHER\\s+Professional)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 18
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B00D1ULH0I",
+      "title": "Bosch PRO Kabelgebundener Sauger GAS 35 L SFC+",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 19
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0CZ6V5GP3",
+      "title": "KÄRCHER Nass-/Trockensauger WD 3 P V-19/4/20, Kunststoffbehälter: 19 l",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 20
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0GXBDVPD8",
+      "title": "Bosch PRO Allzwecksauger GAS12-25LS",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 21
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0DBLD211L",
+      "title": "KÄRCHER Waschsauger SE 3 Compact, Weiß",
+      "reason": "title_pattern:\\bSE\\s*3\\s+Compact\\b",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 22
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B09MD8DBY6",
+      "title": "KÄRCHER Nass-/Trockensauger WD 3 S V-17/4/20, 1.000 Watt",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 23
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0FLY1JKXJ",
+      "title": "LEHMANN Aschesauger 15L - Kaminsauger für hohe Temperaturen - robustem Metalltank - Waschbar HEPA-Filter im Metallgehäuse - Blasfunktion - Aschestaubsauger ideal für Kamin, Pelletofen und Grill",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 25
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B09CLDC89W",
+      "title": "Bosch Akku Nass- und Trockensauger AdvancedVac 18V-8 (ohne Akku, 18 Volt System, mit Zubehörset, im Karton)",
+      "reason": "title_pattern:\\b(?:AdvancedVac|UniversalVac|Allessauger|Roboterstaubsauger|Teppichreiniger|Fleckenreiniger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 26
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0D6RDF1B4",
+      "title": "Bosch PRO Allzwecksauger GAS 12-40 MA",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 27
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0794P9XKC",
+      "title": "KÄRCHER Professional Nass- und Trockensauger NT 22/1 Ap L",
+      "reason": "title_pattern:\\b(?:TP-VC|TE-VC)\\b|\\b(?:Nilfisk\\s+Multi|K[ÄA]RCHER\\s+Professional)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 28
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B082W571NZ",
+      "title": "Sellnet Aschesauger 15L 1200W mit Blasfunktion & DUAL Filtersystem, Kaminsauger mit HEPA Filter, Staubsauger für Kamin, (Kabellänge - ca. 1,5m) Kabelhalter, Grill und Feuerstelle SN119",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 29
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0G625YDW5",
+      "title": "Smabix® Aschesauger, 18L Tankvolumen, 1200 W Leistung, inkl. HEPA-Filter und Staubfilter, Aschesauger für Kamin, Pelletofen, Feuerschalen u.v.m.",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 30
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B00T47OD5S",
+      "title": "KÄRCHER Professional Trockensauger T 7/1 Classic, Nennleistung: 850 Watt",
+      "reason": "title_pattern:\\b(?:TP-VC|TE-VC)\\b|\\b(?:Nilfisk\\s+Multi|K[ÄA]RCHER\\s+Professional)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 31
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B01MT60RIK",
+      "title": "Nilfisk Multi II 30L T Nass Trockensauger mit Steckdose - Staubsauger für Werkstatt, Haus, Garten und Auto (1400 W)",
+      "reason": "title_pattern:\\b(?:TP-VC|TE-VC)\\b|\\b(?:Nilfisk\\s+Multi|K[ÄA]RCHER\\s+Professional)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 32
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B074XK2D8W",
+      "title": "KÄRCHER Aschesauger AD 2, Nennleistungsaufnahme: 1.000 Watt",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 33
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0GC6MPDLY",
+      "title": "KÄRCHER Nass-/Trockensauger WD 3 V-17/4/20, Kunststoffbehälter: 17 l",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 34
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B06XT2BCCH",
+      "title": "Bosch Nass- und Trockensauger UniversalVac 15",
+      "reason": "title_pattern:\\b(?:AdvancedVac|UniversalVac|Allessauger|Roboterstaubsauger|Teppichreiniger|Fleckenreiniger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 35
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B07V5J4QBG",
+      "title": "Einhell Akku-Nass-Trockensauger TE-VC 18/10 Li-Solo",
+      "reason": "title_pattern:\\b(?:TP-VC|TE-VC)\\b|\\b(?:Nilfisk\\s+Multi|K[ÄA]RCHER\\s+Professional)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 36
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0BQ2LB1S6",
+      "title": "Cecotec Kompakter Aschesauger Conga Ash 2000 Home, 10 L Tank, 14 kPa, 800 W",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 40
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0FVF575J4",
+      "title": "Dyson Spot+Scrub™ AI Roboterstaubsauger, Selbstentleerung, Nasswalze",
+      "reason": "title_pattern:\\b(?:AdvancedVac|UniversalVac|Allessauger|Roboterstaubsauger|Teppichreiniger|Fleckenreiniger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 41
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0CBSBYYTD",
+      "title": "metabo ASA 30 L PC Allessauger, Nass-Trockensauger mit Filterabreinigung",
+      "reason": "title_pattern:\\b(?:AdvancedVac|UniversalVac|Allessauger|Roboterstaubsauger|Teppichreiniger|Fleckenreiniger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 45
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B088K958PM",
+      "title": "MASKO® Industriestaubsauger Staubsauger 6IN1 Nass & Trockensauger Aschesauger 2300W mit Steckdose & Blasfunktion | Trocken & Nass-Saugen | Industrie-Sauger mit Beutel & beutellos nutzbar, inkl. Filter",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 46
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0FCFBBJSC",
+      "title": "Aschesauger für Kamin Pelletofen, 1200W 20L Kaminsauger mit Rollen, Grün",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 47
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B07Z41BC79",
+      "title": "Bosch PRO Nass-/Trockensauger GAS 12-25 PL",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 48
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B09MD77LKP",
+      "title": "KÄRCHER Nass-/Trockensauger WD 5 S V-25/5/22, Leistung: 1.200 Watt",
+      "reason": "title_pattern:\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 49
+      }
+    },
+    {
+      "marketplace": "DE",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B07VF1CHH7",
+      "title": "MASKO® Industriestaubsauger, Nass Trockensauger HEPA, 3 in 1 Filtersystem, 58 l/s Werkstattsauger mit Steckdose, 2300W, 30L, Industriesauger mit & ohne Beutel, Filter + Aufsätze, Push&Clean, Blau",
+      "reason": "title_pattern:\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+      "source": {
+        "file": "BSR_DE_Wet-Dry-Floor-Washer_Node2077530031_Top50_2026-10-08.xlsx",
+        "nodeId": "2077530031",
+        "sourceUrl": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
+        "rank": 50
+      }
+    }
+  ],
+  "errors": []
+}
