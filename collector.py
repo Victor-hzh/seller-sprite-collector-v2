@@ -701,7 +701,7 @@ def run_collection(config: dict[str, Any], force: bool) -> int:
             except Exception:
                 pass
 
-    logging.info("本周原始数据下载完成，清单：%s", manifest_path)
+    logging.info("采集流程结束；失败任务 %s 个，清单：%s", failures, manifest_path)
     return 2 if failures else 0
 
 def inspect_mode(config: dict[str, Any]) -> int:

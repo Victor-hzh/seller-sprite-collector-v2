@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 import sys
 import time
@@ -38,6 +39,9 @@ def decrypt_password() -> str:
         errors="replace",
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
+        # PowerShell 7's inherited module paths can break Windows PowerShell's
+        # DPAPI cmdlets. Let Windows PowerShell build its own default paths.
+        env={key: value for key, value in os.environ.items() if key.upper() != 'PSMODULEPATH'},
     )
     if result.returncode or not result.stdout:
         detail = result.stderr.strip().splitlines()

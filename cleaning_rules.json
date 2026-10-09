@@ -3,10 +3,22 @@
   "default": {"keep_asins": [], "exclude_asins": [], "exclude_title_patterns": []},
   "groups": {
     "DE/Wet-Dry-Floor-Washer": {
-      "keep_asins": [],
-      "exclude_asins": [],
-      "exclude_title_patterns": [],
-      "note": "先合并两个来源。确认非洗地机 ASIN 后加入排除名单；正则规则默认关闭。"
+      "keep_asins": ["B0GJT26L7Z"],
+      "exclude_asins": ["B0FWC5BMY8"],
+      "exclude_title_patterns": [
+        "\\b(?:Werkstattsauger|Industriesauger|Allzwecksauger|Aschesauger|Shop\\s+Vacuum|Baustellensauger)",
+        "\\b(?:KWD|WD)\\s*[- ]?\\d|\\b(?:GAS|PAS)\\s*[- ]?\\d",
+        "\\b(?:AdvancedVac|UniversalVac|Allessauger|Roboterstaubsauger|Teppichreiniger|Fleckenreiniger)",
+        "\\b(?:TP-VC|TE-VC)\\b|\\b(?:Nilfisk\\s+Multi|K[ÄA]RCHER\\s+Professional)",
+        "\\bSE\\s*3\\s+Compact\\b",
+        "^(?:Ersatz(?:filter|walze|bürste)|Filterbeutel|Staubbeutel|Zubehör|Reinigungsmittel)\\b"
+      ],
+      "require_title_patterns": [
+        "\\b(?:Saugwischer|Wischsauger|Wischfunktion|Bodenreiniger|Hartbodenreiniger|Floor\\s*ONE|FloorShine|iFloor|X[- ]?Clean|CrossWave|HydroVac|Heißwasserwischen|AquaTrio)\\b",
+        "\\b(?:dreame\\s+(?:H\\d+|T16)|roborock\\s+F25|MOVA\\s+(?:M(?:10|20|50)|X4)|JONR\\s+H2|Midea\\s+X10)\\b",
+        "(?:K[ÄA]RCHER|Karcher).*\\bFC\\s*\\d"
+      ],
+      "note": "家用吸拖洗一体机。明确的工业/桶式产品排除，无法确认的产品单列待复核，不进入已确认大盘。按ASIN的明确保留优先于标题规则。"
     }
   }
 }

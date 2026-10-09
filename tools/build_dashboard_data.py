@@ -53,6 +53,9 @@ def decision(product, rules):
     for pattern in rules.get('exclude_title_patterns', []):
         if re.search(pattern, product.get('title', ''), re.I):
             return False, 'title_pattern:' + pattern
+    required = rules.get('require_title_patterns', [])
+    if required and not any(re.search(pattern, product.get('title', ''), re.I) for pattern in required):
+        return False, 'needs_review:household_floor_washer_not_confirmed'
     return True, 'no_exclusion_rule'
 
 
@@ -60,15 +63,16 @@ def summaries(products, field):
     buckets = defaultdict(list)
     for product in products:
         buckets[product.get(field) or 'Unknown'].append(product)
-    total = sum(p.get('monthlyRevenue') or 0 for p in products)
+    total = sum(p.get('monthlySales') or 0 for p in products)
     result = []
     for name, items in buckets.items():
         revenue = sum(p.get('monthlyRevenue') or 0 for p in items)
         prices = [p['price'] for p in items if p.get('price') is not None]
-        result.append(dict(name=name, monthlySales=sum(p.get('monthlySales') or 0 for p in items),
+        sales = sum(p.get('monthlySales') or 0 for p in items)
+        result.append(dict(name=name, monthlySales=sales,
                            monthlyRevenue=revenue, annualSales=None, annualRevenue=None,
-                           averagePrice=sum(prices)/len(prices) if prices else None,
-                           marketShare=revenue/total if total else None))
+                           averagePrice=revenue/sales if sales else None,
+                           marketShare=sales/total if total else None))
     return sorted(result, key=lambda r: (-r['monthlyRevenue'], r['name']))
 
 
@@ -80,12 +84,13 @@ def merge_group(sources, rules):
             keep, reason = decision(incoming, rules)
             evidence = dict(file=source['file'], nodeId=source['node'], sourceUrl=source['task']['url'], rank=incoming.get('rank'))
             if not keep:
-                audit.append(dict(action='excluded', asin=incoming['asin'], title=incoming.get('title'), reason=reason, source=evidence))
+                audit.append(dict(action='review' if reason.startswith('needs_review:') else 'excluded', asin=incoming['asin'], title=incoming.get('title'), reason=reason, source=evidence))
                 continue
             asin = incoming['asin']
             if asin not in selected:
                 selected[asin] = copy.deepcopy(incoming)
                 selected[asin]['sources'] = [evidence]
+                selected[asin]['selectedSourceFile'] = source['file']
                 continue
             chosen = selected[asin]
             chosen['sources'].append(evidence)
@@ -97,6 +102,7 @@ def merge_group(sources, rules):
     products = sorted(selected.values(), key=lambda p: (p.get('monthlyRevenue') is None, -(p.get('monthlyRevenue') or 0), p['asin']))
     for rank, product in enumerate(products, 1):
         product['rank'] = rank
+        product['competitionRank'] = rank
     return {
         'id': f"{first['marketplace']}_{first['category']}_{first['date']}",
         'marketplace': first['marketplace'], 'category': first['category'],
@@ -108,6 +114,7 @@ def merge_group(sources, rules):
         'products': products, 'brands': summaries(products, 'brand'), 'sellers': summaries(products, 'buyboxSeller'),
         'rankingBasis': 'monthlyRevenue', 'aggregationScope': 'all_cleaned_unique_asins',
         'rawProductCount': sum(len(s['products']) for s in sources),
+        'reviewProductCount': len({e['asin'] for e in audit if e['action'] == 'review'} - set(selected)),
         'cleanedProductCount': len(products), 'missingRevenueCount': sum(p.get('monthlyRevenue') is None for p in products),
     }, audit
 
@@ -155,6 +162,7 @@ def main(argv=None):
     parser.add_argument('--rules', default=str(ROOT / 'cleaning_rules.json'))
     parser.add_argument('--output', default=str(ROOT / 'data/dashboard-data.json'))
     parser.add_argument('--audit', default=str(ROOT / 'data/cleaning-audit.json'))
+    parser.add_argument('--merged-dir', default=str(ROOT / 'data/merged'), help='保留原列和图片的合并Excel目录')
     args = parser.parse_args(argv)
     files = excel.find_files(args.inputs)
     if not files:
@@ -165,6 +173,15 @@ def main(argv=None):
     if payload['errors']:
         print(json.dumps(payload['errors'], ensure_ascii=False, indent=2))
         return 1  # Never replace good dashboard data with a partial parse.
+    try:
+        from .merged_excel import export_dataset
+    except ImportError:
+        from merged_excel import export_dataset
+    paths_by_name = {p.name: p for p in files}
+    for dataset in payload['datasets']:
+        destination = Path(args.merged_dir) / dataset['date'] / f"MERGED_{dataset['marketplace']}_{dataset['category']}_{dataset['date']}.xlsx"
+        export_dataset(dataset, {name: paths_by_name[name] for name in dataset['sourceFiles']}, destination)
+        dataset['mergedFile'] = str(destination.relative_to(Path(args.merged_dir)))
     for target, value in ((args.output, payload), (args.audit, audit)):
         path = Path(target)
         path.parent.mkdir(parents=True, exist_ok=True)

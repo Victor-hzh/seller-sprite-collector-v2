@@ -8,3 +8,10 @@ dist/
 data/source/
 data/dashboard-data.json
 data/cleaning-audit.json
+data/merged/
+node_modules/
+.next/
+out/
+work/
+*.tsbuildinfo
+next-env.d.ts

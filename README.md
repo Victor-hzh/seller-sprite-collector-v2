@@ -1,6 +1,6 @@
 # SellerSprite Collector V2
 
-独立实验仓库：Victor-hzh/seller-sprite-collector-v2。没有网站部署流程，不修改原看板仓库。
+独立实验仓库：Victor-hzh/seller-sprite-collector-v2。包含原看板源码的实验副本，没有网站部署流程，不修改原看板仓库。
 
 ## 当前功能
 
@@ -10,7 +10,12 @@
 - 按日期、站点、品类合并，ASIN 去重，按月销售额排序。
 - 同 ASIN 数值冲突按 tasks_v2.json 来源顺序选用一份，不相加，审计记录包含差异。
 - 大盘计算包含全部清洗后的产品，不截取 Top50；品牌和卖家汇总重新生成。
-- cleaning_rules.json 支持各站点品类 ASIN 保留/排除及标题正则排除，默认没有自动排除规则。
+- cleaning_rules.json 支持各站点品类 ASIN 保留/排除及标题正则排除；德国洗地机已启用家用吸拖洗一体机范围，其他品类仍保留原规则。
+- data/merged/YYYY-MM-DD 保存合并清洗Excel，保留原70列、图片、商品链接、列宽、冻结首行及DE/Brands/Sellers/Note工作表。
+- 合并表的 # 是竞品销售额顺序，原始小类BSR字段不修改。Brands/Sellers重新汇总，市场份额沿用原表月销量口径。
+- 原始商品表没有逐SKU年销量/年销售额，所以重算汇总的年指标留空，不相加原表的整榜年度汇总。
+- 未能确认品类的产品列为 review，不进入已确认大盘；审计记录保留ASIN、标题和来源。
+- 看板总览、品牌、价格带和机会对比使用全部清洗产品，TopN仅限制商品列表展示。竞品排名和来源BSR分别显示。
 - 旧格式历史文件也可以读取；缺少新增来源的历史日期会标记 missingSourceNodes。
 
 ## 源码运行
@@ -40,12 +45,17 @@ exclude_title_patterns 是 Python 正则，需确认规则后再启用。
 data/cleaning-audit.json 记录被排除产品及重复产品的差异。
 销售额缺失记录保留并排在最后，missingRevenueCount 标明缺失数量。
 统计仍沿用原看板的月销量/月销售额字段；父子变体指标口径需另行核实。
-得到的是来源榜单覆盖的竞品样本，不等同于全市场。
+得到的是来源榜单覆盖的竞品样本，不等同于全市场。来源覆盖不一致的历史日期不计算虚假的排名/销售环比。
 
 ## GitHub 数据更新
 
 上传 data/source/YYYY-MM-DD 下的 Excel 后，Actions 自动重建 dashboard-data.json 与 cleaning-audit.json。
-读取失败时不覆盖上一份结果。仅重新构建数据，不部署网站。
+读取失败时不覆盖上一份结果。仅重新构建数据与合并Excel，不部署网站。
+
+## 实验看板
+
+安装 package.json 中的依赖后运行 npm run dev。数据入口仍为 data/dashboard-data.json，保持原网站结构。
+生产验证使用 npm run lint 和 npm run build。仅在独立仓库验证，不改变原网站。
 
 ## Windows EXE
 
