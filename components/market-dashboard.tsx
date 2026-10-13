@@ -13,7 +13,6 @@ import {
   Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis,
 } from "recharts";
 
-import dashboardJson from "@/data/dashboard-data.json";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -91,7 +90,6 @@ type WeeklyRow = {
   currentRights: string; previousRights: string;
 };
 
-const baseDashboardData = dashboardJson as DashboardPayload;
 const japanExpectedDatasets: ExpectedDataset[] = [
   {
     id: "JP_MITE_VACUUM",
@@ -139,24 +137,26 @@ const japanExpectedDatasets: ExpectedDataset[] = [
     available: false,
   },
 ];
-const mergedExpectedDatasets = [...baseDashboardData.expectedDatasets];
-for (const expected of japanExpectedDatasets) {
-  if (!mergedExpectedDatasets.some((item) => item.id === expected.id)) {
-    mergedExpectedDatasets.push(expected);
+function enhanceDashboardData(baseDashboardData: DashboardPayload): DashboardPayload {
+  const mergedExpectedDatasets = [...baseDashboardData.expectedDatasets];
+  for (const expected of japanExpectedDatasets) {
+    if (!mergedExpectedDatasets.some((item) => item.id === expected.id)) mergedExpectedDatasets.push(expected);
   }
-}
-const dashboardData: DashboardPayload = {
-  ...baseDashboardData,
-  expectedDatasetCount: mergedExpectedDatasets.length,
-  expectedDatasets: mergedExpectedDatasets,
-  exchangeRates: {
-    ...baseDashboardData.exchangeRates,
-    cnyPerUnit: {
-      ...baseDashboardData.exchangeRates.cnyPerUnit,
-      JPY: baseDashboardData.exchangeRates.cnyPerUnit.JPY ?? 0.042088533,
+  return {
+    ...baseDashboardData,
+    expectedDatasetCount: mergedExpectedDatasets.length,
+    expectedDatasets: mergedExpectedDatasets,
+    exchangeRates: {
+      ...baseDashboardData.exchangeRates,
+      cnyPerUnit: {
+        ...baseDashboardData.exchangeRates.cnyPerUnit,
+        JPY: baseDashboardData.exchangeRates.cnyPerUnit.JPY ?? 0.042088533,
+      },
     },
-  },
-};
+  };
+}
+
+let dashboardData: DashboardPayload;
 const chartColors = ["#FF610A", "#ff8c42", "#f7b32b", "#c54808", "#e04a2f", "#7d3a22", "#e98754", "#5e7480"];
 const brandBubbleColors = ["#FF610A", "#ff8c42", "#f7b32b", "#c54808", "#e04a2f", "#7d3a22", "#e98754", "#d96a16", "#ef6848", "#9a3512", "#f5a623", "#c05b2e", "#ffa15a", "#a34b26", "#dc7860", "#c78a20", "#6f5960", "#5e7480"];
 const marketplaceNames: Record<string, string> = { US: "美国站", UK: "英国站", DE: "德国站", FR: "法国站", IT: "意大利站", ES: "西班牙站", JP: "日本站" };
@@ -399,6 +399,38 @@ function brandBubbleColor(index: number) {
 }
 
 export default function MarketDashboard() {
+  const [data, setData] = useState<DashboardPayload | null>(null);
+  const [loadError, setLoadError] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        const response = await fetch(
+          "https://raw.githubusercontent.com/Victor-hzh/seller-sprite-collector-v2/main/data/dashboard-data.json.gz",
+          { cache: "no-store" },
+        );
+        if (!response.ok || !response.body) throw new Error(`HTTP ${response.status}`);
+        if (typeof DecompressionStream === "undefined") throw new Error("当前浏览器不支持压缩数据解码");
+        const payload = await new Response(response.body.pipeThrough(new DecompressionStream("gzip"))).json() as DashboardPayload;
+        if (!cancelled) {
+          dashboardData = enhanceDashboardData(payload);
+          setData(dashboardData);
+        }
+      } catch (error) {
+        if (!cancelled) setLoadError(error instanceof Error ? error.message : String(error));
+      }
+    }
+    void load();
+    return () => { cancelled = true; };
+  }, []);
+
+  if (loadError) return <main className="data-loading">数据加载失败：{loadError}。请刷新页面重试。</main>;
+  if (!data) return <main className="data-loading">正在载入榜单数据…</main>;
+  return <MarketDashboardContent />;
+}
+
+function MarketDashboardContent() {
   const initial = dashboardData.datasets[0];
   const [activePage, setActivePage] = useState<PageKey>("overview");
   const [marketplace, setMarketplace] = useState(initial?.marketplace ?? "US");
@@ -1402,3 +1434,4 @@ export default function MarketDashboard() {
     </div>
   );
 }
+

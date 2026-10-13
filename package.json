@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "node tools/prepare_site_data.mjs && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
@@ -36,3 +36,4 @@
   "type": "module",
   "displayName": "SellerSprite Dashboard"
 }
+

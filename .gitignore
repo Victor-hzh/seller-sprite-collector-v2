@@ -9,9 +9,11 @@ data/source/
 data/dashboard-data.json
 data/cleaning-audit.json
 data/merged/
+public/dashboard-data.json.gz
 node_modules/
 .next/
 out/
 work/
 *.tsbuildinfo
 next-env.d.ts
+
