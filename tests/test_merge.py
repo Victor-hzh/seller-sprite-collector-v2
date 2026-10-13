@@ -1,5 +1,5 @@
 import unittest
-from tools.build_dashboard_data import PATTERN, merge_group
+from cleaning.build_dashboard_data import PATTERN, merge_group
 
 
 def source(node, products):

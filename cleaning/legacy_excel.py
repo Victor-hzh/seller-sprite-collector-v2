@@ -10,15 +10,15 @@ from xml.etree import ElementTree as ET
 from zipfile import BadZipFile, ZipFile
 
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_SOURCE = BASE_DIR / "data" / "source"
-DEFAULT_OUTPUT = BASE_DIR / "output" / "dashboard-data.json"
+DEFAULT_OUTPUT = BASE_DIR / "data" / "processed" / "dashboard-data.json"
 TASKS_PATH = (
     BASE_DIR / "tasks_all_30.json"
     if (BASE_DIR / "tasks_all_30.json").exists()
     else BASE_DIR / "tasks.json"
 )
-EXCHANGE_RATES_PATH = BASE_DIR / "exchange_rates.json"
+EXCHANGE_RATES_PATH = BASE_DIR / "cleaning" / "exchange_rates.json"
 
 MAIN_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 REL_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
@@ -539,4 +539,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

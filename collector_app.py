@@ -47,7 +47,7 @@ def main(argv=None):
             core.configure_logging()
             code = core.run_collection(config, args.force) if command == 'run' else core.inspect_mode(config)
         elif command == 'clean':
-            from tools import build_dashboard_data as builder
+            from cleaning import build_dashboard_data as builder
             builder.ROOT = BASE_DIR
             code = builder.main([])
         elif command == 'credentials':

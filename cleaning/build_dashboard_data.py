@@ -146,7 +146,7 @@ def build_payload(files, tasks, cleaning):
         key = (task['marketplace'], task['category'])
         expected.setdefault(key, dict(id=task['id'], marketplace=key[0], category=key[1], categoryLabel=task.get('category_label'),
                                      listName=task.get('list_name'), sourceUrl=task['url'], available=key in loaded))
-    excel.EXCHANGE_RATES_PATH = ROOT / 'tools' / 'exchange_rates.json'
+    excel.EXCHANGE_RATES_PATH = ROOT / 'cleaning' / 'exchange_rates.json'
     payload = dict(schemaVersion=2, generatedAt=excel.utc_now(), exchangeRates=excel.load_exchange_rates(),
                    expectedDatasetCount=len(expected), loadedDatasetCount=len(loaded), expectedDatasets=list(expected.values()),
                    opportunityModel={'minimumMarketplaces': 2, 'weights': {'marketSize': .45, 'salesDemand': .25, 'growth': .15, 'entryFriendliness': .15},
@@ -159,9 +159,9 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description='合并榜单、清洗 ASIN 并生成看板数据和审计记录')
     parser.add_argument('inputs', nargs='*', default=[str(ROOT / 'data/source')])
     parser.add_argument('--tasks', default=str(ROOT / 'tasks_v2.json'))
-    parser.add_argument('--rules', default=str(ROOT / 'cleaning_rules.json'))
-    parser.add_argument('--output', default=str(ROOT / 'data/dashboard-data.json'))
-    parser.add_argument('--audit', default=str(ROOT / 'data/cleaning-audit.json'))
+    parser.add_argument('--rules', default=str(ROOT / 'cleaning/cleaning_rules.json'))
+    parser.add_argument('--output', default=str(ROOT / 'data/processed/dashboard-data.json'))
+    parser.add_argument('--audit', default=str(ROOT / 'data/processed/cleaning-audit.json'))
     parser.add_argument('--merged-dir', default=str(ROOT / 'data/merged'), help='保留原列和图片的合并Excel目录')
     args = parser.parse_args(argv)
     files = excel.find_files(args.inputs)

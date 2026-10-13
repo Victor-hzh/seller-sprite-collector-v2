@@ -13,12 +13,13 @@ def main():
                     str(ROOT / 'collector_app.py')], cwd=ROOT, check=True)
     package = ROOT / 'dist/SellerSpriteCollector-v2'
     package.mkdir(parents=True, exist_ok=True)
-    for name in ('config_v2.json', 'tasks_v2.json', 'cleaning_rules.json',
+    for name in ('config_v2.json', 'tasks_v2.json',
                  'save_login_credentials.ps1', 'decrypt_login_password.ps1', 'README.md'):
         shutil.copy2(ROOT / name, package / name)
     shutil.copy2(ROOT / 'dist/SellerSpriteCollector.exe', package / 'SellerSpriteCollector.exe')
-    (package / 'tools').mkdir(exist_ok=True)
-    shutil.copy2(ROOT / 'tools/exchange_rates.json', package / 'tools/exchange_rates.json')
+    (package / 'cleaning').mkdir(exist_ok=True)
+    for name in ('cleaning_rules.json', 'exchange_rates.json'):
+        shutil.copy2(ROOT / 'cleaning' / name, package / 'cleaning' / name)
     subprocess.run([str(package / 'SellerSpriteCollector.exe'), 'check'], check=True)
     shutil.make_archive(str(ROOT / 'dist/SellerSpriteCollector-v2'), 'zip', ROOT / 'dist', package.name)
 

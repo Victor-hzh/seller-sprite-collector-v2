@@ -1,13 +1,13 @@
 import json
 import unittest
 from pathlib import Path
-from tools.build_dashboard_data import decision
+from cleaning.build_dashboard_data import decision
 
 
 class FloorWasherScopeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.rules = json.loads((Path(__file__).resolve().parents[1] / 'cleaning_rules.json').read_text(encoding='utf-8'))['groups']['DE/Wet-Dry-Floor-Washer']
+        cls.rules = json.loads((Path(__file__).resolve().parents[1] / 'cleaning' / 'cleaning_rules.json').read_text(encoding='utf-8'))['groups']['DE/Wet-Dry-Floor-Washer']
 
     def test_important_floor_washers_in_both_sources(self):
         for title in ['Dreame H12 Pro Ultra Nass- und Trockensauger', 'Tineco Floor ONE Stretch S6', 'roborock F25 LT Wet Dry Vacuum Cleaner', 'Rowenta X-Clean 4', 'KÄRCHER FC 7 Bodenreiniger', 'MOVA X4 Pro Heißwasserwischen', 'dreame T16 Pro Heat-A', 'PHILIPS AquaTrio Nass-Trockensauger', 'Midea X10 Smart Nass-Trocken-Sauger']:

@@ -407,7 +407,7 @@ export default function MarketDashboard() {
     async function load() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/Victor-hzh/seller-sprite-collector-v2/main/data/dashboard-data.json.gz",
+          "https://raw.githubusercontent.com/Victor-hzh/seller-sprite-collector-v2/main/data/processed/dashboard-data.json.gz",
           { cache: "no-store" },
         );
         if (!response.ok || !response.body) throw new Error(`HTTP ${response.status}`);
@@ -1434,4 +1434,3 @@ function MarketDashboardContent() {
     </div>
   );
 }
-

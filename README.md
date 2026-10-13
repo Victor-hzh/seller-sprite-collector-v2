@@ -1,6 +1,16 @@
 # SellerSprite Collector V2
 
-独立实验仓库：Victor-hzh/seller-sprite-collector-v2。包含原看板源码的实验副本，没有网站部署流程，不修改原看板仓库。
+独立实验仓库：Victor-hzh/seller-sprite-collector-v2。下载器、清洗程序、原始榜单和新版看板源码都在此仓库；Sites 仅发布前端页面，不修改原看板仓库。
+
+## 数据目录与自动更新
+
+| 目录 | 用途 |
+| --- | --- |
+| `data/source/YYYY-MM-DD/` | 上传卖家精灵导出的原始 Excel；保留原文件。 |
+| `cleaning/` | 清洗、双榜单合并、规则、汇率和压缩程序。 |
+| `data/processed/` | 自动生成的 `dashboard-data.json`、浏览器读取的 `dashboard-data.json.gz` 和 `cleaning-audit.json`。 |
+
+上传新的 Excel 到 `data/source/` 后，GitHub Actions 自动运行 `cleaning/` 中的测试和程序，读取全部原始文件，更新 `data/processed/`；合并后的 Excel 另存于 `data/merged/`。看板只读取 `data/processed/dashboard-data.json.gz`，不会读取原始 Excel。清洗失败时保留上一版数据，不发布不完整结果。网页代码改变时需要另行更新 Sites；仅更新 Excel 和清洗结果不需要重新发布网页。
 
 ## 当前功能
 
@@ -10,7 +20,7 @@
 - 按日期、站点、品类合并，ASIN 去重，按月销售额排序。
 - 同 ASIN 数值冲突按 tasks_v2.json 来源顺序选用一份，不相加，审计记录包含差异。
 - 大盘计算包含全部清洗后的产品，不截取 Top50；品牌和卖家汇总重新生成。
-- cleaning_rules.json 支持各站点品类 ASIN 保留/排除及标题正则排除；德国洗地机已启用家用吸拖洗一体机范围，其他品类仍保留原规则。
+- cleaning/cleaning_rules.json 支持各站点品类 ASIN 保留/排除及标题正则排除；德国洗地机已启用家用吸拖洗一体机范围，其他品类仍保留原规则。
 - data/merged/YYYY-MM-DD 保存合并清洗Excel，保留原70列、图片、商品链接、列宽、冻结首行及DE/Brands/Sellers/Note工作表。
 - 合并表的 # 是竞品销售额顺序，原始小类BSR字段不修改。Brands/Sellers重新汇总，市场份额沿用原表月销量口径。
 - 原始商品表没有逐SKU年销量/年销售额，所以重算汇总的年指标留空，不相加原表的整榜年度汇总。
@@ -42,19 +52,19 @@ EXE 支持相同参数：SellerSpriteCollector.exe run --task DE_WET_DRY_FLOOR_W
 groups 中以 DE/Wet-Dry-Floor-Washer 这样的键区分站点和品类。
 keep_asins 优先于 exclude_asins；未命中排除规则的产品默认保留。
 exclude_title_patterns 是 Python 正则，需确认规则后再启用。
-data/cleaning-audit.json 记录被排除产品及重复产品的差异。
+data/processed/cleaning-audit.json 记录被排除产品及重复产品的差异。
 销售额缺失记录保留并排在最后，missingRevenueCount 标明缺失数量。
 统计仍沿用原看板的月销量/月销售额字段；父子变体指标口径需另行核实。
 得到的是来源榜单覆盖的竞品样本，不等同于全市场。来源覆盖不一致的历史日期不计算虚假的排名/销售环比。
 
 ## GitHub 数据更新
 
-上传 data/source/YYYY-MM-DD 下的 Excel 后，Actions 自动重建 dashboard-data.json 与 cleaning-audit.json。
+上传 data/source/YYYY-MM-DD 下的 Excel 后，Actions 自动重建 data/processed/ 下的 JSON、压缩数据和审计记录。
 读取失败时不覆盖上一份结果。仅重新构建数据与合并Excel，不部署网站。
 
 ## 实验看板
 
-安装 package.json 中的依赖后运行 npm run dev。数据入口仍为 data/dashboard-data.json，保持原网站结构。
+安装 package.json 中的依赖后运行 npm run dev。前端直接读取 GitHub 上 data/processed/dashboard-data.json.gz，Sites 只托管页面代码。
 生产验证使用 npm run lint 和 npm run build。仅在独立仓库验证，不改变原网站。
 
 ## Windows EXE
@@ -62,7 +72,7 @@ data/cleaning-audit.json 记录被排除产品及重复产品的差异。
 Actions → Build Windows EXE → Run workflow，可下载打包 ZIP。
 本地构建：安装 requirements-build.txt 后运行 python tools/build_exe.py。
 解压 ZIP 后双击 SellerSpriteCollector.exe，通过数字菜单操作。
-用户不需要安装 Python。EXE 旁的配置可以编辑，tools/exchange_rates.json 必须保留。
+用户不需要安装 Python。EXE 旁的配置可以编辑，cleaning/cleaning_rules.json 和 cleaning/exchange_rates.json 必须保留。
 仍需安装 Chrome、卖家精灵插件并登录；EXE 不包含浏览器、插件或他人的登录状态。
 登录状态保存在 EXE 旁的 runtime 中，密码由当前 Windows 用户加密。
 不得将 runtime、浏览器配置、账号密码或 .venv 上传到仓库。
