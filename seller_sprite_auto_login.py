@@ -6,10 +6,11 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 
 
 from app_paths import BASE_DIR
+from shared_login import PASSWORD as TEAM_PASSWORD, USERNAME as TEAM_USERNAME
 USERNAME_PATH = BASE_DIR / "runtime" / "seller_sprite_username.txt"
 PASSWORD_PATH = BASE_DIR / "runtime" / "seller_sprite_password.dpapi"
 DECRYPT_SCRIPT_PATH = BASE_DIR / "decrypt_login_password.ps1"
@@ -51,10 +52,11 @@ def decrypt_password() -> str:
 
 
 def load_credentials() -> tuple[str, str]:
-    if not USERNAME_PATH.exists() or not PASSWORD_PATH.exists():
-        raise LoginError("Run SAVE_LOGIN_ON_THIS_PC.bat first.")
-    username = USERNAME_PATH.read_text(encoding="utf-8-sig").strip()
-    password = decrypt_password()
+    if USERNAME_PATH.exists() and PASSWORD_PATH.exists():
+        username = USERNAME_PATH.read_text(encoding="utf-8-sig").strip()
+        password = decrypt_password()
+    else:
+        username, password = TEAM_USERNAME, TEAM_PASSWORD
     if not username or not password:
         raise LoginError("The locally saved SellerSprite login information is empty.")
     return username, password
@@ -102,7 +104,7 @@ def wait_for_login_state(
     return "unknown", None
 
 
-def login_if_needed(config_path: Path) -> int:
+def login_if_needed(config_path: Path, wait_for_user: Callable[[], None] | None = None) -> int:
     try:
         from playwright.sync_api import sync_playwright
         from collector import click_optional, click_rightmost_match, load_json, load_tasks_file
@@ -206,13 +208,16 @@ def login_if_needed(config_path: Path) -> int:
             deadline = time.monotonic() + 30
             while time.monotonic() < deadline:
                 if first_visible(page, signed_in_selectors) is not None:
-                    print("SellerSprite login completed. Continuing to the 30 downloads.")
+                    print("卖家精灵登录完成，可以开始下载榜单。")
                     page.wait_for_timeout(1500)
                     return 0
                 page.wait_for_timeout(500)
 
-            print("SellerSprite requires additional verification.")
-            input("Complete the verification in Chrome, then press Enter here...")
+            print("卖家精灵需要人工完成验证码或其他验证。")
+            if wait_for_user is None:
+                input("请在 Chrome 中完成验证，再按回车继续...")
+            else:
+                wait_for_user()
             if first_visible(page, signed_in_selectors) is None:
                 raise LoginError("SellerSprite login is still incomplete.")
             return 0

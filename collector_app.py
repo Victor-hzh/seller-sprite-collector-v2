@@ -25,7 +25,7 @@ def latest_source_folder(source_root: Path, today: str) -> Path | None:
 
 def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
     parser = argparse.ArgumentParser(description='SellerSprite Collector V2')
-    parser.add_argument('command', nargs='?', choices=['run', 'inspect', 'clean', 'credentials', 'upload', 'check'])
+    parser.add_argument('command', nargs='?', choices=['run', 'inspect', 'login', 'clean', 'credentials', 'upload', 'check'])
     parser.add_argument('--force', action='store_true')
     parser.add_argument('--task', help='只运行指定任务 ID，适合验证新增榜单')
     args = parser.parse_args(argv)
@@ -33,8 +33,8 @@ def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
     command = args.command
     interactive = command is None
     if interactive:
-        print('卖家精灵采集 V2\n1. 下载榜单\n2. 浏览器/插件初始化\n3. 清洗与合并\n4. 保存本机登录信息\n5. 打开新仓库上传页面\n6. 检查配置')
-        command = dict(zip('123456', ['run', 'inspect', 'clean', 'credentials', 'upload', 'check'])).get(input('请选择：').strip())
+        print('卖家精灵采集 V2\n1. 下载榜单\n2. 浏览器/插件初始化\n3. 一键登录\n4. 清洗与合并\n5. 保存本机登录信息\n6. 打开新仓库上传页面\n7. 检查配置')
+        command = dict(zip('1234567', ['run', 'inspect', 'login', 'clean', 'credentials', 'upload', 'check'])).get(input('请选择：').strip())
         if command is None:
             return 0
     try:
@@ -59,7 +59,19 @@ def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
         elif command in ('run', 'inspect'):
             core.ensure_directories()
             core.configure_logging()
-            code = core.run_collection(config, args.force) if command == 'run' else core.inspect_mode(config, wait_for_user)
+            if command == 'run':
+                from seller_sprite_auto_login import login_if_needed
+                print('先检查卖家精灵登录状态，必要时自动登录...')
+                login_code = login_if_needed(config_path, wait_for_user)
+                if login_code != 0:
+                    raise RuntimeError('卖家精灵登录检查未通过，下载未开始。')
+                print('登录检查通过，开始下载榜单。')
+                code = core.run_collection(config, args.force)
+            else:
+                code = core.inspect_mode(config, wait_for_user)
+        elif command == 'login':
+            from seller_sprite_auto_login import login_if_needed
+            code = login_if_needed(config_path, wait_for_user)
         elif command == 'clean':
             from cleaning import build_dashboard_data as builder
             builder.ROOT = BASE_DIR

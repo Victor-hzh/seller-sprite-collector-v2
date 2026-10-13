@@ -35,6 +35,7 @@
 ```text
 python collector_app.py check
 python collector_app.py inspect
+python collector_app.py login
 python collector_app.py credentials
 python collector_app.py run
 python collector_app.py clean
@@ -44,8 +45,8 @@ python collector_app.py upload
 仅测试德国新增来源：python collector_app.py run --task DE_WET_DRY_FLOOR_WASHER_2077530031。
 桌面版仍可通过 `SellerSpriteCollector.exe --cli run --task DE_WET_DRY_FLOOR_WASHER_2077530031` 使用命令行。
 
-浏览器初始化时需要在专用 Chrome 中安装并登录卖家精灵。验证码仍需人工完成。
-下载保持原来的浏览器、登录和导出逻辑。未自动启动真实下载；新增来源需实测。
+浏览器初始化时需要在专用 Chrome 中安装卖家精灵插件；团队账号由程序自动登录。验证码仍需人工完成。
+下载前先检查卖家精灵登录状态并自动登录，检查通过后才进入原来的浏览器、登录与导出逻辑；每个榜单仍检查掉线并尝试重登。未自动启动真实下载；新增来源需实测。
 
 ## 清洗规则
 
@@ -71,9 +72,9 @@ data/processed/cleaning-audit.json 记录被排除产品及重复产品的差异
 
 在 Actions → Build Windows EXE 的最新成功运行中下载 `SellerSpriteCollector-v2-Windows`，解压后双击 `SellerSpriteCollector-v2-Setup.exe` 安装。开始菜单和桌面会出现“SellerSprite Collector V2”。也保留免安装 ZIP，供便携使用。安装版用户无需安装 Python、配置虚拟环境或设置环境变量；开发者本地构建时运行 `python tools/build_exe.py` 和 `python tools/build_installer.py`（构建机需有 NSIS）。
 
-窗口按“检查环境 → 打开浏览器 / 初始化插件 → 保存登录账号 → 开始下载 → 打开文件夹 + GitHub 上传页”操作。下载支持全部 36 个来源、单榜单、跳过已完成任务和强制重下；还提供本地清洗预览、数据文件夹和完整日志入口。上传按钮会打开最新有 Excel 的日期文件夹及对应的 v2 仓库上传页，用户仍需将 Excel 拖到页面并点击提交。GitHub Actions 随后自动清洗、合并并更新看板 JSON。
+窗口按“本地环境配置与部署 → 卖家精灵一键登录 → 开始下载 → 打开文件夹 + GitHub 上传页”操作。内置团队账号会自动用于一键登录和下载任务，用户无需输入账号密码；如需覆盖，可在本机另存账号。下载支持全部 36 个来源、单榜单、跳过已完成任务和强制重下；还提供本地清洗预览、数据文件夹和完整日志入口。上传按钮会打开最新有 Excel 的日期文件夹及对应的 v2 仓库上传页，用户仍需将 Excel 拖到页面并点击提交。GitHub Actions 随后自动清洗、合并并更新看板 JSON。
 
-首次仍需安装 Chrome，并在程序打开的专用 Chrome 中安装、登录卖家精灵插件；验证码人工完成。程序不附带浏览器、插件或登录状态。账号密码由当前 Windows 用户加密，保存在本机 `runtime/`，不得将其、浏览器配置、账号密码或 `.venv` 上传到仓库。安装版数据也保存在安装目录下；卸载程序时保留下载数据与登录状态，方便自行备份或删除。详见 `README_WINDOWS_GUI.txt`。
+首次仍需安装 Chrome，并在程序打开的专用 Chrome 中安装卖家精灵插件；团队账号自动登录，验证码人工完成。程序不附带浏览器、插件或登录状态。团队账号按项目所有人的要求随公开 V2 仓库与安装包提供；本机覆盖账号由当前 Windows 用户加密，保存在 `runtime/`。不要将本机 `runtime/`、浏览器配置或 `.venv` 上传到仓库。安装版数据也保存在安装目录下；卸载程序时保留下载数据与登录状态，方便自行备份或删除。详见 `README_WINDOWS_GUI.txt`。
 
 ## 验证
 

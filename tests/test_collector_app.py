@@ -4,7 +4,10 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
+import collector_app
+import seller_sprite_auto_login as auto_login
 from collector_app import latest_source_folder
 from collector_gui import build_change_request_prompt
 
@@ -61,6 +64,51 @@ class ChangeRequestTests(unittest.TestCase):
             with self.subTest(region=region, category=category, urls=urls):
                 with self.assertRaises(ValueError):
                     build_change_request_prompt(region, category, urls, description)
+
+
+class LoginRoutingTests(unittest.TestCase):
+    def test_one_click_login_uses_v2_config_and_gui_verification_callback(self):
+        callback = lambda: None
+        with patch('seller_sprite_auto_login.login_if_needed', return_value=0) as login:
+            self.assertEqual(collector_app.main(['login'], wait_for_user=callback), 0)
+        self.assertEqual(login.call_args.args[0], collector_app.BASE_DIR / 'config_v2.json')
+        self.assertIs(login.call_args.args[1], callback)
+
+    def test_download_checks_login_before_collecting(self):
+        with patch('seller_sprite_auto_login.login_if_needed', return_value=0) as login, \
+             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
+             patch('collector.run_collection', return_value=0) as collect:
+            self.assertEqual(collector_app.main(['run']), 0)
+        login.assert_called_once()
+        collect.assert_called_once()
+
+    def test_download_stops_when_login_check_fails(self):
+        with patch('seller_sprite_auto_login.login_if_needed', return_value=1), \
+             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
+             patch('collector.run_collection') as collect:
+            self.assertEqual(collector_app.main(['run']), 1)
+        collect.assert_not_called()
+
+    def test_team_login_is_used_without_local_override(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            missing = Path(temporary)
+            with patch.object(auto_login, 'USERNAME_PATH', missing / 'username.txt'), \
+                 patch.object(auto_login, 'PASSWORD_PATH', missing / 'password.dpapi'):
+                username, password = auto_login.load_credentials()
+        self.assertTrue(username)
+        self.assertTrue(password)
+
+    def test_local_override_takes_priority(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)
+            username_path = folder / 'username.txt'
+            password_path = folder / 'password.dpapi'
+            username_path.write_text('local-user', encoding='utf-8')
+            password_path.touch()
+            with patch.object(auto_login, 'USERNAME_PATH', username_path), \
+                 patch.object(auto_login, 'PASSWORD_PATH', password_path), \
+                 patch.object(auto_login, 'decrypt_password', return_value='local-password'):
+                self.assertEqual(auto_login.load_credentials(), ('local-user', 'local-password'))
 
 
 @unittest.skipUnless(os.name == 'nt', 'Windows DPAPI integration test')

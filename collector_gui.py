@@ -131,10 +131,11 @@ class CollectorWindow:
         ttk.Label(shell, text="卖家精灵榜单采集", style="Title.TLabel").pack(anchor="w")
         ttk.Label(shell, textvariable=self.summary).pack(anchor="w", pady=(3, 14))
 
-        setup = self._card(shell, "1  本地环境", "首次安装后按引导检查配置，安装 Chrome，并在专用浏览器中安装、登录卖家精灵插件。")
+        setup = self._card(shell, "1  本地环境", "首次安装后按引导检查配置并安装 Chrome、卖家精灵插件。团队账号已包含在程序中。")
         setup_actions = ttk.Frame(setup, style="Card.TFrame")
         setup_actions.pack(anchor="w")
-        self._button(setup_actions, "本地环境配置与部署", self._setup_dialog, primary=True).pack(side="left")
+        self._button(setup_actions, "本地环境配置与部署", self._setup_dialog, primary=True).pack(side="left", padx=(0, 8))
+        self._button(setup_actions, "卖家精灵一键登录", self._login_clicked).pack(side="left")
 
         download = self._card(shell, "2  下载榜单", "默认下载全部 36 个来源；已完成任务会跳过。可选单个榜单测试，也可勾选重新下载。")
         picker = ttk.Frame(download, style="Card.TFrame")
@@ -166,17 +167,18 @@ class CollectorWindow:
     def _setup_dialog(self) -> None:
         dialog = Toplevel(self.root)
         dialog.title("本地环境配置与部署")
-        dialog.geometry("620x380")
+        dialog.geometry("650x435")
         dialog.transient(self.root)
         body = ttk.Frame(dialog, padding=22)
         body.pack(fill="both", expand=True)
         ttk.Label(body, text="首次使用向导", style="Title.TLabel").pack(anchor="w", pady=(0, 12))
-        ttk.Label(body, text="程序已包含 Python 和依赖，无需设置环境变量。先检查，再安装 Chrome、初始化插件；安装与登录需在浏览器中由本人完成。", wraplength=560).pack(anchor="w", pady=(0, 18))
+        ttk.Label(body, text="程序已包含 Python、依赖和团队登录账号，无需设置环境变量。先检查，再安装 Chrome、初始化插件；验证码仍需本人完成。", wraplength=560).pack(anchor="w", pady=(0, 18))
         self._button(body, "1  检查配置与驱动", lambda: self._run_command("check")).pack(anchor="w", pady=4)
         self._button(body, "2  获取 Chrome（若尚未安装）", lambda: webbrowser.open("https://www.google.com/chrome/")).pack(anchor="w", pady=4)
-        self._button(body, "3  打开专用浏览器，安装 / 登录卖家精灵插件", lambda: self._run_command("inspect")).pack(anchor="w", pady=4)
-        self._button(body, "4  保存登录账号（可选）", self._credential_dialog).pack(anchor="w", pady=4)
-        ttk.Label(body, text="安装插件、登录与验证码需要人工操作；之后登录状态保存在本机。", wraplength=560).pack(anchor="w", pady=(16, 0))
+        self._button(body, "3  打开专用浏览器，安装卖家精灵插件", lambda: self._run_command("inspect")).pack(anchor="w", pady=4)
+        self._button(body, "4  使用团队账号一键登录", self._login_clicked).pack(anchor="w", pady=4)
+        self._button(body, "5  改用本机账号（可选）", self._credential_dialog).pack(anchor="w", pady=4)
+        ttk.Label(body, text="程序会自动填写并提交团队账号；插件首次安装及可能出现的验证码需要人工操作。", wraplength=560).pack(anchor="w", pady=(16, 0))
 
     def _prompt_dialog(self) -> None:
         dialog = Toplevel(self.root)
@@ -261,6 +263,9 @@ class CollectorWindow:
             elif kind == "inspect_confirm":
                 messagebox.showinfo("浏览器初始化", "请在刚打开的 Chrome 中确认卖家精灵插件已安装并登录。\n完成后点击“确定”，程序会保存诊断截图并关闭本次浏览器。", parent=self.root)
                 value.set()
+            elif kind == "login_confirm":
+                messagebox.showinfo("完成登录验证", "请在 Chrome 中完成卖家精灵要求的验证码或其他验证，完成后点击“确定”。", parent=self.root)
+                value.set()
             elif kind == "done":
                 self.busy = False
                 self.buttons = [button for button in self.buttons if button.winfo_exists()]
@@ -268,6 +273,8 @@ class CollectorWindow:
                     button.configure(state="normal")
                 self.status.set("完成" if value == 0 else f"运行失败（代码 {value}），请查看上方记录")
                 self._refresh_summary()
+            elif kind == "after_success":
+                self.root.after(0, value)
         self.root.after(100, self._drain_events)
 
     def _wait_for_inspect(self) -> None:
@@ -275,7 +282,12 @@ class CollectorWindow:
         self.events.put(("inspect_confirm", signal))
         signal.wait()
 
-    def _run_worker(self, title: str, action) -> None:
+    def _wait_for_login(self) -> None:
+        signal = threading.Event()
+        self.events.put(("login_confirm", signal))
+        signal.wait()
+
+    def _run_worker(self, title: str, action, after_success=None) -> None:
         if self.busy:
             messagebox.showinfo("请稍候", "当前任务仍在运行，请等待完成。", parent=self.root)
             return
@@ -295,6 +307,8 @@ class CollectorWindow:
                 except Exception:
                     traceback.print_exc()
             self.events.put(("done", code))
+            if code == 0 and after_success is not None:
+                self.events.put(("after_success", after_success))
 
         threading.Thread(target=work, name="seller-sprite-task", daemon=True).start()
 
@@ -303,9 +317,16 @@ class CollectorWindow:
             if command == "check":
                 print(f"Chrome：{chrome_path() or '未找到，请先安装 Google Chrome'}")
                 print(f"数据目录：{SOURCE_ROOT}")
-            return collector_app.main([command, *(extra or [])], wait_for_user=self._wait_for_inspect if command == "inspect" else None)
+            wait_for_user = self._wait_for_inspect if command == "inspect" else self._wait_for_login if command in ("login", "run") else None
+            return collector_app.main([command, *(extra or [])], wait_for_user=wait_for_user)
 
-        self._run_worker({"run": "下载榜单", "inspect": "初始化浏览器和插件", "clean": "本地清洗与合并", "upload": "打开上传页面", "check": "检查环境"}[command], action)
+        self._run_worker({"run": "下载榜单", "inspect": "初始化浏览器和插件", "login": "卖家精灵一键登录", "clean": "本地清洗与合并", "upload": "打开上传页面", "check": "检查环境"}[command], action)
+
+    def _login_clicked(self) -> None:
+        if not chrome_path():
+            messagebox.showerror("需要 Chrome", "请先在“本地环境配置与部署”中安装 Chrome。", parent=self.root)
+            return
+        self._run_command("login")
 
     def _download(self) -> None:
         args: list[str] = []
@@ -316,7 +337,7 @@ class CollectorWindow:
             args.append("--force")
         self._run_command("run", args)
 
-    def _credential_dialog(self) -> None:
+    def _credential_dialog(self, start_login_after_save: bool = False) -> None:
         dialog = Toplevel(self.root)
         dialog.title("保存卖家精灵账号")
         dialog.resizable(False, False)
@@ -356,7 +377,7 @@ class CollectorWindow:
                     print("卖家精灵账号已使用当前 Windows 用户加密保存在本机。")
                 return result.returncode
 
-            self._run_worker("保存登录信息", action)
+            self._run_worker("保存登录信息", action, after_success=self._login_clicked if start_login_after_save else None)
 
         ttk.Button(body, text="加密保存", command=save, style="Primary.TButton").grid(row=3, column=1, sticky="e", pady=(14, 0))
         dialog.bind("<Return>", lambda _event: save())
@@ -385,6 +406,10 @@ def self_test() -> int:
         return 1
     if not enabled_tasks():
         print("No enabled download tasks")
+        return 1
+    from shared_login import USERNAME, PASSWORD
+    if not USERNAME or not PASSWORD:
+        print("The team login is not configured")
         return 1
     from playwright.sync_api import sync_playwright
     with sync_playwright() as playwright:

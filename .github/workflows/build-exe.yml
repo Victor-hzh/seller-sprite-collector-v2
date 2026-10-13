@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'collector*.py'
+      - 'seller_sprite_auto_login.py'
+      - 'shared_login.py'
       - 'app_paths.py'
       - 'config_v2.json'
       - 'tasks_v2.json'
