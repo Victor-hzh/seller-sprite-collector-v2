@@ -1,5 +1,19 @@
 name: Build Windows EXE
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'collector*.py'
+      - 'app_paths.py'
+      - 'config_v2.json'
+      - 'tasks_v2.json'
+      - '*login*.ps1'
+      - 'tools/build_exe.py'
+      - 'tools/build_installer.py'
+      - 'installer/**'
+      - 'requirements*.txt'
+      - 'README_WINDOWS_GUI.txt'
+      - '.github/workflows/build-exe.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -14,7 +28,12 @@ jobs:
       - run: python -m pip install -r requirements-build.txt
       - run: python -m unittest discover -s tests -v
       - run: python tools/build_exe.py
+      - name: Install NSIS for the build machine
+        run: choco install nsis --yes --no-progress
+      - run: python tools/build_installer.py
       - uses: actions/upload-artifact@v4
         with:
           name: SellerSpriteCollector-v2-Windows
-          path: dist/SellerSpriteCollector-v2.zip
+          path: |
+            dist/SellerSpriteCollector-v2-Setup.exe
+            dist/SellerSpriteCollector-v2.zip

@@ -11,7 +11,7 @@ import time
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 
 from app_paths import BASE_DIR
 RUNTIME_DIR = BASE_DIR / "runtime"
@@ -704,7 +704,7 @@ def run_collection(config: dict[str, Any], force: bool) -> int:
     logging.info("采集流程结束；失败任务 %s 个，清单：%s", failures, manifest_path)
     return 2 if failures else 0
 
-def inspect_mode(config: dict[str, Any]) -> int:
+def inspect_mode(config: dict[str, Any], wait_for_user: Callable[[], None] | None = None) -> int:
     validate_config(config, allow_placeholders=True)
     try:
         from playwright.sync_api import sync_playwright
@@ -728,7 +728,10 @@ def inspect_mode(config: dict[str, Any]) -> int:
         page = context.pages[0] if context.pages else context.new_page()
         page.goto(task["url"], wait_until="domcontentloaded", timeout=60000)
         print("\n浏览器已打开。请确认卖家精灵已登录并打开悬浮面板。")
-        input("完成后按回车，程序会保存诊断截图……")
+        if wait_for_user is None:
+            input("完成后按回车，程序会保存诊断截图……")
+        else:
+            wait_for_user()
         timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
         page.screenshot(path=str(ERROR_DIR / f"inspect-{timestamp}.png"), full_page=True)
         (ERROR_DIR / f"inspect-{timestamp}-frames.json").write_text(

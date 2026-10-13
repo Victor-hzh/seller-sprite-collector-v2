@@ -6,10 +6,24 @@ import subprocess
 import sys
 import webbrowser
 from datetime import datetime
+from pathlib import Path
+from typing import Callable
 from app_paths import BASE_DIR
 
 
-def main(argv=None):
+def latest_source_folder(source_root: Path, today: str) -> Path | None:
+    """Prefer today's Excel files, then the newest dated folder awaiting upload."""
+    if not source_root.is_dir():
+        return None
+    folders = sorted((path for path in source_root.iterdir() if path.is_dir()), reverse=True)
+    today_folder = source_root / today
+    if today_folder in folders:
+        folders.remove(today_folder)
+        folders.insert(0, today_folder)
+    return next((path for path in folders if any(path.glob('*.xlsx'))), None)
+
+
+def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
     parser = argparse.ArgumentParser(description='SellerSprite Collector V2')
     parser.add_argument('command', nargs='?', choices=['run', 'inspect', 'clean', 'credentials', 'upload', 'check'])
     parser.add_argument('--force', action='store_true')
@@ -45,7 +59,7 @@ def main(argv=None):
         elif command in ('run', 'inspect'):
             core.ensure_directories()
             core.configure_logging()
-            code = core.run_collection(config, args.force) if command == 'run' else core.inspect_mode(config)
+            code = core.run_collection(config, args.force) if command == 'run' else core.inspect_mode(config, wait_for_user)
         elif command == 'clean':
             from cleaning import build_dashboard_data as builder
             builder.ROOT = BASE_DIR
@@ -55,12 +69,15 @@ def main(argv=None):
         else:
             if config.get('repository') != 'Victor-hzh/seller-sprite-collector-v2':
                 raise RuntimeError('实验版只允许上传到独立 V2 仓库。')
-            date = datetime.now().strftime('%Y-%m-%d')
-            folder = BASE_DIR / 'data/source' / date
-            if not folder.is_dir():
-                raise RuntimeError('今天的数据目录不存在，请先下载。')
+            source_dir = Path(config.get('storage', {}).get('source_dir', 'data/source'))
+            if not source_dir.is_absolute():
+                source_dir = BASE_DIR / source_dir
+            folder = latest_source_folder(source_dir, datetime.now().strftime('%Y-%m-%d'))
+            if folder is None:
+                raise RuntimeError('没有找到已下载的 Excel，请先点击下载榜单。')
             os.startfile(str(folder))
-            webbrowser.open(f"https://github.com/{config['repository']}/upload/main/data/source/{date}")
+            webbrowser.open(f"https://github.com/{config['repository']}/upload/main/data/source/{folder.name}")
+            print(f'已打开数据文件夹和 GitHub 上传页面：{folder}')
             code = 0
     except Exception as exc:
         print(f'运行失败：{exc}')
