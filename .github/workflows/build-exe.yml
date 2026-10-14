@@ -7,11 +7,13 @@ on:
     paths:
       - 'collector*.py'
       - 'seller_sprite_auto_login.py'
+      - 'github_upload.py'
       - 'shared_login.py'
       - 'app_paths.py'
       - 'config_v2.json'
       - 'tasks_v2.json'
       - '*login*.ps1'
+      - 'save_github_token.ps1'
       - 'tools/build_exe.py'
       - 'tools/build_installer.py'
       - 'installer/**'
@@ -41,4 +43,3 @@ jobs:
           path: |
             dist/SellerSpriteCollector-v2-Setup.exe
             dist/SellerSpriteCollector-v2.zip
-

@@ -89,6 +89,24 @@ class LoginRoutingTests(unittest.TestCase):
             self.assertEqual(collector_app.main(['run']), 1)
         collect.assert_not_called()
 
+    def test_download_and_upload_runs_in_sequence_after_success(self):
+        with patch('seller_sprite_auto_login.login_if_needed', return_value=0), \
+             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
+             patch('collector.run_collection', return_value=0) as collect, \
+             patch('collector_app.upload_downloaded_excel', return_value=0) as upload:
+            self.assertEqual(collector_app.main(['run-upload', '--task', 'DE_WET_DRY_FLOOR_WASHER']), 0)
+        collect.assert_called_once()
+        upload.assert_called_once()
+        self.assertEqual(upload.call_args.kwargs, {'task_id': 'DE_WET_DRY_FLOOR_WASHER', 'today_only': True})
+
+    def test_failed_download_does_not_upload(self):
+        with patch('seller_sprite_auto_login.login_if_needed', return_value=0), \
+             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
+             patch('collector.run_collection', return_value=2), \
+             patch('collector_app.upload_downloaded_excel') as upload:
+            self.assertEqual(collector_app.main(['run-upload']), 2)
+        upload.assert_not_called()
+
     def test_team_login_is_used_without_local_override(self):
         with tempfile.TemporaryDirectory() as temporary:
             missing = Path(temporary)

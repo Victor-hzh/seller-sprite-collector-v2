@@ -20,7 +20,7 @@ def main():
         shutil.rmtree(package)
     package.mkdir(parents=True, exist_ok=True)
     for name in ('config_v2.json', 'tasks_v2.json',
-                 'save_login_credentials.ps1', 'decrypt_login_password.ps1', 'README.md', 'README_WINDOWS_GUI.txt'):
+                 'save_login_credentials.ps1', 'save_github_token.ps1', 'decrypt_login_password.ps1', 'README.md', 'README_WINDOWS_GUI.txt'):
         shutil.copy2(ROOT / name, package / name)
     shutil.copy2(ROOT / 'dist/SellerSpriteCollector.exe', package / 'SellerSpriteCollector.exe')
     (package / 'cleaning').mkdir(exist_ok=True)

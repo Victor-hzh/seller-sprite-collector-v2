@@ -38,6 +38,8 @@ python collector_app.py inspect
 python collector_app.py login
 python collector_app.py credentials
 python collector_app.py run
+python collector_app.py run-upload
+python collector_app.py upload-auto
 python collector_app.py clean
 python collector_app.py upload
 ```
@@ -72,7 +74,7 @@ data/processed/cleaning-audit.json 记录被排除产品及重复产品的差异
 
 在 Actions → Build Windows EXE 的最新成功运行中下载 `SellerSpriteCollector-v2-Windows`，解压后双击 `SellerSpriteCollector-v2-Setup.exe` 安装。开始菜单和桌面会出现“SellerSprite Collector V2”。也保留免安装 ZIP，供便携使用。安装版用户无需安装 Python、配置虚拟环境或设置环境变量；开发者本地构建时运行 `python tools/build_exe.py` 和 `python tools/build_installer.py`（构建机需有 NSIS）。
 
-窗口按“本地环境配置与部署 → 卖家精灵一键登录 → 开始下载 → 打开文件夹 + GitHub 上传页”操作。内置团队账号会自动用于一键登录和下载任务，用户无需输入账号密码；如需覆盖，可在本机另存账号。下载支持全部 36 个来源、单榜单、跳过已完成任务和强制重下；还提供本地清洗预览、数据文件夹和完整日志入口。上传按钮会打开最新有 Excel 的日期文件夹及对应的 v2 仓库上传页，用户仍需将 Excel 拖到页面并点击提交。GitHub Actions 随后自动清洗、合并并更新看板 JSON。
+窗口首次使用先完成本地环境配置并点击“连接 GitHub”，用拥有本仓库 Contents 读写权限的个人令牌连接一次。之后选择下载范围并点击“下载并更新看板”，程序自动检查卖家精灵登录状态、下载 Excel、向 V2 仓库提交新增或变化的 Excel；GitHub Actions 随后自动清洗、合并并更新看板 JSON。令牌通过 Windows 当前用户加密保存在 `runtime/github_token.dpapi`，不会加入仓库或安装包。下载支持全部 36 个来源、单榜单、跳过已完成任务和强制重下；上传失败可单独重试，不需要重新下载。“仅下载”和手动 GitHub 上传页面保留备用。
 
 首次仍需安装 Chrome，并在程序打开的专用 Chrome 中安装卖家精灵插件；团队账号自动登录，验证码人工完成。程序不附带浏览器、插件或登录状态。团队账号按项目所有人的要求随公开 V2 仓库与安装包提供；本机覆盖账号由当前 Windows 用户加密，保存在 `runtime/`。不要将本机 `runtime/`、浏览器配置或 `.venv` 上传到仓库。安装版数据也保存在安装目录下；卸载程序时保留下载数据与登录状态，方便自行备份或删除。详见 `README_WINDOWS_GUI.txt`。
 

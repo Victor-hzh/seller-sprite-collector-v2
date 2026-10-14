@@ -13,7 +13,7 @@ import webbrowser
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
-from tkinter import BooleanVar, StringVar, Tk, Toplevel, messagebox, ttk
+from tkinter import BooleanVar, Canvas, StringVar, Tk, Toplevel, messagebox, ttk
 from tkinter.scrolledtext import ScrolledText
 
 import collector_app
@@ -91,7 +91,7 @@ class CollectorWindow:
         self.task_by_label: dict[str, str | None] = {"全部榜单": None}
 
         root.title("卖家精灵数据采集 · V2")
-        root.geometry("940x750")
+        root.geometry("980x830")
         root.minsize(790, 650)
         root.configure(bg="#f5f6f8")
         root.protocol("WM_DELETE_WINDOW", self._on_close)
@@ -126,8 +126,15 @@ class CollectorWindow:
         return card
 
     def _build_layout(self) -> None:
-        shell = ttk.Frame(self.root, padding=20)
-        shell.pack(fill="both", expand=True)
+        canvas = Canvas(self.root, background="#f5f6f8", highlightthickness=0)
+        scrollbar = ttk.Scrollbar(self.root, orient="vertical", command=canvas.yview)
+        canvas.configure(yscrollcommand=scrollbar.set)
+        scrollbar.pack(side="right", fill="y")
+        canvas.pack(side="left", fill="both", expand=True)
+        shell = ttk.Frame(canvas, padding=20)
+        window = canvas.create_window((0, 0), window=shell, anchor="nw")
+        shell.bind("<Configure>", lambda _event: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.bind("<Configure>", lambda event: canvas.itemconfigure(window, width=event.width))
         ttk.Label(shell, text="卖家精灵榜单采集", style="Title.TLabel").pack(anchor="w")
         ttk.Label(shell, textvariable=self.summary).pack(anchor="w", pady=(3, 14))
 
@@ -137,21 +144,28 @@ class CollectorWindow:
         self._button(setup_actions, "本地环境配置与部署", self._setup_dialog, primary=True).pack(side="left", padx=(0, 8))
         self._button(setup_actions, "卖家精灵一键登录", self._login_clicked).pack(side="left")
 
-        download = self._card(shell, "2  下载榜单", "默认下载全部 36 个来源；已完成任务会跳过。可选单个榜单测试，也可勾选重新下载。")
+        download = self._card(shell, "2  下载并更新", "选择全部或单个榜单。点击“下载并更新看板”后，程序会依次下载、上传 Excel 并提交 GitHub。")
         picker = ttk.Frame(download, style="Card.TFrame")
         picker.pack(fill="x")
         ttk.Label(picker, text="下载范围", style="Card.TLabel").pack(side="left", padx=(0, 8))
         self.task_box = ttk.Combobox(picker, textvariable=self.task_label, state="readonly", width=52)
         self.task_box.pack(side="left", padx=(0, 14))
         ttk.Checkbutton(picker, text="重新下载已完成榜单", variable=self.force).pack(side="left")
-        self._button(download, "开始下载", self._download, primary=True).pack(anchor="w", pady=(14, 0))
+        download_actions = ttk.Frame(download, style="Card.TFrame")
+        download_actions.pack(anchor="w", pady=(14, 0))
+        self._button(download_actions, "下载并更新看板", lambda: self._download(upload=True), primary=True).pack(side="left", padx=(0, 8))
+        self._button(download_actions, "仅下载", lambda: self._download(upload=False)).pack(side="left")
 
-        upload = self._card(shell, "3  上传到 GitHub", "下载结束后打开 Excel 文件夹和对应日期的 GitHub 上传页。把文件拖进网页并提交后，仓库会自动清洗、合并和更新看板数据。")
+        upload = self._card(shell, "3  GitHub 连接与上传", "首次使用先连接 GitHub。下载并更新会自动提交 Excel，触发仓库清洗；上传失败时可点击“重新上传已下载 Excel”。")
         upload_actions = ttk.Frame(upload, style="Card.TFrame")
         upload_actions.pack(anchor="w")
-        self._button(upload_actions, "打开文件夹 + GitHub 上传页", lambda: self._run_command("upload"), primary=True).pack(side="left", padx=(0, 8))
-        self._button(upload_actions, "只打开数据文件夹", self._open_source_folder).pack(side="left", padx=(0, 8))
-        self._button(upload_actions, "本地清洗预览（可选）", lambda: self._run_command("clean")).pack(side="left")
+        self._button(upload_actions, "连接 GitHub", self._github_token_dialog).pack(side="left", padx=(0, 8))
+        self._button(upload_actions, "重新上传已下载 Excel", self._upload_auto, primary=True).pack(side="left", padx=(0, 8))
+        self._button(upload_actions, "手动上传页面（备用）", lambda: self._run_command("upload")).pack(side="left")
+        upload_tools = ttk.Frame(upload, style="Card.TFrame")
+        upload_tools.pack(anchor="w", pady=(8, 0))
+        self._button(upload_tools, "打开数据文件夹", self._open_source_folder).pack(side="left", padx=(0, 8))
+        self._button(upload_tools, "本地清洗预览（可选）", lambda: self._run_command("clean")).pack(side="left")
 
         prompt = self._card(shell, "4  提交新的榜单需求", "选择地区和品类，粘贴榜单网址并描述现状，生成可复制的完整修改提示词。")
         self._button(prompt, "填写需求并生成提示词", self._prompt_dialog, primary=True).pack(anchor="w")
@@ -161,13 +175,13 @@ class CollectorWindow:
         ttk.Label(log_header, text="运行记录").pack(side="left")
         self._button(log_header, "打开完整日志", self._open_log).pack(side="right")
         self.log = ScrolledText(shell, height=9, wrap="word", state="disabled", font=("Consolas", 9), background="#172331", foreground="#e7edf2")
-        self.log.pack(fill="both", expand=True)
+        self.log.pack(fill="x")
         ttk.Label(shell, textvariable=self.status).pack(anchor="w", pady=(8, 0))
 
     def _setup_dialog(self) -> None:
         dialog = Toplevel(self.root)
         dialog.title("本地环境配置与部署")
-        dialog.geometry("650x435")
+        dialog.geometry("650x515")
         dialog.transient(self.root)
         body = ttk.Frame(dialog, padding=22)
         body.pack(fill="both", expand=True)
@@ -178,6 +192,7 @@ class CollectorWindow:
         self._button(body, "3  打开专用浏览器，安装卖家精灵插件", lambda: self._run_command("inspect")).pack(anchor="w", pady=4)
         self._button(body, "4  使用团队账号一键登录", self._login_clicked).pack(anchor="w", pady=4)
         self._button(body, "5  改用本机账号（可选）", self._credential_dialog).pack(anchor="w", pady=4)
+        self._button(body, "6  连接 GitHub 自动上传", self._github_token_dialog).pack(anchor="w", pady=4)
         ttk.Label(body, text="程序会自动填写并提交团队账号；插件首次安装及可能出现的验证码需要人工操作。", wraplength=560).pack(anchor="w", pady=(16, 0))
 
     def _prompt_dialog(self) -> None:
@@ -317,10 +332,10 @@ class CollectorWindow:
             if command == "check":
                 print(f"Chrome：{chrome_path() or '未找到，请先安装 Google Chrome'}")
                 print(f"数据目录：{SOURCE_ROOT}")
-            wait_for_user = self._wait_for_inspect if command == "inspect" else self._wait_for_login if command in ("login", "run") else None
+            wait_for_user = self._wait_for_inspect if command == "inspect" else self._wait_for_login if command in ("login", "run", "run-upload") else None
             return collector_app.main([command, *(extra or [])], wait_for_user=wait_for_user)
 
-        self._run_worker({"run": "下载榜单", "inspect": "初始化浏览器和插件", "login": "卖家精灵一键登录", "clean": "本地清洗与合并", "upload": "打开上传页面", "check": "检查环境"}[command], action)
+        self._run_worker({"run": "下载榜单", "run-upload": "下载并更新看板", "inspect": "初始化浏览器和插件", "login": "卖家精灵一键登录", "clean": "本地清洗与合并", "upload": "打开上传页面", "upload-auto": "自动上传已下载 Excel", "check": "检查环境"}[command], action)
 
     def _login_clicked(self) -> None:
         if not chrome_path():
@@ -328,14 +343,76 @@ class CollectorWindow:
             return
         self._run_command("login")
 
-    def _download(self) -> None:
+    def _download(self, *, upload: bool) -> None:
+        if upload:
+            from github_upload import saved_token_exists
+            if not saved_token_exists():
+                self._github_token_dialog(after_save=lambda: self._download(upload=True))
+                return
         args: list[str] = []
         task_id = self.task_by_label.get(self.task_label.get())
         if task_id:
             args.extend(["--task", task_id])
         if self.force.get():
             args.append("--force")
-        self._run_command("run", args)
+        self._run_command("run-upload" if upload else "run", args)
+
+    def _upload_auto(self) -> None:
+        from github_upload import saved_token_exists
+        if not saved_token_exists():
+            self._github_token_dialog(after_save=self._upload_auto)
+            return
+        args: list[str] = []
+        task_id = self.task_by_label.get(self.task_label.get())
+        if task_id:
+            args.extend(["--task", task_id])
+        self._run_command("upload-auto", args)
+
+    def _github_token_dialog(self, after_save=None) -> None:
+        dialog = Toplevel(self.root)
+        dialog.title("连接 GitHub 自动上传")
+        dialog.geometry("690x290")
+        dialog.resizable(False, False)
+        dialog.transient(self.root)
+        dialog.grab_set()
+        body = ttk.Frame(dialog, padding=20)
+        body.pack(fill="both", expand=True)
+        ttk.Label(body, text="首次使用：保存个人 GitHub 访问令牌", style="Title.TLabel").pack(anchor="w")
+        ttk.Label(body, text="令牌需能写入 Victor-hzh/seller-sprite-collector-v2 的 Contents。保存后只供当前 Windows 用户使用，不会上传到仓库。", wraplength=635).pack(anchor="w", pady=(9, 13))
+        ttk.Button(body, text="打开 GitHub 令牌创建页面", command=lambda: webbrowser.open("https://github.com/settings/personal-access-tokens/new?name=SellerSprite+Collector+V2&target_name=Victor-hzh&contents=write")).pack(anchor="w", pady=(0, 14))
+        row = ttk.Frame(body)
+        row.pack(fill="x")
+        ttk.Label(row, text="粘贴令牌").pack(side="left", padx=(0, 10))
+        secret = ttk.Entry(row, show="●", width=57)
+        secret.pack(side="left", fill="x", expand=True)
+        secret.focus_set()
+
+        def save() -> None:
+            token = secret.get().strip()
+            if not token or any(ch.isspace() for ch in token):
+                messagebox.showerror("令牌无效", "请粘贴完整的 GitHub 访问令牌。", parent=dialog)
+                return
+            secret.delete(0, "end")
+            dialog.destroy()
+
+            def action() -> int:
+                result = subprocess.run(
+                    ["powershell.exe", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", str(BASE_DIR / "save_github_token.ps1"), "-FromStdin"],
+                    input=token + "\n", capture_output=True, text=True, encoding="utf-8", errors="replace",
+                    env={key: value for key, value in os.environ.items() if key.upper() != "PSMODULEPATH"},
+                )
+                if result.returncode:
+                    print("GitHub 令牌保存失败；请重试。")
+                    return result.returncode
+                from github_upload import GitHubClient, REPOSITORY, read_saved_token
+                GitHubClient(read_saved_token()).request("GET", f"/repos/{REPOSITORY}")
+                print("GitHub 连接成功。令牌已使用当前 Windows 用户加密保存在本机。")
+                return 0
+
+            self._run_worker("连接 GitHub", action, after_success=after_save)
+
+        ttk.Button(body, text="保存并连接", command=save, style="Primary.TButton").pack(anchor="e", pady=(16, 0))
+        dialog.bind("<Return>", lambda _event: save())
 
     def _credential_dialog(self, start_login_after_save: bool = False) -> None:
         dialog = Toplevel(self.root)
@@ -399,7 +476,7 @@ class CollectorWindow:
 
 
 def self_test() -> int:
-    required = ["config_v2.json", "tasks_v2.json", "save_login_credentials.ps1", "decrypt_login_password.ps1", "cleaning/cleaning_rules.json", "cleaning/exchange_rates.json"]
+    required = ["config_v2.json", "tasks_v2.json", "save_login_credentials.ps1", "save_github_token.ps1", "decrypt_login_password.ps1", "cleaning/cleaning_rules.json", "cleaning/exchange_rates.json"]
     missing = [name for name in required if not (BASE_DIR / name).is_file()]
     if missing:
         print("Missing installer files:", ", ".join(missing))

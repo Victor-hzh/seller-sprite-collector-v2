@@ -25,7 +25,7 @@ def latest_source_folder(source_root: Path, today: str) -> Path | None:
 
 def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
     parser = argparse.ArgumentParser(description='SellerSprite Collector V2')
-    parser.add_argument('command', nargs='?', choices=['run', 'inspect', 'login', 'clean', 'credentials', 'upload', 'check'])
+    parser.add_argument('command', nargs='?', choices=['run', 'run-upload', 'inspect', 'login', 'clean', 'credentials', 'upload', 'upload-auto', 'check'])
     parser.add_argument('--force', action='store_true')
     parser.add_argument('--task', help='只运行指定任务 ID，适合验证新增榜单')
     args = parser.parse_args(argv)
@@ -56,10 +56,10 @@ def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
                               'productGroups': len({(t['marketplace'], t['category']) for t in config['tasks'] if t.get('enabled', True)}),
                               'baseDirectory': str(BASE_DIR), 'browserDriverReady': driver_ready}, ensure_ascii=False, indent=2))
             code = 0
-        elif command in ('run', 'inspect'):
+        elif command in ('run', 'run-upload', 'inspect'):
             core.ensure_directories()
             core.configure_logging()
-            if command == 'run':
+            if command in ('run', 'run-upload'):
                 from seller_sprite_auto_login import login_if_needed
                 print('先检查卖家精灵登录状态，必要时自动登录...')
                 login_code = login_if_needed(config_path, wait_for_user)
@@ -67,6 +67,8 @@ def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
                     raise RuntimeError('卖家精灵登录检查未通过，下载未开始。')
                 print('登录检查通过，开始下载榜单。')
                 code = core.run_collection(config, args.force)
+                if code == 0 and command == 'run-upload':
+                    code = upload_downloaded_excel(config, task_id=args.task, today_only=True)
             else:
                 code = core.inspect_mode(config, wait_for_user)
         elif command == 'login':
@@ -78,6 +80,8 @@ def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
             code = builder.main([])
         elif command == 'credentials':
             code = subprocess.run(['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(BASE_DIR / 'save_login_credentials.ps1')]).returncode
+        elif command == 'upload-auto':
+            code = upload_downloaded_excel(config, task_id=args.task)
         else:
             if config.get('repository') != 'Victor-hzh/seller-sprite-collector-v2':
                 raise RuntimeError('实验版只允许上传到独立 V2 仓库。')
@@ -97,6 +101,29 @@ def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
     if interactive:
         input('按回车关闭。')
     return code
+
+
+def upload_downloaded_excel(config: dict, *, task_id: str | None = None, today_only: bool = False) -> int:
+    from github_upload import GitHubClient, REPOSITORY, excel_files, read_saved_token, upload_excel_files
+
+    if config.get('repository') != REPOSITORY:
+        raise RuntimeError('自动上传仅允许独立 V2 仓库。')
+    source_dir = Path(config.get('storage', {}).get('source_dir', 'data/source'))
+    if not source_dir.is_absolute():
+        source_dir = BASE_DIR / source_dir
+    today = datetime.now().strftime('%Y-%m-%d')
+    folder = source_dir / today if today_only else latest_source_folder(source_dir, today)
+    if folder is None or not folder.is_dir():
+        raise RuntimeError('没有找到可上传的 Excel，请先下载榜单。')
+    files = excel_files(folder, task_id)
+    print(f'准备自动上传 {folder.name} 的 {len(files)} 份 Excel…')
+    changed, url = upload_excel_files(files, folder, GitHubClient(read_saved_token()))
+    if changed:
+        print(f'已提交 {changed} 份 Excel：{url}')
+        print(f'清洗任务会自动运行：https://github.com/{REPOSITORY}/actions/workflows/build-dashboard-data.yml')
+    else:
+        print('仓库中的 Excel 与本地相同，无需重新提交；看板数据不会重复构建。')
+    return 0
 
 
 if __name__ == '__main__':
