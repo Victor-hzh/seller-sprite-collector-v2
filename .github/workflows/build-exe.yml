@@ -1,4 +1,6 @@
 name: Build Windows EXE
+env:
+  PYTHONUTF8: '1'
 on:
   push:
     branches: [main]
@@ -39,3 +41,4 @@ jobs:
           path: |
             dist/SellerSpriteCollector-v2-Setup.exe
             dist/SellerSpriteCollector-v2.zip
+
