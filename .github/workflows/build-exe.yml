@@ -18,6 +18,7 @@ on:
       - 'tools/build_installer.py'
       - 'installer/**'
       - 'requirements*.txt'
+      - 'tests/**'
       - 'README_WINDOWS_GUI.txt'
       - '.github/workflows/build-exe.yml'
   workflow_dispatch:
