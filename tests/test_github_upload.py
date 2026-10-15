@@ -89,7 +89,7 @@ class GitHubUploadTests(unittest.TestCase):
                 {"id": "TASK_A", "status": "completed", "download_file": "data/source/2026-10-14/correct.xlsx"},
             ]}), encoding="utf-8")
             with patch.object(github_upload, "BASE_DIR", Path(temporary)):
-                self.assertEqual(github_upload.excel_files(folder, "TASK_A"), [correct])
+                self.assertEqual(github_upload.excel_files(folder, "TASK_A"), [correct.resolve()])
                 with self.assertRaises(github_upload.UploadError):
                     github_upload.excel_files(folder, "TASK_B")
 
