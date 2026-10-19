@@ -50,13 +50,33 @@ def decision(product, rules):
         return True, 'explicit_keep'
     if asin in {str(a).upper() for a in rules.get('exclude_asins', [])}:
         return False, 'explicit_exclude'
+    if not (product.get('title') or '').strip():
+        return False, 'needs_review:missing_title'
     for pattern in rules.get('exclude_title_patterns', []):
         if re.search(pattern, product.get('title', ''), re.I):
             return False, 'title_pattern:' + pattern
     required = rules.get('require_title_patterns', [])
     if required and not any(re.search(pattern, product.get('title', ''), re.I) for pattern in required):
-        return False, 'needs_review:household_floor_washer_not_confirmed'
+        return False, 'needs_review:' + rules.get('review_reason', 'category_not_confirmed')
     return True, 'no_exclusion_rule'
+
+
+def rules_for(cleaning, market, category):
+    """Apply shared exclusions to every list, then category and site exceptions."""
+    merged = {}
+    layers = (cleaning.get('default', {}),
+              cleaning.get('categories', {}).get(category, {}),
+              cleaning.get('groups', {}).get(f'{market}/{category}', {}))
+    for layer in layers:
+        for key, value in layer.items():
+            if key == 'require_title_patterns':
+                # A site-specific inclusion scope replaces the category scope.
+                merged[key] = list(value)
+            elif isinstance(value, list):
+                merged.setdefault(key, []).extend(value)
+            else:
+                merged[key] = value
+    return merged
 
 
 def summaries(products, field):
@@ -132,8 +152,7 @@ def build_payload(files, tasks, cleaning):
     for (market, category, date), sources in sorted(grouped.items()):
         # Prefer explicitly named Node files to legacy files of the same node.
         sources.sort(key=lambda s: (priority[s['task']['id']], '_Node' not in s['file'], s['file']))
-        rules = dict(cleaning.get('default', {}))
-        rules.update(cleaning.get('groups', {}).get(f'{market}/{category}', {}))
+        rules = rules_for(cleaning, market, category)
         dataset, events = merge_group(sources, rules)
         expected_nodes = {str(t.get('node_id')) for t in tasks if t.get('enabled', True) and t['marketplace'] == market and t['category'] == category}
         dataset['missingSourceNodes'] = sorted(expected_nodes - {s['node'] for s in sources})

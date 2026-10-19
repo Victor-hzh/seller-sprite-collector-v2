@@ -20,7 +20,7 @@
 - 按日期、站点、品类合并，ASIN 去重，按月销售额排序。
 - 同 ASIN 数值冲突按 tasks_v2.json 来源顺序选用一份，不相加，审计记录包含差异。
 - 大盘计算包含全部清洗后的产品，不截取 Top50；品牌和卖家汇总重新生成。
-- cleaning/cleaning_rules.json 支持各站点品类 ASIN 保留/排除及标题正则排除；德国洗地机已启用家用吸拖洗一体机范围，其他品类仍保留原规则。
+- cleaning/cleaning_rules.json 按通用、品类、站点品类三层应用规则。全部站点自动剔除明确的清洁液、替换件和工业设备；洗地机另排除桶式干湿吸尘器，布艺清洗机排除纯蒸汽机，除螨仪只纳入有床垫/除螨证据的商品。德国洗地机继续使用其专门的家用吸拖洗一体机规则。
 - data/merged/YYYY-MM-DD 保存合并清洗Excel，保留原70列、图片、商品链接、列宽、冻结首行及DE/Brands/Sellers/Note工作表。
 - 合并表的 # 是竞品销售额顺序，原始小类BSR字段不修改。Brands/Sellers重新汇总，市场份额沿用原表月销量口径。
 - 原始商品表没有逐SKU年销量/年销售额，所以重算汇总的年指标留空，不相加原表的整榜年度汇总。
@@ -52,10 +52,10 @@ python collector_app.py upload
 
 ## 清洗规则
 
-groups 中以 DE/Wet-Dry-Floor-Washer 这样的键区分站点和品类。
-keep_asins 优先于 exclude_asins；未命中排除规则的产品默认保留。
-exclude_title_patterns 是 Python 正则，需确认规则后再启用。
-data/processed/cleaning-audit.json 记录被排除产品及重复产品的差异。
+default 对所有站点和品类生效；categories 按品类叠加；groups 中以 DE/Wet-Dry-Floor-Washer 这样的键覆盖特定站点品类。排除正则逐层累加，品类的 require_title_patterns 可由站点规则替换。
+keep_asins 优先于 exclude_asins 和标题规则；只有有明确品类证据的除螨仪和德国洗地机才启用“未确认则待复核”。其他榜单未命中排除规则的商品默认保留，避免因关键词不全误删整机。
+exclude_title_patterns 是 Python 正则；清洁液等规则只匹配标题前段，避免把“随机附送清洁液”的整机误当耗材。无法确认品类、标题缺失的商品进入 review，不计入看板大盘。
+data/processed/cleaning-audit.json 记录 excluded、review、duplicate，包含 ASIN、标题、命中规则、来源和原榜单排名。新增规则应先检查审计记录和各站点产品数量；确认后的例外可放入站点品类的 keep_asins/exclude_asins。
 销售额缺失记录保留并排在最后，missingRevenueCount 标明缺失数量。
 统计仍沿用原看板的月销量/月销售额字段；父子变体指标口径需另行核实。
 得到的是来源榜单覆盖的竞品样本，不等同于全市场。来源覆盖不一致的历史日期不计算虚假的排名/销售环比。

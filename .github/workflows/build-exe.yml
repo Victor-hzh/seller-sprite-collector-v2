@@ -12,6 +12,7 @@ on:
       - 'app_paths.py'
       - 'config_v2.json'
       - 'tasks_v2.json'
+      - 'cleaning/**'
       - '*login*.ps1'
       - 'save_github_token.ps1'
       - 'tools/build_exe.py'
