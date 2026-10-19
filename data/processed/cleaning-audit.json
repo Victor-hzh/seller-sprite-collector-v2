@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T02:22:24+00:00",
+  "generatedAt": "2026-10-19T03:51:11+00:00",
   "duplicatePolicy": "configured_source_priority",
   "events": [
     {
@@ -2152,6 +2152,36 @@
       "category": "Wet-Dry-Floor-Washer",
       "date": "2026-09-23",
       "action": "excluded",
+      "asin": "B0HHN61KPZ",
+      "title": "Dyson(ダイソン) Dyson V12s Detect Slim Submarine 无线棒式吸尘器 戴森官方限定 延长保修1年款",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
+        "nodeId": "13698381",
+        "sourceUrl": "https://www.amazon.co.jp/gp/bestsellers/diy/13698381",
+        "rank": 17
+      }
+    },
+    {
+      "marketplace": "JP",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-23",
+      "action": "excluded",
+      "asin": "B0HGLFDYL5",
+      "title": "Dyson(ダイソン) 吸尘器 无线 Dyson V12s Detect Slim Submarine (SV46 SU) 棒 手持式吸尘器 气旋 可用水擦拭 干式吸尘器 带充电支架 【从现在开始用水擦拭】 (New V8 slim)",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
+        "nodeId": "13698381",
+        "sourceUrl": "https://www.amazon.co.jp/gp/bestsellers/diy/13698381",
+        "rank": 20
+      }
+    },
+    {
+      "marketplace": "JP",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-23",
+      "action": "excluded",
       "asin": "B0BW467WC5",
       "title": "Makita 牧田兼容品 充电式 集尘机 干湿两用 集尘机 业务用 粉尘用 鼓风机 软管 小型 吸 大容量 10L 吸尘器 无线 电动 18V 电池 对应 ※仅本体 电池 充电器 另售 (SYU01-BL)",
       "reason": "title_pattern:\\b(?:wet.?dry|nass.?trocken|乾湿両用|干湿两用|solidi.?liquidi|seco.?húmedo).{0,90}\\b(?:1[0-9]|2[0-9]|3[0-9])\\s*(?:L|lit(?:er|re|ro)s?)\\b",
@@ -2235,6 +2265,21 @@
         "nodeId": "13698381",
         "sourceUrl": "https://www.amazon.co.jp/gp/bestsellers/diy/13698381",
         "rank": 5
+      }
+    },
+    {
+      "marketplace": "JP",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "excluded",
+      "asin": "B0HHN61KPZ",
+      "title": "Dyson(ダイソン) Dyson V12s Detect Slim Submarine 无线棒式吸尘器 戴森官方限定 延长保修1年款",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "13698381",
+        "sourceUrl": "https://www.amazon.co.jp/gp/bestsellers/diy/13698381",
+        "rank": 7
       }
     },
     {
@@ -2332,6 +2377,21 @@
       "category": "Wet-Dry-Floor-Washer",
       "date": "2026-10-08",
       "action": "excluded",
+      "asin": "B0HHN61KPZ",
+      "title": "Dyson(ダイソン) Dyson V12s Detect Slim Submarine 无线棒式吸尘器 戴森官方限定 延长保修1年款",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "13698381",
+        "sourceUrl": "https://www.amazon.co.jp/gp/bestsellers/diy/13698381",
+        "rank": 7
+      }
+    },
+    {
+      "marketplace": "JP",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
       "asin": "B0H99BC6SP",
       "title": "Gwrv 干湿两用 真空 带鼓风机功能 15L 家用 商用 吸尘器 800W (15L,塑料制 标准型号(附9件套))",
       "reason": "title_pattern:(?:業務用|商用|集塵機|集じん機)",
@@ -2340,6 +2400,21 @@
         "nodeId": "13698381",
         "sourceUrl": "https://www.amazon.co.jp/gp/bestsellers/diy/13698381",
         "rank": 13
+      }
+    },
+    {
+      "marketplace": "JP",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0HGLFDYL5",
+      "title": "Dyson(ダイソン) 吸尘器 无线 Dyson V12s Detect Slim Submarine (SV46 SU) 棒 手持式吸尘器 气旋 可用水擦拭 干式吸尘器 带充电支架 【从现在开始用水擦拭】 (New V8 slim)",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "13698381",
+        "sourceUrl": "https://www.amazon.co.jp/gp/bestsellers/diy/13698381",
+        "rank": 15
       }
     },
     {
@@ -3045,6 +3120,21 @@
         "nodeId": "3576389031",
         "sourceUrl": "https://www.amazon.co.uk/gp/bestsellers/kitchen/3576389031",
         "rank": 39
+      }
+    },
+    {
+      "marketplace": "UK",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "excluded",
+      "asin": "B0GKHN6VPY",
+      "title": "Karcher Intensive Carpet & Upholstery Cleaner, 1L",
+      "reason": "title_pattern:^.{0,80}\\b(?:EveryMess|Spot\\s+Cleaner|Upholstery\\s+Cleaner|Stain\\s+Eliminator|Portable\\s+Carpet\\s+Cleaner)\\b",
+      "source": {
+        "file": "BSR_UK_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "3576389031",
+        "sourceUrl": "https://www.amazon.co.uk/gp/bestsellers/kitchen/3576389031",
+        "rank": 40
       }
     },
     {
@@ -7215,6 +7305,261 @@
         "nodeId": "1063922",
         "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/1063922",
         "rank": 37
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-08-31",
+      "action": "excluded",
+      "asin": "B0G2ZMG22K",
+      "title": "Shark EveryMess 3-in-1 Wet/Dry Vac & Stain Eliminator, 4 Tools VX101sUltra-Powerful , Multi-Surface, StainForce Technology,",
+      "reason": "title_pattern:^.{0,80}\\b(?:EveryMess|Spot\\s+Cleaner|Upholstery\\s+Cleaner|Stain\\s+Eliminator|Portable\\s+Carpet\\s+Cleaner)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 11
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-08-31",
+      "action": "excluded",
+      "asin": "B0GY5Z5BT4",
+      "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-08-31",
+      "action": "excluded",
+      "asin": "B003R3JFJO",
+      "title": "Bissell Garage Pro Wall-Mounted Wet Dry Vacuum/Blower, 18P03sAuto tool kit included; wall-mount saves floor space; wet/dry",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 21
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-08-31",
+      "action": "excluded",
+      "asin": "B07B4853N8",
+      "title": "BISSELL MultiClean Wet/Dry Garage and Auto Vacuum, 2035MsRed color; multi-purpose wet/dry cleaning for garage floors, auto",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 45
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "excluded",
+      "asin": "B0GY5Z5BT4",
+      "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "excluded",
+      "asin": "B0G2ZMG22K",
+      "title": "Shark EveryMess 3-in-1 Wet/Dry Vac & Stain Eliminator, 4 Tools VX101sUltra-Powerful , Multi-Surface, StainForce Technology,",
+      "reason": "title_pattern:^.{0,80}\\b(?:EveryMess|Spot\\s+Cleaner|Upholstery\\s+Cleaner|Stain\\s+Eliminator|Portable\\s+Carpet\\s+Cleaner)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 17
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "excluded",
+      "asin": "B003R3JFJO",
+      "title": "Bissell Garage Pro Wall-Mounted Wet Dry Vacuum/Blower, 18P03sAuto tool kit included; wall-mount saves floor space; wet/dry",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 28
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "excluded",
+      "asin": "B07B4853N8",
+      "title": "BISSELL MultiClean Wet/Dry Garage and Auto Vacuum, 2035MsRed color; multi-purpose wet/dry cleaning for garage floors, auto",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 47
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-23",
+      "action": "excluded",
+      "asin": "B0GY5Z5BT4",
+      "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 12
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-23",
+      "action": "excluded",
+      "asin": "B003R3JFJO",
+      "title": "Bissell Garage Pro Wall-Mounted Wet Dry Vacuum/Blower, 18P03sAuto tool kit included; wall-mount saves floor space; wet/dry",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 28
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "excluded",
+      "asin": "B0GY5Z5BT4",
+      "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuum",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "excluded",
+      "asin": "B003R3JFJO",
+      "title": "Bissell Garage Pro Wall-Mounted Wet Dry Vacuum/Blower, 18P03",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 27
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "excluded",
+      "asin": "B07B4853N8",
+      "title": "BISSELL MultiClean Wet/Dry Garage and Auto Vacuum, 2035MsRed color; multi-purpose wet/dry cleaning for garage floors, auto",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 47
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0GP1DH22S",
+      "title": "Shark EveryMess 3-in-1 Wet/Dry Vac & Stain Eliminator, 3 Tools VX102BRNsUltra-Powerful , Multi-Surface, StainForce Technolo",
+      "reason": "title_pattern:^.{0,80}\\b(?:EveryMess|Spot\\s+Cleaner|Upholstery\\s+Cleaner|Stain\\s+Eliminator|Portable\\s+Carpet\\s+Cleaner)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 21
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B0GY5Z5BT4",
+      "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
+      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 27
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B003R3JFJO",
+      "title": "Bissell Garage Pro Wall-Mounted Wet Dry Vacuum/Blower, 18P03sAuto tool kit included; wall-mount saves floor space; wet/dry",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 41
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "excluded",
+      "asin": "B07B4853N8",
+      "title": "BISSELL MultiClean Wet/Dry Garage and Auto Vacuum, 2035MsRed color; multi-purpose wet/dry cleaning for garage floors, auto",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 48
       }
     }
   ],
