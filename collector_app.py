@@ -1,67 +1,132 @@
-Û^š›bh¥êß¢¹­…â'ŠØš–,ŞçÚº[C®+Ş²Š^­«b¢z'¶…ŠW’ÊË^ššè¾'^­ö¢•çHˆˆÛÛœÛÛHY[HÚ\™YHÛİ\˜ÙHÚXÚÛİ][™HXÚØYÙYÚ[™İÜÈVKˆˆˆ‚š[\Ü\™Ü\œÙBš[\ÜœÛÛ‚š[\ÜÜÂš[\ÜİXœ›ØÙ\ÜÂš[\ÜŞ\Âš[\ÜÙX˜œ›İÜÙ\‚™œ›ÛH]][YH[\Ü]][YB™œ›ÛH]Xˆ[\Ü]™œ›ÛH\[™È[\ÜØ[X›B™œ›ÛH\Ü]È[\ÜTÑWÑT‚‚‚™Yˆ]\İÜÛİ\˜ÙWÙ›Û\ŠÛİ\˜ÙWÜ›Ûİˆ]Ù^NˆİŠHOˆ]›Û™N‚ˆˆˆ”™Y™\ˆÙ^IÜÈ^Ù[š[\Ë[ˆH™]Ù\İ]Y›Û\ˆ]ØZ][™È\ØYˆˆˆ‚ˆYˆ›İÛİ\˜ÙWÜ›Ûİš\×Ù\Š
-N‚ˆ™]\›ˆ›Û™Bˆ›Û\œÈHÛÜY
+"""Console menu shared by source checkout and the packaged Windows EXE."""
+import argparse
+import json
+import os
+import subprocess
+import sys
+import webbrowser
+from datetime import datetime
+from pathlib import Path
+from typing import Callable
+from app_paths import BASE_DIR
 
-]›Üˆ][ˆÛİ\˜ÙWÜ›Ûİš]\™\Š
-HYˆ]š\×Ù\Š
-JK™]™\œÙOUYJBˆÙ^WÙ›Û\ˆHÛİ\˜ÙWÜ›ÛİÈÙ^BˆYˆÙ^WÙ›Û\ˆ[ˆ›Û\œÎ‚ˆ›Û\œËœ™[[İ™JÙ^WÙ›Û\ŠBˆ›Û\œËš[œÙ\
-Ù^WÙ›Û\ŠBˆ™]\›ˆ™^
 
-]›Üˆ][ˆ›Û\œÈYˆ[J]™ÛØŠ	Ê‹Ş	ÊJJK›Û™JB‚‚™YˆXZ[Š\™İS›Û™K
-‹ØZ]Ù›Ü—İ\Ù\ˆØ[X›VÖ×K›Û™WH›Û™HH›Û™JN‚ˆ\œÙ\ˆH\™Ü\œÙK\™İ[Y[\œÙ\Š\ØÜš\[ÛIÔÙ[\”Üš]HÛÛXİÜˆŒ‰ÊBˆ\œÙ\‹˜YØ\™İ[Y[
-	ØÛÛ[X[™	Ë˜\™ÜÏIÏÉËÚÚXÙ\ÏVÉÜ[‰Ë	Ü[‹]\ØY	Ë	Ú[œÜXİ	Ë	ÛÙÚ[‰Ë	ØÛX[‰Ë	ØÜ™Y[X[ÉË	İ\ØY	Ë	İ\ØYX]]ÉË	ØÚXÚÉ×JBˆ\œÙ\‹˜YØ\™İ[Y[
-	ËKY›Ü˜ÙIËXİ[ÛIÜİÜ™WİYIÊBˆ\œÙ\‹˜YØ\™İ[Y[
-	ËK]\ÚÉË[Iùcêº/ä:(c9£!ùk¦¹.îùb¨HQ;ï#:` ¹d":j£:+ày¥¬9h§¹©§9ceIÊBˆ\™ÜÈH\œÙ\‹œ\œÙWØ\™ÜÊ\™İŠBˆÜË˜Ú\ŠTÑWÑTŠBˆÛÛ[X[™H\™ÜË˜ÛÛ[X[™ˆ[\˜Xİ]™HHÛÛ[X[™\È›Û™BˆYˆ[\˜Xİ]™N‚ˆš[
-	ùce¹k­¹ì¯¹àmzaáúfáˆŒ—ŒKˆ9."ú/oy©§9ceWŒ‹ˆ9­cú)â9fjù£ä¹.í¹b'yiâùc%—ŒËˆ9. :e+¹ænùoeWˆ9®!y­%ù.#¹d"9nm—Kˆ9/çykf9§+9§.¹ænùoey/èy k×‹ˆ9¢dùo 9¥¬9.äùn¤ù."¹/(:hmzgh—Ëˆ9¨à9§ézacyïk‰ÊBˆÛÛ[X[™HXİ
-š\
-	ÌLŒÍMÉËÉÜ[‰Ë	Ú[œÜXİ	Ë	ÛÙÚ[‰Ë	ØÛX[‰Ë	ØÜ™Y[X[ÉË	İ\ØY	Ë	ØÚXÚÉ×JJK™Ù]
-[œ]
-	ú+íú`"y¢ê{ï&‰ÊKœİš\
+def latest_source_folder(source_root: Path, today: str) -> Path | None:
+    """Prefer today's Excel files, then the newest dated folder awaiting upload."""
+    if not source_root.is_dir():
+        return None
+    folders = sorted((path for path in source_root.iterdir() if path.is_dir()), reverse=True)
+    today_folder = source_root / today
+    if today_folder in folders:
+        folders.remove(today_folder)
+        folders.insert(0, today_folder)
+    return next((path for path in folders if any(path.glob('*.xlsx'))), None)
 
-JBˆYˆÛÛ[X[™\È›Û™N‚ˆ™]\›ˆˆN‚ˆ[\ÜÛÛXİÜ—ÚXÛÛ—Ù^ÜÈ\Y\ÈH^\İ[™ÈÙÚ[‹Ù^ÜÛÛ\]Xš[]H^Y\‹‚ˆ[\ÜÛÛXİÜˆ\ÈÛÜ™BˆÛÛ™šY×Ü]HTÑWÑTˆÈ	ØÛÛ™šY×İŒ‹šœÛÛ‰ÂˆÛÛ™šYÈHÛÜ™K›ØYÚœÛÛŠÛÛ™šY×Ü]
-BˆÛÜ™K›ØYİ\ÚÜ×Ùš[JÛÛ™šYËÛÛ™šY×Ü]
-BˆÛÜ™K˜[Y]WØÛÛ™šYÊÛÛ™šYÊBˆYˆ\™ÜË\ÚÎ‚ˆÛÛ™šYÖÉİ\ÚÜÉ×HHİ›Üˆ[ˆÛÛ™šYÖÉİ\ÚÜÉ×HYˆÉÚY	×HOH\™ÜË\ÚÈ[™™Ù]
-	Ù[˜X›Y	ËYJWBˆYˆ›İÛÛ™šYÖÉİ\ÚÜÉ×N‚ˆ˜Z\ÙH[[YQ\œ›ÜŠ	ù£!ùk¦¹.îùb¨y.#ykf9g*9¢%¹§*¹d+ùå*8à ‰ÊBˆYˆÛÛ[X[™OH	ØÚXÚÉÎ‚ˆœ›ÛH^]ÜšYÚœŞ[˜×Ø\H[\ÜŞ[˜×Ü^]ÜšYÚˆÚ]Ş[˜×Ü^]ÜšYÚ
 
-H\È^]ÜšYÚ‚ˆš]™\—Ü™XYHH^]ÜšYÚ˜Ú›ÛZ][K›˜[YHOH	ØÚ›ÛZ][IÂˆš[
-œÛÛ‹™[\ÊÉÜ™\ÜÚ]ÜIÎˆÛÛ™šYÖÉÜ™\ÜÚ]ÜI×K	Ù[˜X›YÛİ\˜Ù\ÉÎˆİ[J™Ù]
-	Ù[˜X›Y	ËYJH›Üˆ[ˆÛÛ™šYÖÉİ\ÚÜÉ×JKˆ	Ü›ÙXİÜ›İ\ÉÎˆ[ŠÊÉÛX\šÙ]XÙI×KÉØØ]YÛÜI×JH›Üˆ[ˆÛÛ™šYÖÉİ\ÚÜÉ×HYˆ™Ù]
-	Ù[˜X›Y	ËYJ_JKˆ	Ø˜\ÙQ\™XİÜIÎˆİŠTÑWÑTŠK	Øœ›İÜÙ\‘š]™\”™XYIÎˆš]™\—Ü™XY_K[œİ\™WØ\ØÚZOQ˜[ÙK[™[LŠJBˆÛÙHHˆ[YˆÛÛ[X[™[ˆ
-	Ü[‰Ë	Ü[‹]\ØY	Ë	Ú[œÜXİ	ÊN‚ˆÛÜ™K™[œİ\™WÙ\™XİÜšY\Ê
-BˆÛÜ™K˜ÛÛ™šYİ\™WÛÙÙÚ[™Ê
-BˆYˆÛÛ[X[™[ˆ
-	Ü[‰Ë	Ü[‹]\ØY	ÊN‚ˆœ›ÛHÙ[\—ÜÜš]WØ]]×ÛÙÚ[ˆ[\ÜÙÚ[—ÚY—Û™YYYˆš[
-	ùab9¨à9§éyce¹k­¹ì¯¹àmyænùoeyâ­¹  {ï#9oáz) y¥íº!ê¹bª9ænùoeK‹‹‰ÊBˆÙÚ[—ØÛÙHHÙÚ[—ÚY—Û™YYY
-ÛÛ™šY×Ü]ØZ]Ù›Ü—İ\Ù\ŠBˆYˆÙÚ[—ØÛÙHOH‚ˆ˜Z\ÙH[[YQ\œ›ÜŠ	ùce¹k­¹ì¯¹àmyænùoey¨à9§éy§*º`&º/áûï#9."ú/oy§*¹o 9iâøà ‰ÊBˆš[
-	ùænùoey¨à9§éz`&º/áûï#9o 9iâù."ú/oy©§9cexà ‰ÊBˆ[—Ù]HH]][YK››İÊ
-Kœİ™[YJ	ÉVKI[KIY	ÊBˆÛÙHHÛÜ™Kœ[—ØÛÛXİ[ÛŠÛÛ™šYË\™ÜË™›Ü˜ÙK[—Ù]O\[—Ù]JBˆYˆÛÙHOH[™ÛÛ[X[™OH	Ü[‹]\ØY	Î‚ˆÛÙHH\ØYÙİÛ›ØYYÙ^Ù[
-ÛÛ™šYË\Ú×ÚYX\™ÜË\ÚËÙ^WÛÛ›OUYK[—Ù]O\[—Ù]JBˆ[ÙN‚ˆÛÙHHÛÜ™Kš[œÜXİÛ[ÙJÛÛ™šYËØZ]Ù›Ü—İ\Ù\ŠBˆ[YˆÛÛ[X[™OH	ÛÙÚ[‰Î‚ˆœ›ÛHÙ[\—ÜÜš]WØ]]×ÛÙÚ[ˆ[\ÜÙÚ[—ÚY—Û™YYYˆÛÙHHÙÚ[—ÚY—Û™YYY
-ÛÛ™šY×Ü]ØZ]Ù›Ü—İ\Ù\ŠBˆ[YˆÛÛ[X[™OH	ØÛX[‰Î‚ˆœ›ÛHÛX[š[™È[\ÜZ[Ù\Ú›Ø\™Ù]H\ÈZ[\‚ˆZ[\‹”“ÓÕHTÑWÑT‚ˆÛÙHHZ[\‹›XZ[Š×JBˆ[YˆÛÛ[X[™OH	ØÜ™Y[X[ÉÎ‚ˆÛÙHHİXœ›ØÙ\ÜËœ[ŠÉÜİÙ\œÚ[™^IË	ËS›Ô›Ùš[IË	ËQ^Xİ][Û”ÛXŞIË	Ğ\\ÜÉË	ËQš[IËİŠTÑWÑTˆÈ	ÜØ]™WÛÙÚ[—ØÜ™Y[X[ËœÌIÊWJKœ™]\›˜ÛÙBˆ[YˆÛÛ[X[™OH	İ\ØYX]]ÉÎ‚ˆÛÙHH\ØYÙİÛ›ØYYÙ^Ù[
-ÛÛ™šYË\Ú×ÚYX\™ÜË\ÚÊBˆ[ÙN‚ˆYˆÛÛ™šYË™Ù]
-	Ü™\ÜÚ]ÜIÊHOH	ÕšXİÜ‹ZšÜÙ[\‹\Üš]KXÛÛXİÜ‹]Œ‰Î‚ˆ˜Z\ÙH[[YQ\œ›ÜŠ	ùk§ºj£9âb9cê¹a`z+®9."¹/(9b,9âë9êâÈŒˆ9.äùn¤øà ‰ÊBˆÛİ\˜ÙWÙ\ˆH]
-ÛÛ™šYË™Ù]
-	ÜİÜ˜YÙIËßJK™Ù]
-	ÜÛİ\˜ÙWÙ\‰Ë	Ù]KÜÛİ\˜ÙIÊJBˆYˆ›İÛİ\˜ÙWÙ\‹š\×ØXœÛÛ]J
-N‚ˆÛİ\˜ÙWÙ\ˆHTÑWÑTˆÈÛİ\˜ÙWÙ\‚ˆ›Û\ˆH]\İÜÛİ\˜ÙWÙ›Û\ŠÛİ\˜ÙWÙ\‹]][YK››İÊ
-Kœİ™[YJ	ÉVKI[KIY	ÊJBˆYˆ›Û\ˆ\È›Û™N‚ˆ˜Z\ÙH[[YQ\œ›ÜŠ	ù¬¨y§"y¢o¹b,9mì¹."ú/oyæ¡^Ù[;ï#:+íùab9à®yaîù."ú/oy©§9cexà ‰ÊBˆÜËœİ\š[JİŠ›Û\ŠJBˆÙX˜œ›İÜÙ\‹›Ü[ŠˆšÎ‹ËÙÚ]X‹˜ÛÛKŞØÛÛ™šYÖÉÜ™\ÜÚ]ÜI×_Kİ\ØYÛXZ[‹Ù]KÜÛİ\˜ÙKŞÙ›Û\‹›˜[Y_HŠBˆš[
-‰ùmì¹¢dùo 9¥l9£k¹¥¡ù.í¹i.yd£Ú]Xˆ9."¹/(:hmzgh»ï&Ù›Û\ŸIÊBˆÛÙHHˆ^Ù\^Ù\[Ûˆ\È^Î‚ˆš[
-‰ú/ä:(c9i,z-){ï&Ù^ßIÊBˆÛÙHHBˆYˆ[\˜Xİ]™N‚ˆ[œ]
-	ù£"yfçº/i¹alúeëxà ‰ÊBˆ™]\›ˆÛÙB‚‚™Yˆ\ØYÙİÛ›ØYYÙ^Ù[
-ÛÛ™šYÎˆXİ
-‹\Ú×ÚYˆİˆ›Û™HH›Û™KÙ^WÛÛ›Nˆ›ÛÛH˜[ÙKˆ[—Ù]Nˆİˆ›Û™HH›Û™JHOˆ[‚ˆœ›ÛHÚ]X—İ\ØY[\ÜÚ]XÛY[‘TÔÒUÔ–K^Ù[Ùš[\Ë™XYÜØ]™YİÚÙ[‹\ØYÙ^Ù[Ùš[\Â‚ˆYˆÛÛ™šYË™Ù]
-	Ü™\ÜÚ]ÜIÊHOH‘TÔÒUÔ–N‚ˆ˜Z\ÙH[[YQ\œ›ÜŠ	ú!ê¹bª9."¹/(9.áya`z+®9âë9êâÈŒˆ9.äùn¤øà ‰ÊBˆÛİ\˜ÙWÙ\ˆH]
-ÛÛ™šYË™Ù]
-	ÜİÜ˜YÙIËßJK™Ù]
-	ÜÛİ\˜ÙWÙ\‰Ë	Ù]KÜÛİ\˜ÙIÊJBˆYˆ›İÛİ\˜ÙWÙ\‹š\×ØXœÛÛ]J
-N‚ˆÛİ\˜ÙWÙ\ˆHTÑWÑTˆÈÛİ\˜ÙWÙ\‚ˆÙ^HH]][YK››İÊ
-Kœİ™[YJ	ÉVKI[KIY	ÊBˆ›Û\ˆHÛİ\˜ÙWÙ\ˆÈ
-[—Ù]HÜˆÙ^JHYˆÙ^WÛÛ›H[ÙH]\İÜÛİ\˜ÙWÙ›Û\ŠÛİ\˜ÙWÙ\‹Ù^JBˆYˆ›Û\ˆ\È›Û™HÜˆ›İ›Û\‹š\×Ù\Š
-N‚ˆ˜Z\ÙH[[YQ\œ›ÜŠ	ù¬¨y§"y¢o¹b,9cëù."¹/(9æ¡^Ù[;ï#:+íùab9."ú/oy©§9cexà ‰ÊBˆš[\ÈH^Ù[Ùš[\Ê›Û\‹\Ú×ÚY
-Bˆš[
-‰ùaá¹i!ú!ê¹bª9."¹/(Ù›Û\‹›˜[Y_H9æ¡Û[Šš[\Ê_H9.ïH^Ù[8 )‰ÊBˆÚ[™ÙY\›H\ØYÙ^Ù[Ùš[\Êš[\Ë›Û\‹Ú]XÛY[
-™XYÜØ]™YİÚÙ[Š
-JJBˆYˆÚ[™ÙY‚ˆš[
-‰ùmì¹£ä9.©ØÚ[™ÙYH9.ïH^Ù[;ï&İ\›IÊBˆš[
-‰ù®!y­%ù.îùb¨y/&º!ê¹bª:/ä:(c;ï&šÎ‹ËÙÚ]X‹˜ÛÛKŞÔ‘TÔÒUÔ–_KØXİ[ÛœËİÛÜšÙ›İÜËØZ[Y\Ú›Ø\™Y]K[[	ÊBˆ[ÙN‚ˆš[
-	ù.äùn¤ù.+yæ¡^Ù[9.#¹§+9g,9æî9d#;ï#9¥è:g :aãy¥¬9£ä9.©;ï&ùç"ù§où¥l9£k¹.#y/&ºaãyi#y§¡9nî¸à ‰ÊBˆ™]\›ˆ‚‚šYˆ×Û˜[YW×ÈOH	××ÛXZ[—×ÉÎ‚ˆ˜Z\ÙHŞ\İ[Q^]
-XZ[Š
-JB
+def main(argv=None, *, wait_for_user: Callable[[], None] | None = None):
+    parser = argparse.ArgumentParser(description='SellerSprite Collector V2')
+    parser.add_argument('command', nargs='?', choices=['run', 'run-upload', 'inspect', 'login', 'clean', 'credentials', 'upload', 'upload-auto', 'check'])
+    parser.add_argument('--force', action='store_true')
+    parser.add_argument('--task', help='åªè¿è¡ŒæŒ‡å®šä»»åŠ¡ IDï¼Œé€‚åˆéªŒè¯æ–°å¢æ¦œå•')
+    args = parser.parse_args(argv)
+    os.chdir(BASE_DIR)
+    command = args.command
+    interactive = command is None
+    if interactive:
+        print('å–å®¶ç²¾çµé‡‡é›† V2\n1. ä¸‹è½½æ¦œå•\n2. æµè§ˆå™¨/æ’ä»¶åˆå§‹åŒ–\n3. ä¸€é”®ç™»å½•\n4. æ¸…æ´—ä¸åˆå¹¶\n5. ä¿å­˜æœ¬æœºç™»å½•ä¿¡æ¯\n6. æ‰“å¼€æ–°ä»“åº“ä¸Šä¼ é¡µé¢\n7. æ£€æŸ¥é…ç½®')
+        command = dict(zip('1234567', ['run', 'inspect', 'login', 'clean', 'credentials', 'upload', 'check'])).get(input('è¯·é€‰æ‹©ï¼š').strip())
+        if command is None:
+            return 0
+    try:
+        import collector_icon_export  # Applies the existing login/export compatibility layer.
+        import collector as core
+        config_path = BASE_DIR / 'config_v2.json'
+        config = core.load_json(config_path)
+        core.load_tasks_file(config, config_path)
+        core.validate_config(config)
+        if args.task:
+            config['tasks'] = [t for t in config['tasks'] if t['id'] == args.task and t.get('enabled', True)]
+            if not config['tasks']:
+                raise RuntimeError('æŒ‡å®šä»»åŠ¡ä¸å­˜åœ¨æˆ–æœªå¯ç”¨ã€‚')
+        if command == 'check':
+            from playwright.sync_api import sync_playwright
+            with sync_playwright() as playwright:
+                driver_ready = playwright.chromium.name == 'chromium'
+            print(json.dumps({'repository': config['repository'], 'enabledSources': sum(t.get('enabled', True) for t in config['tasks']),
+                              'productGroups': len({(t['marketplace'], t['category']) for t in config['tasks'] if t.get('enabled', True)}),
+                              'baseDirectory': str(BASE_DIR), 'browserDriverReady': driver_ready}, ensure_ascii=False, indent=2))
+            code = 0
+        elif command in ('run', 'run-upload', 'inspect'):
+            core.ensure_directories()
+            core.configure_logging()
+            if command in ('run', 'run-upload'):
+                from seller_sprite_auto_login import login_if_needed
+                print('å…ˆæ£€æŸ¥å–å®¶ç²¾çµç™»å½•çŠ¶æ€ï¼Œå¿…è¦æ—¶è‡ªåŠ¨ç™»å½•...')
+                login_code = login_if_needed(config_path, wait_for_user)
+                if login_code != 0:
+                    raise RuntimeError('å–å®¶ç²¾çµç™»å½•æ£€æŸ¥æœªé€šè¿‡ï¼Œä¸‹è½½æœªå¼€å§‹ã€‚')
+                print('ç™»å½•æ£€æŸ¥é€šè¿‡ï¼Œå¼€å§‹ä¸‹è½½æ¦œå•ã€‚')
+                run_date = datetime.now().strftime('%Y-%m-%d')
+                code = core.run_collection(config, args.force, run_date=run_date)
+                if code == 0 and command == 'run-upload':
+                    code = upload_downloaded_excel(config, task_id=args.task, today_only=True, run_date=run_date)
+            else:
+                code = core.inspect_mode(config, wait_for_user)
+        elif command == 'login':
+            from seller_sprite_auto_login import login_if_needed
+            code = login_if_needed(config_path, wait_for_user)
+        elif command == 'clean':
+            from cleaning import build_dashboard_data as builder
+            builder.ROOT = BASE_DIR
+            code = builder.main([])
+        elif command == 'credentials':
+            code = subprocess.run(['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(BASE_DIR / 'save_login_credentials.ps1')]).returncode
+        elif command == 'upload-auto':
+            code = upload_downloaded_excel(config, task_id=args.task)
+        else:
+            if config.get('repository') != 'Victor-hzh/seller-sprite-collector-v2':
+                raise RuntimeError('å®éªŒç‰ˆåªå…è®¸ä¸Šä¼ åˆ°ç‹¬ç«‹ V2 ä»“åº“ã€‚')
+            source_dir = Path(config.get('storage', {}).get('source_dir', 'data/source'))
+            if not source_dir.is_absolute():
+                source_dir = BASE_DIR / source_dir
+            folder = latest_source_folder(source_dir, datetime.now().strftime('%Y-%m-%d'))
+            if folder is None:
+                raise RuntimeError('æ²¡æœ‰æ‰¾åˆ°å·²ä¸‹è½½çš„ Excelï¼Œè¯·å…ˆç‚¹å‡»ä¸‹è½½æ¦œå•ã€‚')
+            os.startfile(str(folder))
+            webbrowser.open(f"https://github.com/{config['repository']}/upload/main/data/source/{folder.name}")
+            print(f'å·²æ‰“å¼€æ•°æ®æ–‡ä»¶å¤¹å’Œ GitHub ä¸Šä¼ é¡µé¢ï¼š{folder}')
+            code = 0
+    except Exception as exc:
+        print(f'è¿è¡Œå¤±è´¥ï¼š{exc}')
+        code = 1
+    if interactive:
+        input('æŒ‰å›è½¦å…³é—­ã€‚')
+    return code
+
+
+def upload_downloaded_excel(config: dict, *, task_id: str | None = None, today_only: bool = False,
+                            run_date: str | None = None) -> int:
+    from github_upload import GitHubClient, REPOSITORY, excel_files, read_saved_token, upload_excel_files
+
+    if config.get('repository') != REPOSITORY:
+        raise RuntimeError('è‡ªåŠ¨ä¸Šä¼ ä»…å…è®¸ç‹¬ç«‹ V2 ä»“åº“ã€‚')
+    source_dir = Path(config.get('storage', {}).get('source_dir', 'data/source'))
+    if not source_dir.is_absolute():
+        source_dir = BASE_DIR / source_dir
+    today = datetime.now().strftime('%Y-%m-%d')
+    folder = source_dir / (run_date or today) if today_only else latest_source_folder(source_dir, today)
+    if folder is None or not folder.is_dir():
+        raise RuntimeError('æ²¡æœ‰æ‰¾åˆ°å¯ä¸Šä¼ çš„ Excelï¼Œè¯·å…ˆä¸‹è½½æ¦œå•ã€‚')
+    files = excel_files(folder, task_id)
+    print(f'å‡†å¤‡è‡ªåŠ¨ä¸Šä¼  {folder.name} çš„ {len(files)} ä»½ Excelâ€¦')
+    changed, url = upload_excel_files(files, folder, GitHubClient(read_saved_token()))
+    if changed:
+        print(f'å·²æäº¤ {changed} ä»½ Excelï¼š{url}')
+        print(f'æ¸…æ´—ä»»åŠ¡ä¼šè‡ªåŠ¨è¿è¡Œï¼šhttps://github.com/{REPOSITORY}/actions/workflows/build-dashboard-data.yml')
+    else:
+        print('ä»“åº“ä¸­çš„ Excel ä¸æœ¬åœ°ç›¸åŒï¼Œæ— éœ€é‡æ–°æäº¤ï¼›çœ‹æ¿æ•°æ®ä¸ä¼šé‡å¤æ„å»ºã€‚')
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
