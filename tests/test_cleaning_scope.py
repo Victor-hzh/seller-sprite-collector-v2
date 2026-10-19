@@ -33,6 +33,10 @@ class FloorWasherScopeTests(unittest.TestCase):
             ('IT', 'Spot-Cleaner', 'STANHOMEsDetergente Smacchiante Tappeti Carpet Cleaner, 500 ML'),
             ('JP', 'Spot-Cleaner', 'KEEPOW 8枚組 ケルヒャー用 消耗品 スチームクリーナー ハンドブラシ用'),
             ('UK', 'Wet-Dry-Floor-Washer', 'KÄRCHER WD 2 Plus Wet and Dry Vacuum Cleaner, 12 L'),
+            ('US', 'Wet-Dry-Floor-Washer', 'Bissell Garage Pro Wall-Mounted Wet Dry Vacuum/Blower, 18P03'),
+            ('US', 'Wet-Dry-Floor-Washer', 'BISSELL MultiClean Wet/Dry Garage and Auto Vacuum, 2035M'),
+            ('US', 'Wet-Dry-Floor-Washer', 'Shark EveryMess 3-in-1 Wet/Dry Vac & Stain Eliminator'),
+            ('US', 'Wet-Dry-Floor-Washer', 'Dyson V16 Piston Animal Submarine Cordless Wet and Dry Vacuum'),
             ('JP', 'Wet-Dry-Floor-Washer', '日動 業務用バキュームクリーナー２０Ｌ'),
             ('US', 'Spot-Cleaner', 'McCulloch MC1275 Heavy-Duty Steam Cleaner'),
         ]
@@ -54,6 +58,8 @@ class FloorWasherScopeTests(unittest.TestCase):
             ('UK', 'Spot-Cleaner', 'Akitas X5 Spot Cleaner, Dual Water Tanks, Fabric Cleaning Solution Trial Size'),
             ('FR', 'Spot-Cleaner', 'BISSELL Revolution HydroSteam Nettoyeur Vapeur, Shampouineuse pour canapé'),
             ('ES', 'Stick-Vacuum', 'Aspiradora sin Cable con Cepillo para Mascotas'),
+            ('US', 'Wet-Dry-Floor-Washer', 'Shark HydroVac Reveal Cordless Vacuum, Mop and Self-Clean'),
+            ('US', 'Wet-Dry-Floor-Washer', 'Bissell CrossWave HydroSteam 3-in-1 Steam Mop'),
         ]
         for market, category, title in samples:
             with self.subTest(title=title):

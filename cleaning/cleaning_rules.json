@@ -18,6 +18,9 @@
     "Wet-Dry-Floor-Washer": {
       "exclude_title_patterns": [
         "\\b(?:K[ÄA]RCHER\\s+WD\\s*[- ]?\\d|KWD\\s*[- ]?\\d|Bosch\\s+(?:PAS|GAS)\\s*[- ]?\\d|AdvancedVac\\s*\\d|UniversalVac\\s*\\d)\\b",
+        "\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+        "\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+        "^.{0,80}\\b(?:EveryMess|Spot\\s+Cleaner|Upholstery\\s+Cleaner|Stain\\s+Eliminator|Portable\\s+Carpet\\s+Cleaner)\\b",
         "\\b(?:wet.?dry|nass.?trocken|乾湿両用|干湿两用|solidi.?liquidi|seco.?húmedo).{0,90}\\b(?:1[0-9]|2[0-9]|3[0-9])\\s*(?:L|lit(?:er|re|ro)s?)\\b",
         "\\b(?:s[óo]lidos\\s+y\\s+l[íi]quidos|solidi\\s*[- ]?liquidi|vacuums?\\s+for\\s+car\\s+and\\s+garage|aspirateur\\s+eau\\s+et\\s+poussière\\s+\\d{2}\\s*L)\\b"
       ]
