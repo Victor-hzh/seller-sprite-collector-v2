@@ -1,161 +1,141 @@
-import os
-import shutil
-import subprocess
-import tempfile
-import unittest
-from pathlib import Path
-from unittest.mock import patch
+Û^š›bh¥êß¢¹­…â'ŠØš–,ŞçÚº[C®+Ş²Š^­«b¢z'¶…ŠW’ÊË^ššè¾'^­ö¢•çZ[\ÜÜÂš[\ÜÚ][š[\ÜİXœ›ØÙ\ÜÂš[\Ü[\š[Bš[\Ü[š]\İ™œ›ÛH]Xˆ[\Ü]™œ›ÛH[š]\İ›[ØÚÈ[\Ü]Ú‚š[\ÜÛÛXİÜ—Ø\š[\ÜÙ[\—ÜÜš]WØ]]×ÛÙÚ[ˆ\È]]×ÛÙÚ[‚™œ›ÛHÛÛXİÜ—Ø\[\Ü]\İÜÛİ\˜ÙWÙ›Û\‚™œ›ÛHÛÛXİÜ—ÙİZH[\ÜZ[ØÚ[™ÙWÜ™\]Y\İÜ›Û\‚‚˜Û\ÜÈ\ØY›Û\•\İÊ[š]\İ•\İØ\ÙJN‚ˆYˆ\İÜ™Y™\œ×İÙ^WİÚ]Ù^Ù[
+Ù[ŠN‚ˆÚ][\š[K•[\Ü˜\Q\™XİÜJ
+H\È[\Ü˜\N‚ˆ›ÛİH]
+[\Ü˜\JBˆÛH›ÛİÈ	ÌŒ‹LLLL‰ÂˆÙ^HH›ÛİÈ	ÌŒ‹LLLLÉÂˆÛ›ZÙ\Š
+BˆÙ^K›ZÙ\Š
+Bˆ
+ÛÈ	ÛÛŞ	ÊKİXÚ
 
-import collector_app
-import seller_sprite_auto_login as auto_login
-from collector_app import latest_source_folder
-from collector_gui import build_change_request_prompt
+Bˆ
+Ù^HÈ	İÙ^KŞ	ÊKİXÚ
 
+BˆÙ[‹˜\ÜÙ\\]X[
+]\İÜÛİ\˜ÙWÙ›Û\Š›Ûİ	ÌŒ‹LLLLÉÊKÙ^JB‚ˆYˆ\İİ\Ù\×Û]\İÛ›Û™[\WÙ›Û\—İÚ[—İÙ^WÚ\×Ù[\JÙ[ŠN‚ˆÚ][\š[K•[\Ü˜\Q\™XİÜJ
+H\È[\Ü˜\N‚ˆ›ÛİH]
+[\Ü˜\JBˆ›Üˆ]H[ˆ
+	ÌŒ‹LLLLIË	ÌŒ‹LLLL‰Ë	ÌŒ‹LLLLÉÊN‚ˆ
+›ÛİÈ]JK›ZÙ\Š
+Bˆ
+›ÛİÈ	ÌŒ‹LLLLIÈÈ	ÛÛŞ	ÊKİXÚ
 
-class UploadFolderTests(unittest.TestCase):
-    def test_prefers_today_with_excel(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            old = root / '2026-10-12'
-            today = root / '2026-10-13'
-            old.mkdir()
-            today.mkdir()
-            (old / 'old.xlsx').touch()
-            (today / 'today.xlsx').touch()
-            self.assertEqual(latest_source_folder(root, '2026-10-13'), today)
+Bˆ
+›ÛİÈ	ÌŒ‹LLLL‰ÈÈ	Û]\İŞ	ÊKİXÚ
 
-    def test_uses_latest_nonempty_folder_when_today_is_empty(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            for date in ('2026-10-11', '2026-10-12', '2026-10-13'):
-                (root / date).mkdir()
-            (root / '2026-10-11' / 'old.xlsx').touch()
-            (root / '2026-10-12' / 'latest.xlsx').touch()
-            self.assertEqual(latest_source_folder(root, '2026-10-13'), root / '2026-10-12')
+BˆÙ[‹˜\ÜÙ\\]X[
+]\İÜÛİ\˜ÙWÙ›Û\Š›Ûİ	ÌŒ‹LLLLÉÊK›ÛİÈ	ÌŒ‹LLLL‰ÊB‚ˆYˆ\İÛ›×Ù^Ù[ÙÙ\×Û›İÛÜ[—Ø[—İ\ØYÜYÙJÙ[ŠN‚ˆÚ][\š[K•[\Ü˜\Q\™XİÜJ
+H\È[\Ü˜\N‚ˆ›ÛİH]
+[\Ü˜\JBˆ
+›ÛİÈ	ÌŒ‹LLLLÉÊK›ZÙ\Š
+BˆÙ[‹˜\ÜÙ\\Ó›Û™J]\İÜÛİ\˜ÙWÙ›Û\Š›Ûİ	ÌŒ‹LLLLÉÊJB‚‚˜Û\ÜÈÚ[™ÙT™\]Y\İ\İÊ[š]\İ•\İØ\ÙJN‚ˆYˆ\İİ[\]WØÛÛZ[œ×ØÚÚXÙ\×Û[šÜ×Ø[™Ü™\]Y\İYÜØÛÜJÙ[ŠN‚ˆ›Û\HZ[ØÚ[™ÙWÜ™\]Y\İÜ›Û\
+ˆ	ùo­ùfïyêæIË	ù­%ùg,9§.‰Ëˆ	ÚÎ‹ËİİİË˜[X^›Û‹™KÙÜØ™\İÙ[\œËÚÚ]Ú[‹ÌŒNÍÎMŒŒÌW‰Âˆ	ÚÎ‹ËİİİË˜[X^›Û‹™KÙÜØ™\İÙ[\œËÚÚ]Ú[‹ÌŒÍÍLÌÌIËˆ	ú/ïz)áy.#¹çìùi-9b!¹lg¹.)9.*¹©§9ce{ï#:g :) yd"9nm¹nm¹£¤ºfi9méy.&¹¨m¹o#ùd.9l&9fj8à ‰Ëˆ
+BˆÙ[‹˜\ÜÙ\[Š	ùo­ùfïyêæ{ï"{ï"IË›Û\
+BˆÙ[‹˜\ÜÙ\[Š	ùdàyìnûï&¹­%ùg,9§.‰Ë›Û\
+BˆÙ[‹˜\ÜÙ\[Š	ÌŒÍÍLÌÌIË›Û\
+BˆÙ[‹˜\ÜÙ\[Š	ú/ïz)áy.#¹çìùi-	Ë›Û\
+BˆÙ[‹˜\ÜÙ\[Š	ùd#9. TÒSˆ:-ê9©§9ceyaî¹ã¬9¥í¹c®úaãIË›Û\
+B‚ˆYˆ\İÜ™\]Z\™\×Ø[Ù›İ\—ÙšY[ÊÙ[ŠN‚ˆ›Üˆ™YÚ[Û‹Ø]YÛÜK\›Ë\ØÜš\[Ûˆ[ˆ
+ˆ
+	ÉË	ù­%ùg,9§.‰Ë	ÚÎ‹ËİİİË˜[X^›Û‹™KØIË	úeëºh¦	ÊKˆ
+	ùo­ùfïyêæIË	ÉË	ÚÎ‹ËİİİË˜[X^›Û‹™KØIË	úeëºh¦	ÊKˆ
+	ùo­ùfïyêæIË	ù­%ùg,9§.‰Ë	Û›İXK[[šÉË	úeëºh¦	ÊKˆ
+	ùo­ùfïyêæIË	ù­%ùg,9§.‰Ë	ÚÎ‹ËİİİË˜[X^›Û‹™KØIË	ÉÊKˆ
+N‚ˆÚ]Ù[‹œİX•\İ
+™YÚ[Û\™YÚ[Û‹Ø]YÛÜOXØ]YÛÜK\›Ï]\›ÊN‚ˆÚ]Ù[‹˜\ÜÙ\˜Z\Ù\Ê˜[YQ\œ›ÜŠN‚ˆZ[ØÚ[™ÙWÜ™\]Y\İÜ›Û\
+™YÚ[Û‹Ø]YÛÜK\›Ë\ØÜš\[ÛŠB‚‚˜Û\ÜÈÙÚ[”›İ][™Õ\İÊ[š]\İ•\İØ\ÙJN‚ˆYˆ\İÛÛ™WØÛXÚ×ÛÙÚ[—İ\Ù\×İŒ—ØÛÛ™šY×Ø[™ÙİZWİ™\šYšXØ][Û—ØØ[˜XÚÊÙ[ŠN‚ˆØ[˜XÚÈH[X™Nˆ›Û™BˆÚ]]Ú
+	ÜÙ[\—ÜÜš]WØ]]×ÛÙÚ[‹›ÙÚ[—ÚY—Û™YYY	Ë™]\›—İ˜[YOL
+H\ÈÙÚ[‚ˆÙ[‹˜\ÜÙ\\]X[
+ÛÛXİÜ—Ø\›XZ[ŠÉÛÙÚ[‰×KØZ]Ù›Ü—İ\Ù\XØ[˜XÚÊK
+BˆÙ[‹˜\ÜÙ\\]X[
+ÙÚ[‹˜Ø[Ø\™ÜË˜\™ÜÖÌKÛÛXİÜ—Ø\TÑWÑTˆÈ	ØÛÛ™šY×İŒ‹šœÛÛ‰ÊBˆÙ[‹˜\ÜÙ\\ÊÙÚ[‹˜Ø[Ø\™ÜË˜\™ÜÖÌWKØ[˜XÚÊB‚ˆYˆ\İÙİÛ›ØYØÚXÚÜ×ÛÙÚ[—Ø™Y›Ü™WØÛÛXİ[™ÊÙ[ŠN‚ˆÚ]]Ú
+	ÜÙ[\—ÜÜš]WØ]]×ÛÙÚ[‹›ÙÚ[—ÚY—Û™YYY	Ë™]\›—İ˜[YOL
+H\ÈÙÚ[‹ˆ]Ú
+	ØÛÛXİÜ‹™[œİ\™WÙ\™XİÜšY\ÉÊK]Ú
+	ØÛÛXİÜ‹˜ÛÛ™šYİ\™WÛÙÙÚ[™ÉÊKˆ]Ú
+	ØÛÛXİÜ‹œ[—ØÛÛXİ[Û‰Ë™]\›—İ˜[YOL
+H\ÈÛÛXİ‚ˆÙ[‹˜\ÜÙ\\]X[
+ÛÛXİÜ—Ø\›XZ[ŠÉÜ[‰×JK
+BˆÙÚ[‹˜\ÜÙ\ØØ[YÛÛ˜ÙJ
+BˆÛÛXİ˜\ÜÙ\ØØ[YÛÛ˜ÙJ
+B‚ˆYˆ\İÙİÛ›ØYÜİÜ×İÚ[—ÛÙÚ[—ØÚXÚ×Ù˜Z[ÊÙ[ŠN‚ˆÚ]]Ú
+	ÜÙ[\—ÜÜš]WØ]]×ÛÙÚ[‹›ÙÚ[—ÚY—Û™YYY	Ë™]\›—İ˜[YOLJKˆ]Ú
+	ØÛÛXİÜ‹™[œİ\™WÙ\™XİÜšY\ÉÊK]Ú
+	ØÛÛXİÜ‹˜ÛÛ™šYİ\™WÛÙÙÚ[™ÉÊKˆ]Ú
+	ØÛÛXİÜ‹œ[—ØÛÛXİ[Û‰ÊH\ÈÛÛXİ‚ˆÙ[‹˜\ÜÙ\\]X[
+ÛÛXİÜ—Ø\›XZ[ŠÉÜ[‰×JKJBˆÛÛXİ˜\ÜÙ\Û›İØØ[Y
 
-    def test_no_excel_does_not_open_an_upload_page(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            (root / '2026-10-13').mkdir()
-            self.assertIsNone(latest_source_folder(root, '2026-10-13'))
+B‚ˆYˆ\İÙİÛ›ØYØ[™İ\ØYÜ[œ×Ú[—ÜÙ\]Y[˜ÙWØY\—ÜİXØÙ\ÜÊÙ[ŠN‚ˆÚ]]Ú
+	ÜÙ[\—ÜÜš]WØ]]×ÛÙÚ[‹›ÙÚ[—ÚY—Û™YYY	Ë™]\›—İ˜[YOL
+Kˆ]Ú
+	ØÛÛXİÜ‹™[œİ\™WÙ\™XİÜšY\ÉÊK]Ú
+	ØÛÛXİÜ‹˜ÛÛ™šYİ\™WÛÙÙÚ[™ÉÊKˆ]Ú
+	ØÛÛXİÜ‹œ[—ØÛÛXİ[Û‰Ë™]\›—İ˜[YOL
+H\ÈÛÛXİˆ]Ú
+	ØÛÛXİÜ—Ø\\ØYÙİÛ›ØYYÙ^Ù[	Ë™]\›—İ˜[YOL
+H\È\ØYˆ]Ú
+	ØÛÛXİÜ—Ø\™]][YIÊH\ÈÛØÚÎ‚ˆÛØÚË››İËœ™]\›—İ˜[YKœİ™[YKœ™]\›—İ˜[YHH	ÌŒ‹LLLNIÂˆÙ[‹˜\ÜÙ\\]X[
+ÛÛXİÜ—Ø\›XZ[ŠÉÜ[‹]\ØY	Ë	ËK]\ÚÉË	ÑWÕÑUÑ–WÑ“ÓÔ—ÕĞTÒT‰×JK
+BˆÙ[‹˜\ÜÙ\\]X[
+ÛÛXİ˜Ø[Ø\™ÜËšİØ\™ÜÖÉÜ[—Ù]I×K	ÌŒ‹LLLNIÊBˆ\ØY˜\ÜÙ\ØØ[YÛÛ˜ÙJ
+BˆÙ[‹˜\ÜÙ\\]X[
+\ØY˜Ø[Ø\™ÜËšİØ\™ÜËÂˆ	İ\Ú×ÚY	Îˆ	ÑWÕÑUÑ–WÑ“ÓÔ—ÕĞTÒT‰Ë	İÙ^WÛÛ›IÎˆYK	Ü[—Ù]IÎˆ	ÌŒ‹LLLNIËˆJB‚ˆYˆ\İÜ[—İ\ØYİ\Ù\×ÙİÛ›ØYÙ]WØY\—ÛZYšYÚ
+Ù[ŠN‚ˆÚ][\š[K•[\Ü˜\Q\™XİÜJ
+H\È[\Ü˜\N‚ˆÛİ\˜ÙWÜ›ÛİH]
+[\Ü˜\JBˆİÛ›ØYÙ›Û\ˆHÛİ\˜ÙWÜ›ÛİÈ	ÌŒ‹LLLNIÂˆİÛ›ØYÙ›Û\‹›ZÙ\Š
+Bˆ^Ù[HİÛ›ØYÙ›Û\ˆÈ	Ğ”Ô—ÕT×ÓZ]KU˜Xİ][WÓ›ÙMLLLMÕÜLÌŒ‹LLLNKŞ	Âˆ^Ù[Üš]WØ]\Ê‰Ù^[\IÊBˆÛÛ™šYÈHÉÜ™\ÜÚ]ÜIÎˆ	ÕšXİÜ‹ZšÜÙ[\‹\Üš]KXÛÛXİÜ‹]Œ‰Ëˆ	ÜİÜ˜YÙIÎˆÉÜÛİ\˜ÙWÙ\‰ÎˆİŠÛİ\˜ÙWÜ›Ûİ
+__BˆÚ]]Ú
+	ØÛÛXİÜ—Ø\™]][YIÊH\ÈÛØÚËˆ]Ú
+	ÙÚ]X—İ\ØYœ™XYÜØ]™YİÚÙ[‰Ë™]\›—İ˜[YOIİ\İ]ÚÙ[‰ÊKˆ]Ú
+	ÙÚ]X—İ\ØY‘Ú]XÛY[	ÊKˆ]Ú
+	ÙÚ]X—İ\ØY\ØYÙ^Ù[Ùš[\ÉË™]\›—İ˜[YOJK	ÚÎ‹ËÙÚ]X‹˜ÛÛKÙ^[\IÊJH\È\ØY‚ˆÛØÚË››İËœ™]\›—İ˜[YKœİ™[YKœ™]\›—İ˜[YHH	ÌŒ‹LLLŒ	ÂˆÙ[‹˜\ÜÙ\\]X[
+ÛÛXİÜ—Ø\\ØYÙİÛ›ØYYÙ^Ù[
+ˆÛÛ™šYËÙ^WÛÛ›OUYK[—Ù]OIÌŒ‹LLLNIÊK
+BˆÙ[‹˜\ÜÙ\\]X[
+\ØY˜Ø[Ø\™ÜË˜\™ÜÖÌKÙ^Ù[JBˆÙ[‹˜\ÜÙ\\]X[
+\ØY˜Ø[Ø\™ÜË˜\™ÜÖÌWKİÛ›ØYÙ›Û\ŠB‚ˆYˆ\İÙ˜Z[YÙİÛ›ØYÙÙ\×Û›İİ\ØY
+Ù[ŠN‚ˆÚ]]Ú
+	ÜÙ[\—ÜÜš]WØ]]×ÛÙÚ[‹›ÙÚ[—ÚY—Û™YYY	Ë™]\›—İ˜[YOL
+Kˆ]Ú
+	ØÛÛXİÜ‹™[œİ\™WÙ\™XİÜšY\ÉÊK]Ú
+	ØÛÛXİÜ‹˜ÛÛ™šYİ\™WÛÙÙÚ[™ÉÊKˆ]Ú
+	ØÛÛXİÜ‹œ[—ØÛÛXİ[Û‰Ë™]\›—İ˜[YOLŠKˆ]Ú
+	ØÛÛXİÜ—Ø\\ØYÙİÛ›ØYYÙ^Ù[	ÊH\È\ØY‚ˆÙ[‹˜\ÜÙ\\]X[
+ÛÛXİÜ—Ø\›XZ[ŠÉÜ[‹]\ØY	×JKŠBˆ\ØY˜\ÜÙ\Û›İØØ[Y
 
+B‚ˆYˆ\İİX[WÛÙÚ[—Ú\×İ\ÙYİÚ]İ]ÛØØ[Ûİ™\œšYJÙ[ŠN‚ˆÚ][\š[K•[\Ü˜\Q\™XİÜJ
+H\È[\Ü˜\N‚ˆZ\ÜÚ[™ÈH]
+[\Ü˜\JBˆÚ]]Ú›Øš™Xİ
+]]×ÛÙÚ[‹	ÕTÑT“SQWÔU	ËZ\ÜÚ[™ÈÈ	İ\Ù\›˜[YK	ÊKˆ]Ú›Øš™Xİ
+]]×ÛÙÚ[‹	ÔTÔÕÓÔ‘ÔU	ËZ\ÜÚ[™ÈÈ	Ü\ÜİÛÜ™™\IÊN‚ˆ\Ù\›˜[YK\ÜİÛÜ™H]]×ÛÙÚ[‹›ØYØÜ™Y[X[Ê
+BˆÙ[‹˜\ÜÙ\YJ\Ù\›˜[YJBˆÙ[‹˜\ÜÙ\YJ\ÜİÛÜ™
+B‚ˆYˆ\İÛØØ[Ûİ™\œšYWİZÙ\×Üš[Üš]JÙ[ŠN‚ˆÚ][\š[K•[\Ü˜\Q\™XİÜJ
+H\È[\Ü˜\N‚ˆ›Û\ˆH]
+[\Ü˜\JBˆ\Ù\›˜[YWÜ]H›Û\ˆÈ	İ\Ù\›˜[YK	Âˆ\ÜİÛÜ™Ü]H›Û\ˆÈ	Ü\ÜİÛÜ™™\IÂˆ\Ù\›˜[YWÜ]Üš]Wİ^
+	ÛØØ[]\Ù\‰Ë[˜ÛÙ[™ÏIİ]‹N	ÊBˆ\ÜİÛÜ™Ü]İXÚ
 
-class ChangeRequestTests(unittest.TestCase):
-    def test_template_contains_choices_links_and_requested_scope(self):
-        prompt = build_change_request_prompt(
-            'å¾·å›½ç«™', 'æ´—åœ°æœº',
-            'https://www.amazon.de/gp/bestsellers/kitchen/218877962031\n'
-            'https://www.amazon.de/gp/bestsellers/kitchen/2077530031',
-            'è¿½è§…ä¸çŸ³å¤´åˆ†å±ä¸¤ä¸ªæ¦œå•ï¼Œéœ€è¦åˆå¹¶å¹¶æ’é™¤å·¥ä¸šæ¡¶å¼å¸å°˜å™¨ã€‚',
-        )
-        self.assertIn('å¾·å›½ç«™ï¼ˆDEï¼‰', prompt)
-        self.assertIn('å“ç±»ï¼šæ´—åœ°æœº', prompt)
-        self.assertIn('2077530031', prompt)
-        self.assertIn('è¿½è§…ä¸çŸ³å¤´', prompt)
-        self.assertIn('åŒä¸€ ASIN è·¨æ¦œå•å‡ºç°æ—¶å»é‡', prompt)
+BˆÚ]]Ú›Øš™Xİ
+]]×ÛÙÚ[‹	ÕTÑT“SQWÔU	Ë\Ù\›˜[YWÜ]
+Kˆ]Ú›Øš™Xİ
+]]×ÛÙÚ[‹	ÔTÔÕÓÔ‘ÔU	Ë\ÜİÛÜ™Ü]
+Kˆ]Ú›Øš™Xİ
+]]×ÛÙÚ[‹	ÙXÜ\Ü\ÜİÛÜ™	Ë™]\›—İ˜[YOIÛØØ[\\ÜİÛÜ™	ÊN‚ˆÙ[‹˜\ÜÙ\\]X[
+]]×ÛÙÚ[‹›ØYØÜ™Y[X[Ê
+K
+	ÛØØ[]\Ù\‰Ë	ÛØØ[\\ÜİÛÜ™	ÊJB‚‚[š]\İœÚÚ\[›\ÜÊÜË›˜[YHOH	Û	Ë	ÕÚ[™İÜÈTH[YÜ˜][Ûˆ\İ	ÊB˜Û\ÜÈÜ™Y[X[[YÜ˜][Û•\İÊ[š]\İ•\İØ\ÙJN‚ˆYˆ\İÜİ[—ØÜ™Y[X[×Ü›İ[™İš\İÚ]İ[šXÛÙJÙ[ŠN‚ˆ›Ú™XİH]
+×Ùš[W×ÊKœ™\ÛÛ™J
+Kœ\™[œ\™[ˆÚ][\š[K•[\Ü˜\Q\™XİÜJ
+H\È[\Ü˜\N‚ˆ›Û\ˆH]
+[\Ü˜\JBˆÚ][˜ÛÜLŠ›Ú™XİÈ	ÜØ]™WÛÙÚ[—ØÜ™Y[X[ËœÌIË›Û\ˆÈ	ÜØ]™WÛÙÚ[—ØÜ™Y[X[ËœÌIÊBˆØ]™YHİXœ›ØÙ\ÜËœ[ŠˆÉÜİÙ\œÚ[™^IË	ËS›Ô›Ùš[IË	ËS›Û’[\˜Xİ]™IË	ËQ^Xİ][Û”ÛXŞIË	Ğ\\ÜÉËˆ	ËQš[IËİŠ›Û\ˆÈ	ÜØ]™WÛÙÚ[—ØÜ™Y[X[ËœÌIÊK	ËQœ›ÛTİ[‰×Kˆ[œ]Iù­bú+åyå*9¢-Ğ^[\K˜ÛÛW¹.-9¥í¹­bú+åyká¹è LLŒ×‰Ë^UYK[˜ÛÙ[™ÏIİ]‹N	ËˆØ\\™WÛİ]]UYKˆ[^ÚÙ^Nˆ˜[YH›ÜˆÙ^K˜[YH[ˆÜË™[š\›Û‹š][\Ê
+HYˆÙ^K\\Š
+HOH	ÔÓSÑSTU	ßKˆ
+BˆÙ[‹˜\ÜÙ\\]X[
+Ø]™Yœ™]\›˜ÛÙKØ]™Yœİ\œŠBˆ[[YHH›Û\ˆÈ	Ü[[YIÂˆÙ[‹˜\ÜÙ\\]X[
 
-    def test_requires_all_four_fields(self):
-        for region, category, urls, description in (
-            ('', 'æ´—åœ°æœº', 'https://www.amazon.de/a', 'é—®é¢˜'),
-            ('å¾·å›½ç«™', '', 'https://www.amazon.de/a', 'é—®é¢˜'),
-            ('å¾·å›½ç«™', 'æ´—åœ°æœº', 'not-a-link', 'é—®é¢˜'),
-            ('å¾·å›½ç«™', 'æ´—åœ°æœº', 'https://www.amazon.de/a', ''),
-        ):
-            with self.subTest(region=region, category=category, urls=urls):
-                with self.assertRaises(ValueError):
-                    build_change_request_prompt(region, category, urls, description)
+[[YHÈ	ÜÙ[\—ÜÜš]Wİ\Ù\›˜[YK	ÊKœ™XYİ^
+[˜ÛÙ[™ÏIİ]‹N\ÚYÉÊKœİš\
 
-
-class LoginRoutingTests(unittest.TestCase):
-    def test_one_click_login_uses_v2_config_and_gui_verification_callback(self):
-        callback = lambda: None
-        with patch('seller_sprite_auto_login.login_if_needed', return_value=0) as login:
-            self.assertEqual(collector_app.main(['login'], wait_for_user=callback), 0)
-        self.assertEqual(login.call_args.args[0], collector_app.BASE_DIR / 'config_v2.json')
-        self.assertIs(login.call_args.args[1], callback)
-
-    def test_download_checks_login_before_collecting(self):
-        with patch('seller_sprite_auto_login.login_if_needed', return_value=0) as login, \
-             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
-             patch('collector.run_collection', return_value=0) as collect:
-            self.assertEqual(collector_app.main(['run']), 0)
-        login.assert_called_once()
-        collect.assert_called_once()
-
-    def test_download_stops_when_login_check_fails(self):
-        with patch('seller_sprite_auto_login.login_if_needed', return_value=1), \
-             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
-             patch('collector.run_collection') as collect:
-            self.assertEqual(collector_app.main(['run']), 1)
-        collect.assert_not_called()
-
-    def test_download_and_upload_runs_in_sequence_after_success(self):
-        with patch('seller_sprite_auto_login.login_if_needed', return_value=0), \
-             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
-             patch('collector.run_collection', return_value=0) as collect, \
-             patch('collector_app.upload_downloaded_excel', return_value=0) as upload:
-            self.assertEqual(collector_app.main(['run-upload', '--task', 'DE_WET_DRY_FLOOR_WASHER']), 0)
-        collect.assert_called_once()
-        upload.assert_called_once()
-        self.assertEqual(upload.call_args.kwargs, {'task_id': 'DE_WET_DRY_FLOOR_WASHER', 'today_only': True})
-
-    def test_failed_download_does_not_upload(self):
-        with patch('seller_sprite_auto_login.login_if_needed', return_value=0), \
-             patch('collector.ensure_directories'), patch('collector.configure_logging'), \
-             patch('collector.run_collection', return_value=2), \
-             patch('collector_app.upload_downloaded_excel') as upload:
-            self.assertEqual(collector_app.main(['run-upload']), 2)
-        upload.assert_not_called()
-
-    def test_team_login_is_used_without_local_override(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            missing = Path(temporary)
-            with patch.object(auto_login, 'USERNAME_PATH', missing / 'username.txt'), \
-                 patch.object(auto_login, 'PASSWORD_PATH', missing / 'password.dpapi'):
-                username, password = auto_login.load_credentials()
-        self.assertTrue(username)
-        self.assertTrue(password)
-
-    def test_local_override_takes_priority(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            folder = Path(temporary)
-            username_path = folder / 'username.txt'
-            password_path = folder / 'password.dpapi'
-            username_path.write_text('local-user', encoding='utf-8')
-            password_path.touch()
-            with patch.object(auto_login, 'USERNAME_PATH', username_path), \
-                 patch.object(auto_login, 'PASSWORD_PATH', password_path), \
-                 patch.object(auto_login, 'decrypt_password', return_value='local-password'):
-                self.assertEqual(auto_login.load_credentials(), ('local-user', 'local-password'))
-
-
-@unittest.skipUnless(os.name == 'nt', 'Windows DPAPI integration test')
-class CredentialIntegrationTests(unittest.TestCase):
-    def test_stdin_credentials_round_trip_with_unicode(self):
-        project = Path(__file__).resolve().parent.parent
-        with tempfile.TemporaryDirectory() as temporary:
-            folder = Path(temporary)
-            shutil.copy2(project / 'save_login_credentials.ps1', folder / 'save_login_credentials.ps1')
-            saved = subprocess.run(
-                ['powershell.exe', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass',
-                 '-File', str(folder / 'save_login_credentials.ps1'), '-FromStdin'],
-                input='æµ‹è¯•ç”¨æˆ·@example.com\nä¸´æ—¶æµ‹è¯•å¯†ç 123\n', text=True, encoding='utf-8',
-                capture_output=True,
-                env={key: value for key, value in os.environ.items() if key.upper() != 'PSMODULEPATH'},
-            )
-            self.assertEqual(saved.returncode, 0, saved.stderr)
-            runtime = folder / 'runtime'
-            self.assertEqual((runtime / 'seller_sprite_username.txt').read_text(encoding='utf-8-sig').strip(),
-                             'æµ‹è¯•ç”¨æˆ·@example.com')
-            decrypted = subprocess.run(
-                ['powershell.exe', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass',
-                 '-File', str(project / 'decrypt_login_password.ps1'), '-PasswordFile',
-                 str(runtime / 'seller_sprite_password.dpapi')],
-                text=True, encoding='utf-8', capture_output=True, check=True,
-                env={key: value for key, value in os.environ.items() if key.upper() != 'PSMODULEPATH'},
-            )
-            self.assertEqual(decrypted.stdout, 'ä¸´æ—¶æµ‹è¯•å¯†ç 123')
-
-
-if __name__ == '__main__':
-    unittest.main()
+Kˆ	ù­bú+åyå*9¢-Ğ^[\K˜ÛÛIÊBˆXÜ\YHİXœ›ØÙ\ÜËœ[ŠˆÉÜİÙ\œÚ[™^IË	ËS›Ô›Ùš[IË	ËS›Û’[\˜Xİ]™IË	ËQ^Xİ][Û”ÛXŞIË	Ğ\\ÜÉËˆ	ËQš[IËİŠ›Ú™XİÈ	ÙXÜ\ÛÙÚ[—Ü\ÜİÛÜ™œÌIÊK	ËT\ÜİÛÜ™š[IËˆİŠ[[YHÈ	ÜÙ[\—ÜÜš]WÜ\ÜİÛÜ™™\IÊWKˆ^UYK[˜ÛÙ[™ÏIİ]‹N	ËØ\\™WÛİ]]UYKÚXÚÏUYKˆ[^ÚÙ^Nˆ˜[YH›ÜˆÙ^K˜[YH[ˆÜË™[š\›Û‹š][\Ê
+HYˆÙ^K\\Š
+HOH	ÔÓSÑSTU	ßKˆ
+BˆÙ[‹˜\ÜÙ\\]X[
+XÜ\Yœİİ]	ù.-9¥í¹­bú+åyká¹è LLŒÉÊB‚‚šYˆ×Û˜[YW×ÈOH	××ÛXZ[—×ÉÎ‚ˆ[š]\İ›XZ[Š
+B
