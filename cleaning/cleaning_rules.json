@@ -18,7 +18,7 @@
     "Wet-Dry-Floor-Washer": {
       "exclude_title_patterns": [
         "\\b(?:K[ÄA]RCHER\\s+WD\\s*[- ]?\\d|KWD\\s*[- ]?\\d|Bosch\\s+(?:PAS|GAS)\\s*[- ]?\\d|AdvancedVac\\s*\\d|UniversalVac\\s*\\d)\\b",
-        "\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+        "\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
         "\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
         "^.{0,80}\\b(?:EveryMess|Spot\\s+Cleaner|Upholstery\\s+Cleaner|Stain\\s+Eliminator|Portable\\s+Carpet\\s+Cleaner)\\b",
         "\\b(?:wet.?dry|nass.?trocken|乾湿両用|干湿两用|solidi.?liquidi|seco.?húmedo).{0,90}\\b(?:1[0-9]|2[0-9]|3[0-9])\\s*(?:L|lit(?:er|re|ro)s?)\\b",
@@ -56,6 +56,23 @@
       ],
       "review_reason": "household_floor_washer_not_confirmed",
       "note": "家用吸拖洗一体机。明确的工业/桶式产品排除，无法确认的产品单列待复核，不进入已确认大盘。按ASIN的明确保留优先于标题规则。"
+    },
+    "FR/Wet-Dry-Floor-Washer": {
+      "exclude_title_patterns": [
+        "\\b(?:aspirateur\\s+[àa]\\s+cendres?|vide\\s+cendres?|cendres?\\s+chaudes?)\\b",
+        "\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+        "\\b[1-9]\\d\\s*(?:L|litres?)\\b",
+        "\\b(?:shampouineuse|nettoyeur\\s+de\\s+(?:tapis|moquettes?|canapés?|rembourrages?)|aspirateur\\s+nettoyeur\\s+de\\s+tapis)\\b",
+        "\\b(?:robot\\s+aspirateur|aspirateur\\s+robot|robot\\s+laveur|DEEBOT|Roomba)\\b",
+        "\\b(?:aspirateur\\s+de\\s+table|ramasse[- ]?miettes|onglerie)\\b"
+      ],
+      "require_title_patterns": [
+        "\\b(?:aspirateur(?:\\s+balai)?\\s+laveur|balai\\s+laveur|laveur\\s+de\\s+sols?|Floor\\s*One|FloorShine|iFloor|X[- ]?Clean|CrossWave|HydroVac|HydroSteam|AquaTrio|Pencilwash)\\b",
+        "\\b(?:roborock\\s+F25|dreame\\s+H\\d+|MOVA\\s+(?:M10|M20|M50|X4))\\b",
+        "\\bJONR\\b.{0,100}(?:\\bH2\\b|\\beau\\s+chaude\\s+auto[- ]?nettoyante\\b)"
+      ],
+      "review_reason": "household_floor_washer_not_confirmed",
+      "note": "法国两个来源只统计家用洗地机；工业/桶式、吸灰、布艺清洗机、机器人和普通吸尘器不进入竞品大盘。标题无法确认的商品留在审计待复核。"
     }
   }
 }

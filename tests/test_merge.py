@@ -1,4 +1,6 @@
 import unittest
+import json
+from pathlib import Path
 from cleaning.build_dashboard_data import PATTERN, merge_group
 
 
@@ -14,6 +16,12 @@ def product(asin, revenue, brand='A', title='Floor washer'):
 
 
 class MergeTests(unittest.TestCase):
+    def test_french_sources_share_one_group(self):
+        tasks = json.loads((Path(__file__).resolve().parents[1] / 'tasks_v2.json').read_text(encoding='utf-8'))['tasks']
+        french = [task for task in tasks if task['marketplace'] == 'FR' and task['category'] == 'Wet-Dry-Floor-Washer']
+        self.assertEqual({task['node_id'] for task in french}, {'218877814031', '1854941031'})
+        self.assertTrue(all(task['enabled'] for task in french))
+
     def test_union_dedup_clean_and_recompute(self):
         a = source('1', [product('B000000001', 100), product('B000000002', 50, title='Accessory')])
         b = source('2', [product('B000000001', 120), product('B000000003', 200, 'B')])

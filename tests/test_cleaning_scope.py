@@ -14,6 +14,43 @@ class FloorWasherScopeTests(unittest.TestCase):
         for title in ['Dreame H12 Pro Ultra Nass- und Trockensauger', 'Tineco Floor ONE Stretch S6', 'roborock F25 LT Wet Dry Vacuum Cleaner', 'Rowenta X-Clean 4', 'KÄRCHER FC 7 Bodenreiniger', 'MOVA X4 Pro Heißwasserwischen', 'dreame T16 Pro Heat-A', 'PHILIPS AquaTrio Nass-Trockensauger', 'Midea X10 Smart Nass-Trocken-Sauger']:
             self.assertTrue(decision({'asin': 'test', 'title': title}, self.rules)[0], title)
 
+    def test_french_floor_washer_scope(self):
+        rules = rules_for(self.cleaning, 'FR', 'Wet-Dry-Floor-Washer')
+        included = [
+            'Tineco Floor ONE S7 Stretch aspirateur laveur',
+            'roborock F25 GT Aspirateur Balai Laveur',
+            'MOVA M10 Aspirateur Laveur',
+            'Rowenta X-Clean 4 Aspirateur laveur',
+            'Bissell CrossWave aspirateur laveur',
+            'EUREKA NEW400 aspirateur balai laveur',
+            'JONR H2 aspirateur laveur eau chaude auto-nettoyante',
+            'Dyson Pencilwash nettoyeur de sols',
+        ]
+        for title in included:
+            with self.subTest(title=title):
+                self.assertTrue(decision({'asin': 'test', 'title': title}, rules)[0])
+
+        excluded = [
+            'Kärcher WD 3 aspirateur eau et poussière 17 L',
+            'Kärcher NT 22 aspirateur professionnel',
+            'Einhell TC-VC 1812 aspirateur eau et poussière',
+            'Scheppach DC500 aspirateur industriel',
+            'Aspirateur à cendres chaudes 20 L',
+            'Shampouineuse nettoyeur de tapis et canapés',
+            'Ecovacs DEEBOT robot aspirateur laveur',
+            'Dyson Cyclone V10 Submarine aspirateur sans fil',
+        ]
+        for title in excluded:
+            with self.subTest(title=title):
+                keep, reason = decision({'asin': 'test', 'title': title}, rules)
+                self.assertFalse(keep)
+                self.assertTrue(reason.startswith('title_pattern:'), reason)
+
+        self.assertEqual(
+            decision({'asin': 'test', 'title': 'Aspirateur balai sans fil 500 W'}, rules),
+            (False, 'needs_review:household_floor_washer_not_confirmed'),
+        )
+
     def test_tank_vacuums_do_not_enter_market(self):
         for title in ['KÄRCHER WD 2 Plus V-12/4/18/C', 'Bosch GAS18V-6LS', 'Bosch Allzwecksauger PAS15-200', 'Akku Nass-Trockensauger Werkstattsaugersmit 10L Staubbehälter', 'KWD 3 S V-17/4/20/F']:
             keep, reason = decision({'asin': 'test', 'title': title}, self.rules)

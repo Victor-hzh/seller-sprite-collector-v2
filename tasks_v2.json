@@ -469,6 +469,19 @@
       "url": "https://www.amazon.de/gp/bestsellers/kitchen/2077530031",
       "target_rows": 50,
       "max_load_more_clicks": 0
+    },
+    {
+      "id": "FR_WET_DRY_FLOOR_WASHER_1854941031",
+      "enabled": true,
+      "data_type": "BSR",
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "category_label": "洗地机",
+      "list_name": "Additional French floor washer source",
+      "node_id": "1854941031",
+      "url": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+      "target_rows": 50,
+      "max_load_more_clicks": 0
     }
   ]
 }

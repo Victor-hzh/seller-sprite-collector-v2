@@ -14,13 +14,14 @@
 
 ## 当前功能
 
-- 7 个站点、5 个品类，共 35 个品类组、36 个下载来源。
+- 7 个站点、5 个品类，共 35 个品类组、37 个下载来源。
 - 德国洗地机新增 2077530031，与 218877962031 合并。
+- 法国洗地机新增 1854941031，与 218877814031 合并。
 - 新文件名包含 Node 编号，原始 Excel 始终保留。
 - 按日期、站点、品类合并，ASIN 去重，按月销售额排序。
 - 同 ASIN 数值冲突按 tasks_v2.json 来源顺序选用一份，不相加，审计记录包含差异。
 - 大盘计算包含全部清洗后的产品，不截取 Top50；品牌和卖家汇总重新生成。
-- cleaning/cleaning_rules.json 按通用、品类、站点品类三层应用规则。全部站点自动剔除明确的清洁液、替换件和工业设备；洗地机另排除桶式/车库吸尘器、便携布艺污渍清洁机及仅加装湿拖头的 Dyson Submarine 吸尘器，布艺清洗机排除纯蒸汽机，除螨仪只纳入有床垫/除螨证据的商品。德国洗地机继续使用其专门的家用吸拖洗一体机规则。
+- cleaning/cleaning_rules.json 按通用、品类、站点品类三层应用规则。全部站点自动剔除明确的清洁液、替换件和工业设备；洗地机另排除桶式/车库吸尘器、便携布艺污渍清洁机及仅加装湿拖头的 Dyson V 系列 Submarine 吸尘器，布艺清洗机排除纯蒸汽机，除螨仪只纳入有床垫/除螨证据的商品。德国和法国洗地机分别使用专门的家用吸拖洗一体机规则；Dyson Pencilwash 纳入洗地机。
 - data/merged/YYYY-MM-DD 保存合并清洗Excel，保留原70列、图片、商品链接、列宽、冻结首行及DE/Brands/Sellers/Note工作表。
 - 合并表的 # 是竞品销售额顺序，原始小类BSR字段不修改。Brands/Sellers重新汇总，市场份额沿用原表月销量口径。
 - 原始商品表没有逐SKU年销量/年销售额，所以重算汇总的年指标留空，不相加原表的整榜年度汇总。
@@ -45,15 +46,16 @@ python collector_app.py upload
 ```
 
 仅测试德国新增来源：python collector_app.py run --task DE_WET_DRY_FLOOR_WASHER_2077530031。
+仅测试法国新增来源：python collector_app.py run --task FR_WET_DRY_FLOOR_WASHER_1854941031。
 桌面版仍可通过 `SellerSpriteCollector.exe --cli run --task DE_WET_DRY_FLOOR_WASHER_2077530031` 使用命令行。
 
 浏览器初始化时需要在专用 Chrome 中安装卖家精灵插件；团队账号由程序自动登录。验证码仍需人工完成。
-下载前先检查卖家精灵登录状态并自动登录，检查通过后才进入原来的浏览器、登录与导出逻辑；每个榜单仍检查掉线并尝试重登。未自动启动真实下载；新增来源需实测。
+下载前先检查卖家精灵登录状态并自动登录，检查通过后才进入浏览器、登录与导出逻辑；每个榜单仍检查掉线并尝试重登。法国两个来源已分别完成真实下载验证。
 
 ## 清洗规则
 
 default 对所有站点和品类生效；categories 按品类叠加；groups 中以 DE/Wet-Dry-Floor-Washer 这样的键覆盖特定站点品类。排除正则逐层累加，品类的 require_title_patterns 可由站点规则替换。
-keep_asins 优先于 exclude_asins 和标题规则；只有有明确品类证据的除螨仪和德国洗地机才启用“未确认则待复核”。其他榜单未命中排除规则的商品默认保留，避免因关键词不全误删整机。
+keep_asins 优先于 exclude_asins 和标题规则；除螨仪、德国与法国洗地机启用“未确认则待复核”。其他榜单未命中排除规则的商品默认保留，避免因关键词不全误删整机。
 exclude_title_patterns 是 Python 正则；清洁液等规则只匹配标题前段，避免把“随机附送清洁液”的整机误当耗材。无法确认品类、标题缺失的商品进入 review，不计入看板大盘。
 data/processed/cleaning-audit.json 记录 excluded、review、duplicate，包含 ASIN、标题、命中规则、来源和原榜单排名。新增规则应先检查审计记录和各站点产品数量；确认后的例外可放入站点品类的 keep_asins/exclude_asins。
 销售额缺失记录保留并排在最后，missingRevenueCount 标明缺失数量。
@@ -74,7 +76,7 @@ data/processed/cleaning-audit.json 记录 excluded、review、duplicate，包含
 
 在 Actions → Build Windows EXE 的最新成功运行中下载 `SellerSpriteCollector-v2-Windows`，解压后双击 `SellerSpriteCollector-v2-Setup.exe` 安装。开始菜单和桌面会出现“SellerSprite Collector V2”。也保留免安装 ZIP，供便携使用。安装版用户无需安装 Python、配置虚拟环境或设置环境变量；开发者本地构建时运行 `python tools/build_exe.py` 和 `python tools/build_installer.py`（构建机需有 NSIS）。
 
-窗口首次使用先完成本地环境配置并点击“连接 GitHub”，用拥有本仓库 Contents 读写权限的个人令牌连接一次。之后选择下载范围并点击“下载并更新看板”，程序自动检查卖家精灵登录状态、下载 Excel、向 V2 仓库提交新增或变化的 Excel；GitHub Actions 随后自动清洗、合并并更新看板 JSON。令牌通过 Windows 当前用户加密保存在 `runtime/github_token.dpapi`，不会加入仓库或安装包。下载支持全部 36 个来源、单榜单、跳过已完成任务和强制重下；上传失败可单独重试，不需要重新下载。“仅下载”和手动 GitHub 上传页面保留备用。
+窗口首次使用先完成本地环境配置并点击“连接 GitHub”，用拥有本仓库 Contents 读写权限的个人令牌连接一次。之后选择下载范围并点击“下载并更新看板”，程序自动检查卖家精灵登录状态、下载 Excel、向 V2 仓库提交新增或变化的 Excel；GitHub Actions 随后自动清洗、合并并更新看板 JSON。令牌通过 Windows 当前用户加密保存在 `runtime/github_token.dpapi`，不会加入仓库或安装包。下载支持全部 37 个来源、单榜单、跳过已完成任务和强制重下；上传失败可单独重试，不需要重新下载。“仅下载”和手动 GitHub 上传页面保留备用。
 
 首次仍需安装 Chrome，并在程序打开的专用 Chrome 中安装卖家精灵插件；团队账号自动登录，验证码人工完成。程序不附带浏览器、插件或登录状态。团队账号按项目所有人的要求随公开 V2 仓库与安装包提供；本机覆盖账号由当前 Windows 用户加密，保存在 `runtime/`。不要将本机 `runtime/`、浏览器配置或 `.venv` 上传到仓库。安装版数据也保存在安装目录下；卸载程序时保留下载数据与登录状态，方便自行备份或删除。详见 `README_WINDOWS_GUI.txt`。
 
