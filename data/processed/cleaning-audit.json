@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T16:52:42+00:00",
+  "generatedAt": "2026-10-20T03:58:23+00:00",
   "duplicatePolicy": "configured_source_priority",
   "events": [
     {
@@ -2043,6 +2043,711 @@
       }
     },
     {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-08-31",
+      "action": "review",
+      "asin": "B0H69GTK93",
+      "title": "Aspirateur sans Fil 50000Pa 600W 60Min Autonomie Grand Bac À Poussière Filtration 8 Étages pour Maison Poils Animaux",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
+        "nodeId": "218877814031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/218877814031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-09",
+      "action": "review",
+      "asin": "B0H69GTK93",
+      "title": "Aspirateur sans Fil 50000Pa 600W 60Min Autonomie Grand Bac À Poussière Filtration 8 Étages pour Maison Poils Animaux",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
+        "nodeId": "218877814031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/218877814031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-09-28",
+      "action": "review",
+      "asin": "B0H69GTK93",
+      "title": "Aspirateur sans Fil 50000Pa 600W 60Min Autonomie Grand Bac À Poussière Filtration 8 Étages pour Maison Poils Animaux",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
+        "nodeId": "218877814031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/218877814031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-08",
+      "action": "review",
+      "asin": "B0H69GTK93",
+      "title": "Aspirateur sans Fil 50000Pa 600W 60Min Autonomie Grand Bac À Poussière Filtration 8 Étages pour Maison Poils Animaux",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
+        "nodeId": "218877814031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/218877814031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-19",
+      "action": "review",
+      "asin": "B0H69GTK93",
+      "title": "Aspirateur sans Fil 50000Pa 600W 60Min Autonomie Grand Bac À Poussière Filtration 8 Étages pour Maison Poils Animaux",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node218877814031_Top50_2026-10-19.xlsx",
+        "nodeId": "218877814031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/218877814031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "review",
+      "asin": "B0H69GTK93",
+      "title": "Aspirateur sans Fil 50000Pa 600W 60Min Autonomie Grand Bac À Poussière Filtration 8 Étages pour Maison Poils Animaux",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node218877814031_Top50_2026-10-20.xlsx",
+        "nodeId": "218877814031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/218877814031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0BQ2LB1S6",
+      "title": "Cecotec Aspirateur à Cendres Conga Ash 2000 Home, 10L, Puissance de 800W",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 2
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B09MD6NFGL",
+      "title": "KÄRCHER 1.628-009.0 Aspirateur Eau et Poussières WD 2 Plus V-12/4/18/C, avec Filtre Cartouche, Sachet Filtre Ouate, 1000 W, Cuve PVC : 12 l, Tube d'Aspiration : 1,8 m, Suceur Sol/Fentes, Jaune",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 3
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0H3667HYG",
+      "title": "Aspirateur à Cendres,1200W 20L aspirateur pour poêles à granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 4
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0GC6MPDLY",
+      "title": "KÄRCHER Aspirateur Eau et Poussières WD 3 V-17/4/20, Soufflage, 1000W, Cuve 17L, Flexible 2m. Inclus : Filtre Cartouche, Sac Non-tissé, Buses Sol & Fentes. Puissant, Compact et idéal pour Le Garage.",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 8
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0CZS8PWFH",
+      "title": "Aspirateur À Cendres Et Poussières 4l 600w - DOH139",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 9
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0G5YLLN3C",
+      "title": "HALMAI Aspirateur à poussière rechargeable sans fil - 800Pa aspiration, moteur sans balais 5000 tr/min, portable pour onglerie (acrylique/gel), filtre HEPA , multi-couleurs (Rose brumeux)",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+de\\s+table|ramasse[- ]?miettes|onglerie)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 10
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0DBLD211L",
+      "title": "KÄRCHER Shampouineuse SE 3 Compact, Aspiration : 500W, Réservoir Eau : 1,7L, Surface : 2,76m2, Poids : 4,1kg, Flexible d'Aspiration, Buses de Lavage : Tissus et Fentes",
+      "reason": "title_pattern:\\b(?:shampouineuse|nettoyeur\\s+de\\s+(?:tapis|moquettes?|canapés?|rembourrages?)|aspirateur\\s+nettoyeur\\s+de\\s+tapis)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 11
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FLY1JKXJ",
+      "title": "LEHMANN Aspirateur à Cendres 15L, Aspirateur Cheminée pour Haute Température, Réservoir Robuste, Filtre HEPA avec Panier Métallique, Fonction Soufflage, Nettoyage Cheminées et Pellets",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 12
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0B56LNP6H",
+      "title": "Vacmaster VQ1220SC 1250W 20L Aspirateur Eau et Poussière,Fonction Soufflerie, Puissant Professionnel Industriel Aspirateur avec & sans Sac",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 13
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0C467KWM5",
+      "title": "Cecotec Aspirateur Eau et Poussière Conga Rockstar Wet & Dry Steel Max, 20L",
+      "reason": "title_pattern:\\b[1-9]\\d\\s*(?:L|litres?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 14
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B09MD77LKP",
+      "title": "KÄRCHER Aspirateur Sec Et Humide WD 5 S V-25/5/22, Filtre Plissé Plat, Cartouche Filtrante Amovible, Nettoyage Automatique du Filtre, 1100 W, Réservoir en Acier Inoxydable 25 L, Tuyau De 2,2 M",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0GWJ4HXFJ",
+      "title": "Aspirateur à Cendres,1000W 15L aspirateur pour poêles à granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 16
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0CRVTN732",
+      "title": "Kärcher Aspirateur Eau et Poussières WD 4 S V-20/5/22, Puissance : 1000W, Cuve en Inox : 20L, Flexible d'Aspiration : 2,2m, Soufflerie, Filtre Plissé Plat, Suceurs Sol & Fentes, Sachet Filtre Ouate",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 17
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FD3RB2RS",
+      "title": "LEHMANN Haddo Aspirateur Industriel 2000W - Aspirateur à Cendres pour Cheminée avec Double Filtre - Réservoir en Acier Inoxydable de 20 L - Filtre HEPA - Fonction Soufflerie - Rouge et Noir",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 18
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0GXKFGVKH",
+      "title": "Verda Aspirateur à cendres 20L 2000W Max., acier inoxydable pour cheminée",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 20
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B08K3M7BW6",
+      "title": "POWERPLUS Vide Cendres POWX3000-1000W 15L",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+[àa]\\s+cendres?|vide\\s+cendres?|cendres?\\s+chaudes?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 21
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FY6F7DPS",
+      "title": "Einhell Aspirateur Eau et poussière TC-VC 1240 S",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 22
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0CQT4YPWX",
+      "title": "Kärcher Shampouineuse SE 4 Plus, Flexible d'Aspiration, Réservoirs Eau Fraîche/Eau Sale : 4 l, Suceurs de Lavage avec Embouts pour Sol Dur, Moquettes, Fauteuils, Fentes",
+      "reason": "title_pattern:\\b(?:shampouineuse|nettoyeur\\s+de\\s+(?:tapis|moquettes?|canapés?|rembourrages?)|aspirateur\\s+nettoyeur\\s+de\\s+tapis)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 23
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B01MZ2QUOR",
+      "title": "BIKAIN Aspirateur à Cendres 20L avec Souffleur pour Cheminées et Granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 24
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0D2DPN2HB",
+      "title": "Cecotec Aspirateur Filaire Conga Rockstar Wet & Dry. Aspirateur de Jardin Compact 10L, 1000W, léger, Compact, Double Fonction d'aspiration et de soufflage, Accessoires",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 25
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FSSMXWPX",
+      "title": "FACILITYS Aspirateur à Cendres Chaudes 1200W 18L en Métal - Aspirateur poêle à pellets et cheminée, jusqu'à 60°C avec Fonction Soufflerie, Filtre HEPA Lavable",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 26
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FHHQPQY3",
+      "title": "LEHMANN Aspirateur Industriel avec Prise 2000W, Aspirateur Eau et Poussière avec Réservoir en Métal 30L, Fonction Soufflage, Filtre HEPA et Filtre Mousse, idéal pour Atelier et Chantier",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 27
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B08BTRBNCG",
+      "title": "Vacmaster Aspirateur Eau et Poussière 1250W 20L pour Maison Garage",
+      "reason": "title_pattern:\\b[1-9]\\d\\s*(?:L|litres?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 28
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0794P9XKC",
+      "title": "KÄRCHER Aspirateur Eau et poussières NT 22/1 AP L, Puissance : Max. 1300 W, Filtre Cartridge PES, réservoir : 22 l, Tuyau : 1,9 m, coude, suceur pour sols humides/secs (300 mm), buse de Fentes",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 30
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B09THS2VF3",
+      "title": "Aspirateur À Cendre 10l 800w - PRCEN011KIT",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+[àa]\\s+cendres?|vide\\s+cendres?|cendres?\\s+chaudes?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 31
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B06Y2T25P5",
+      "title": "STANLEY Aspirateur Solides et Liquides SXVC30XTDE avec Prise Outils Électroportatifs (1600 W, 30 l)",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 32
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B09MD7GXXL",
+      "title": "Kärcher Humide/Sec Aspirateur Eau et poussières WD 3 V-17/4/20, Fonction Soufflerie, 1000 W, Cuve Polypropylène de 17 l, Flexible d'aspiration de 2 m, Filtre Cartouche Inclus, Buse Sol et Fente",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 33
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0BTHFNNH1",
+      "title": "Vacmaster SCA0801 Aspirateur Nettoyeur de Tapis pour canapé, Tapis, Rembourrage, Voiture | Aspirateur Eau-Sec Forte Aspiration Lavage Eau décontamination, 800w",
+      "reason": "title_pattern:\\b(?:shampouineuse|nettoyeur\\s+de\\s+(?:tapis|moquettes?|canapés?|rembourrages?)|aspirateur\\s+nettoyeur\\s+de\\s+tapis)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 34
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FM8CWXV5",
+      "title": "Einhell Aspirateur eaux et poussières Te-VC 2580 SACL",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 35
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0CRVV3SST",
+      "title": "Kärcher Aspirateur Eau et Poussières WD 4 V-20/5/22, Puissance : 1000W, Cuve Polypropylène : 20L, Flexible d'Aspiration : 2,2m, Soufflerie, Filtre Plissé Plat, Suceurs Sol Fentes, Sachet Filtre Ouate",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 36
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "review",
+      "asin": "B09JGRN71Y",
+      "title": "Scheppach Aspirateur DC500 | Puissance 550W",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 37
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B08HH7RSJV",
+      "title": "Aspirateur À Cendres 4l 500w - PRCEN018",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 38
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0CCJ8CN3H",
+      "title": "DICOGAR Aspirateur à Cendres 20L avec Souffleur pour Cheminées et Granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 39
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FWC5BMY8",
+      "title": "Dyson Cyclone V10 Submarine™ aspirateur Balai Sec et Humide",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 42
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B07S1X9T8H",
+      "title": "Masko® Aspirateur Industriel Aspirateur Eau et poussière Acier Inoxydable 2 300 W + Prise | Fonction soufflerie | 30 L | avec et sans Sac | Filtre Interchangeable Inclus | Tuyau: 3,5 m | Jaune",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 43
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0GHR9NGT7",
+      "title": "ECOVACS DEEBOT T90 Omni Robot Aspirateur Laveur 30000Pa Blast OZMO 3.0 AIVI",
+      "reason": "title_pattern:\\b(?:robot\\s+aspirateur|aspirateur\\s+robot|robot\\s+laveur|DEEBOT|Roomba)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 45
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FHH9KWDZ",
+      "title": "LEHMANN Aspirateur Industriel sans Sac 30L - Aspirateur Eau et Poussière avec Prise 2000W - Fonction soufflage - Double Système Filtration avec HEPA - Secoueur de Filtre - pour Atelier et Chantier",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 46
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0HDR1L545",
+      "title": "Pylones Ramasse miettes - Aspirateur de Table - Aspimiette",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+de\\s+table|ramasse[- ]?miettes|onglerie)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 47
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B01HPN5X3S",
+      "title": "BLACK+DECKER Aspirateur Solides et Liquides BXVC20PTE avec Prise Outils Électroportatifs (1200 W, 20 litres)",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 48
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0B5HGW11C",
+      "title": "Varo Powerplus Vide Cendres POWX3013 - Aspirateur de Cendre de 1600 W - avec Réservoir de 20 l, Filtre Exclusif",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+[àa]\\s+cendres?|vide\\s+cendres?|cendres?\\s+chaudes?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 49
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-20",
+      "action": "excluded",
+      "asin": "B0FJ8GPBX2",
+      "title": "NILFISK Aspirateur Sec VP300 HEPA EC EU - avec Filtre et Buses (Dimensions 398 x 340 x 395 cm, Couleur Bleu foncé, Volume du Sac filtrant 10 l, Poids 4,5 kg) 107421143",
+      "reason": "title_pattern:\\b[1-9]\\d\\s*(?:L|litres?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-20.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 50
+      }
+    },
+    {
       "marketplace": "IT",
       "category": "Mite-Vacuum",
       "date": "2026-08-31",
@@ -3219,7 +3924,7 @@
       "action": "excluded",
       "asin": "B0HHN61KPZ",
       "title": "Dyson(ダイソン) Dyson V12s Detect Slim Submarine 无线棒式吸尘器 戴森官方限定 延长保修1年款",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
         "nodeId": "13698381",
@@ -3234,7 +3939,7 @@
       "action": "excluded",
       "asin": "B0HGLFDYL5",
       "title": "Dyson(ダイソン) 吸尘器 无线 Dyson V12s Detect Slim Submarine (SV46 SU) 棒 手持式吸尘器 气旋 可用水擦拭 干式吸尘器 带充电支架 【从现在开始用水擦拭】 (New V8 slim)",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
         "nodeId": "13698381",
@@ -3339,7 +4044,7 @@
       "action": "excluded",
       "asin": "B0HHN61KPZ",
       "title": "Dyson(ダイソン) Dyson V12s Detect Slim Submarine 无线棒式吸尘器 戴森官方限定 延长保修1年款",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
         "nodeId": "13698381",
@@ -3444,7 +4149,7 @@
       "action": "excluded",
       "asin": "B0HHN61KPZ",
       "title": "Dyson(ダイソン) Dyson V12s Detect Slim Submarine 无线棒式吸尘器 戴森官方限定 延长保修1年款",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
         "nodeId": "13698381",
@@ -3474,7 +4179,7 @@
       "action": "excluded",
       "asin": "B0HGLFDYL5",
       "title": "Dyson(ダイソン) 吸尘器 无线 Dyson V12s Detect Slim Submarine (SV46 SU) 棒 手持式吸尘器 气旋 可用水擦拭 干式吸尘器 带充电支架 【从现在开始用水擦拭】 (New V8 slim)",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_JP_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
         "nodeId": "13698381",
@@ -3564,7 +4269,7 @@
       "action": "excluded",
       "asin": "B0HHN61KPZ",
       "title": "Dyson(ダイソン) Dyson V12s Detect Slim Submarine 无线棒式吸尘器 戴森官方限定 延长保修1年款",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_JP_Wet-Dry-Floor-Washer_Node13698381_Top50_2026-10-19.xlsx",
         "nodeId": "13698381",
@@ -9534,7 +10239,7 @@
       "action": "excluded",
       "asin": "B0GY5Z5BT4",
       "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-08-31.xlsx",
         "nodeId": "218819671011",
@@ -9579,7 +10284,7 @@
       "action": "excluded",
       "asin": "B0GY5Z5BT4",
       "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-09.xlsx",
         "nodeId": "218819671011",
@@ -9639,7 +10344,7 @@
       "action": "excluded",
       "asin": "B0GY5Z5BT4",
       "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-23.xlsx",
         "nodeId": "218819671011",
@@ -9669,7 +10374,7 @@
       "action": "excluded",
       "asin": "B0GY5Z5BT4",
       "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuum",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-09-28.xlsx",
         "nodeId": "218819671011",
@@ -9729,7 +10434,7 @@
       "action": "excluded",
       "asin": "B0GY5Z5BT4",
       "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuums315AW, 70 min runtime, 3 Advanced cleaner heads for Carpet,",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_US_Wet-Dry-Floor-Washer_Top50_2026-10-08.xlsx",
         "nodeId": "218819671011",
@@ -9804,7 +10509,7 @@
       "action": "excluded",
       "asin": "B0GY5Z5BT4",
       "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuum",
-      "reason": "title_pattern:\\bDyson\\s+V\\d+.{0,50}Submarine\\b",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
       "source": {
         "file": "BSR_US_Wet-Dry-Floor-Washer_Node218819671011_Top50_2026-10-19.xlsx",
         "nodeId": "218819671011",
