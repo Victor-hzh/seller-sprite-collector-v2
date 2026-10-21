@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T03:58:23+00:00",
+  "generatedAt": "2026-10-21T08:23:09+00:00",
   "duplicatePolicy": "configured_source_priority",
   "events": [
     {
@@ -1654,6 +1654,51 @@
     },
     {
       "marketplace": "ES",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0DRVH8KLM",
+      "title": "13KPa Aspirador de Mano sin Cables con luz UV-C y Ultrasonidos",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_ES_Mite-Vacuum_Node13713592031_Top50_2026-10-21.xlsx",
+        "nodeId": "13713592031",
+        "sourceUrl": "https://www.amazon.es/gp/bestsellers/kitchen/13713592031",
+        "rank": 13
+      }
+    },
+    {
+      "marketplace": "ES",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0F2MQCLRJ",
+      "title": "CREATULIZE Filtro de Limpieza de vacío para el hogar Accesorios",
+      "reason": "title_pattern:^.{0,80}(?:panni\\s+mocio\\s+di\\s+ricambio|potenziatore\\s+detergente|detergente\\s+smacchiante|filtro\\s+de\\s+limpieza|Ersatz(?:filter|walze|bürste)|Filterbeutel|Staubbeutel)\\b",
+      "source": {
+        "file": "BSR_ES_Mite-Vacuum_Node13713592031_Top50_2026-10-21.xlsx",
+        "nodeId": "13713592031",
+        "sourceUrl": "https://www.amazon.es/gp/bestsellers/kitchen/13713592031",
+        "rank": 36
+      }
+    },
+    {
+      "marketplace": "ES",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0FBX24WH6",
+      "title": "Limpiador Varuum – 68 W Fuerte Cama vacío para Limpieza Profunda | Eliminador de para Mascotas vacío para Cojines de sofá Hojas Tela Ropa de Cama Superficies",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_ES_Mite-Vacuum_Node13713592031_Top50_2026-10-21.xlsx",
+        "nodeId": "13713592031",
+        "sourceUrl": "https://www.amazon.es/gp/bestsellers/kitchen/13713592031",
+        "rank": 39
+      }
+    },
+    {
+      "marketplace": "ES",
       "category": "Spot-Cleaner",
       "date": "2026-08-31",
       "action": "excluded",
@@ -1725,6 +1770,21 @@
         "nodeId": "3678039031",
         "sourceUrl": "https://www.amazon.es/gp/bestsellers/kitchen/3678039031",
         "rank": 25
+      }
+    },
+    {
+      "marketplace": "ES",
+      "category": "Spot-Cleaner",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0DDPL3PD2",
+      "title": "Vacmaster Clean & Restore Carpet Cleaner Formula – CCS04",
+      "reason": "title_pattern:^.{0,45}\\b(?:cleaning solution|carpet cleaner formula|cleaning formula|formula booster|detergent refill|refill cartridge|disposable .{0,35} pads? .{0,20} refill)\\b",
+      "source": {
+        "file": "BSR_ES_Spot-Cleaner_Node3678039031_Top50_2026-10-21.xlsx",
+        "nodeId": "3678039031",
+        "sourceUrl": "https://www.amazon.es/gp/bestsellers/kitchen/3678039031",
+        "rank": 17
       }
     },
     {
@@ -1818,6 +1878,21 @@
       }
     },
     {
+      "marketplace": "ES",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0D2KT41N3",
+      "title": "Cecotec Aspiradora con Cable en Seco y Húmedos - Aspirador Sólidos y Líquidos 16L Conga Rockstar Wet & Dry Compact Garden Plus. 1200W, Ligero, Compacto, Doble Función de Succión y Soplado, Accesorios",
+      "reason": "title_pattern:\\b(?:s[óo]lidos\\s+y\\s+l[íi]quidos|solidi\\s*[- ]?liquidi|vacuums?\\s+for\\s+car\\s+and\\s+garage|aspirateur\\s+eau\\s+et\\s+poussière\\s+\\d{2}\\s*L)\\b",
+      "source": {
+        "file": "BSR_ES_Wet-Dry-Floor-Washer_Node218878925031_Top50_2026-10-21.xlsx",
+        "nodeId": "218878925031",
+        "sourceUrl": "https://www.amazon.es/gp/bestsellers/kitchen/218878925031",
+        "rank": 1
+      }
+    },
+    {
       "marketplace": "FR",
       "category": "Mite-Vacuum",
       "date": "2026-08-31",
@@ -1905,6 +1980,21 @@
         "nodeId": "13519663031",
         "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/13519663031",
         "rank": 44
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0DWJQ9GFY",
+      "title": "Aspirateur sans fil avec lumière UV-C, aspirateur à main 16 kPa avec écran LED, filtre HEPA, ultrasons, aspirateur de lit double tasse pour lit, canapé et coussin",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Mite-Vacuum_Node13519663031_Top50_2026-10-21.xlsx",
+        "nodeId": "13519663031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/13519663031",
+        "rank": 43
       }
     },
     {
@@ -2040,6 +2130,36 @@
         "nodeId": "3575198031",
         "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/3575198031",
         "rank": 34
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Spot-Cleaner",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B07999DC2C",
+      "title": "Bissell Brosse pour Taches Tenaces, Noir, 15 cm",
+      "reason": "title_pattern:^.{0,35}\\b(?:brosse\\s+pour\\s+taches|filter\\s+for\\s+vacuum|filtre\\s+pour\\s+aspirateur)\\b",
+      "source": {
+        "file": "BSR_FR_Spot-Cleaner_Node3575198031_Top50_2026-10-21.xlsx",
+        "nodeId": "3575198031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/3575198031",
+        "rank": 16
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Spot-Cleaner",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0GNB36YF6",
+      "title": "Powell Nettoyeur vapeur 2000 W multi-surfaces avec accessoires, noir",
+      "reason": "title_pattern:^(?!.*(?:carpet|upholster|spot|stain|shampoo|shampouineuse|polster|teppich|waschsauger|lavatapp|tappezzer|canap|divan|tissu|sofa|布|地毯|沙发|シミ|リンサー)).*\\b(?:steam\\s+cleaner|Dampfreiniger|nettoyeur\\s+vapeur|pulitore\\s+a\\s+vapore|limpiador\\s+de\\s+vapor|スチームクリーナー)\\b",
+      "source": {
+        "file": "BSR_FR_Spot-Cleaner_Node3575198031_Top50_2026-10-21.xlsx",
+        "nodeId": "3575198031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/3575198031",
+        "rank": 50
       }
     },
     {
@@ -2748,6 +2868,636 @@
       }
     },
     {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0H69GTK93",
+      "title": "Aspirateur sans Fil 50000Pa 600W 60Min Autonomie Grand Bac À Poussière Filtration 8 Étages pour Maison Poils Animaux",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node218877814031_Top50_2026-10-21.xlsx",
+        "nodeId": "218877814031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/218877814031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0BQ2LB1S6",
+      "title": "Cecotec Aspirateur à Cendres Conga Ash 2000 Home, 10L, Puissance de 800W",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B09MD6NFGL",
+      "title": "KÄRCHER 1.628-009.0 Aspirateur Eau et Poussières WD 2 Plus V-12/4/18/C, avec Filtre Cartouche, Sachet Filtre Ouate, 1000 W, Cuve PVC : 12 l, Tube d'Aspiration : 1,8 m, Suceur Sol/Fentes, Jaune",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 3
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0H3667HYG",
+      "title": "Aspirateur à Cendres,1200W 20L aspirateur pour poêles à granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 4
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0B56LNP6H",
+      "title": "Vacmaster VQ1220SC 1250W 20L Aspirateur Eau et Poussière,Fonction Soufflerie, Puissant Professionnel Industriel Aspirateur avec & sans Sac",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 6
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0GWJ2MZDX",
+      "title": "Aspirateur à Cendres,800W 10L aspirateur pour poêles à granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 7
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0GC6MPDLY",
+      "title": "KÄRCHER Aspirateur Eau et Poussières WD 3 V-17/4/20, Soufflage, 1000W, Cuve 17L, Flexible 2m. Inclus : Filtre Cartouche, Sac Non-tissé, Buses Sol & Fentes. Puissant, Compact et idéal pour Le Garage.",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 9
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0CZS8PWFH",
+      "title": "Aspirateur À Cendres Et Poussières 4l 600w - DOH139",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 10
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0FLY1JKXJ",
+      "title": "LEHMANN Aspirateur à Cendres 15L, Aspirateur Cheminée pour Haute Température, Réservoir Robuste, Filtre HEPA avec Panier Métallique, Fonction Soufflage, Nettoyage Cheminées et Pellets",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 11
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0G5YLLN3C",
+      "title": "HALMAI Aspirateur à poussière rechargeable sans fil - 800Pa aspiration, moteur sans balais 5000 tr/min, portable pour onglerie (acrylique/gel), filtre HEPA , multi-couleurs (Rose brumeux)",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+de\\s+table|ramasse[- ]?miettes|onglerie)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 12
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0C467KWM5",
+      "title": "Cecotec Aspirateur Eau et Poussière Conga Rockstar Wet & Dry Steel Max, 20L",
+      "reason": "title_pattern:\\b[1-9]\\d\\s*(?:L|litres?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 13
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0FSSMXWPX",
+      "title": "FACILITYS Aspirateur à Cendres Chaudes 1200W 18L en Métal - Aspirateur poêle à pellets et cheminée, jusqu'à 60°C avec Fonction Soufflerie, Filtre HEPA Lavable",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B01MZ2QUOR",
+      "title": "BIKAIN Aspirateur à Cendres 20L avec Souffleur pour Cheminées et Granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 16
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0DBLD211L",
+      "title": "KÄRCHER Shampouineuse SE 3 Compact, Aspiration : 500W, Réservoir Eau : 1,7L, Surface : 2,76m2, Poids : 4,1kg, Flexible d'Aspiration, Buses de Lavage : Tissus et Fentes",
+      "reason": "title_pattern:\\b(?:shampouineuse|nettoyeur\\s+de\\s+(?:tapis|moquettes?|canapés?|rembourrages?)|aspirateur\\s+nettoyeur\\s+de\\s+tapis)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 17
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B09MD77LKP",
+      "title": "KÄRCHER Aspirateur Sec Et Humide WD 5 S V-25/5/22, Filtre Plissé Plat, Cartouche Filtrante Amovible, Nettoyage Automatique du Filtre, 1100 W, Réservoir en Acier Inoxydable 25 L, Tuyau De 2,2 M",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 18
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0FD3RB2RS",
+      "title": "LEHMANN Haddo Aspirateur Industriel 2000W - Aspirateur à Cendres pour Cheminée avec Double Filtre - Réservoir en Acier Inoxydable de 20 L - Filtre HEPA - Fonction Soufflerie - Rouge et Noir",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 19
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0CQT4YPWX",
+      "title": "Kärcher Shampouineuse SE 4 Plus, Flexible d'Aspiration, Réservoirs Eau Fraîche/Eau Sale : 4 l, Suceurs de Lavage avec Embouts pour Sol Dur, Moquettes, Fauteuils, Fentes",
+      "reason": "title_pattern:\\b(?:shampouineuse|nettoyeur\\s+de\\s+(?:tapis|moquettes?|canapés?|rembourrages?)|aspirateur\\s+nettoyeur\\s+de\\s+tapis)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 20
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0794P9XKC",
+      "title": "KÄRCHER Aspirateur Eau et poussières NT 22/1 AP L, Puissance : Max. 1300 W, Filtre Cartridge PES, réservoir : 22 l, Tuyau : 1,9 m, coude, suceur pour sols humides/secs (300 mm), buse de Fentes",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 21
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B08K3M7BW6",
+      "title": "POWERPLUS Vide Cendres POWX3000-1000W 15L",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+[àa]\\s+cendres?|vide\\s+cendres?|cendres?\\s+chaudes?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 22
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0CRVTN732",
+      "title": "Kärcher Aspirateur Eau et Poussières WD 4 S V-20/5/22, Puissance : 1000W, Cuve en Inox : 20L, Flexible d'Aspiration : 2,2m, Soufflerie, Filtre Plissé Plat, Suceurs Sol & Fentes, Sachet Filtre Ouate",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 23
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B08BTRBNCG",
+      "title": "Vacmaster Aspirateur Eau et Poussière 1250W 20L pour Maison Garage",
+      "reason": "title_pattern:\\b[1-9]\\d\\s*(?:L|litres?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 24
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0D2DPN2HB",
+      "title": "Cecotec Aspirateur Filaire Conga Rockstar Wet & Dry. Aspirateur de Jardin Compact 10L, 1000W, léger, Compact, Double Fonction d'aspiration et de soufflage, Accessoires",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 25
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0FQJS7TKK",
+      "title": "Einhell Aspirateur Eau et poussière TC-VC 2045 S",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 26
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0CRVV3SST",
+      "title": "Kärcher Aspirateur Eau et Poussières WD 4 V-20/5/22, Puissance : 1000W, Cuve Polypropylène : 20L, Flexible d'Aspiration : 2,2m, Soufflerie, Filtre Plissé Plat, Suceurs Sol Fentes, Sachet Filtre Ouate",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 28
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B06Y2T25P5",
+      "title": "STANLEY Aspirateur Solides et Liquides SXVC30XTDE avec Prise Outils Électroportatifs (1600 W, 30 l)",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 29
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0GXKFGVKH",
+      "title": "Verda Aspirateur à cendres 20L 2000W Max., acier inoxydable pour cheminée",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 30
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0G6YGY8V1",
+      "title": "WORKPRO Aspirateur à Cendres 10L 700W avec Fonction Soufflerie",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 31
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0FM8CWXV5",
+      "title": "Einhell Aspirateur eaux et poussières Te-VC 2580 SACL",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 32
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0BTHFNNH1",
+      "title": "Vacmaster SCA0801 Aspirateur Nettoyeur de Tapis pour canapé, Tapis, Rembourrage, Voiture | Aspirateur Eau-Sec Forte Aspiration Lavage Eau décontamination, 800w",
+      "reason": "title_pattern:\\b(?:shampouineuse|nettoyeur\\s+de\\s+(?:tapis|moquettes?|canapés?|rembourrages?)|aspirateur\\s+nettoyeur\\s+de\\s+tapis)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 34
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B09THS2VF3",
+      "title": "Aspirateur À Cendre 10l 800w - PRCEN011KIT",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+[àa]\\s+cendres?|vide\\s+cendres?|cendres?\\s+chaudes?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 35
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0FHH9KWDZ",
+      "title": "LEHMANN Aspirateur Industriel sans Sac 30L - Aspirateur Eau et Poussière avec Prise 2000W - Fonction soufflage - Double Système Filtration avec HEPA - Secoueur de Filtre - pour Atelier et Chantier",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 37
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0FHHQPQY3",
+      "title": "LEHMANN Aspirateur Industriel avec Prise 2000W, Aspirateur Eau et Poussière avec Réservoir en Métal 30L, Fonction Soufflage, Filtre HEPA et Filtre Mousse, idéal pour Atelier et Chantier",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 38
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B09QT6ZS64",
+      "title": "Scheppach Aspirateur DC500 550W 5 sacs à copeaux + 4 adaptateurs",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 39
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B06XSSDKHV",
+      "title": "KÄRCHER Aspirateur Eau et poussières NT 30/1 Tact L, Max. 1380 W, Filtre plissé Plat, réservoir : 30 l, Tuyau : 4,0 m, suceur pour sols humides/secs (360 mm), buse de Fentes",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 42
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B07S1X9T8H",
+      "title": "Masko® Aspirateur Industriel Aspirateur Eau et poussière Acier Inoxydable 2 300 W + Prise | Fonction soufflerie | 30 L | avec et sans Sac | Filtre Interchangeable Inclus | Tuyau: 3,5 m | Jaune",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 43
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B088K958PM",
+      "title": "Masko® Aspirateur Industriel 6IN1 Aspirateur Eau et poussière Aspirateur Aspirateur à Cendres 2 300 W + Prise électrique Fonction soufflage Aspiration à Sec et Aspiration de l'eau (Gelb)",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 44
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0CCJ8CN3H",
+      "title": "DICOGAR Aspirateur à Cendres 20L avec Souffleur pour Cheminées et Granulés",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 45
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0CW18CTYD",
+      "title": "Fartools Aspirateur à cendres APG4 4 L, 600 W Spécial Granulés pour poêles",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 46
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B00BBLITIC",
+      "title": "KÄRCHER Aspirateur Eau et poussières NT 27/1, Puissance : 1380 W, cuve Plastique : 27 l, Tuyau d'aspiration : 2,5 m, coude, suceur pour sols humides/secs (300 mm), buse de Fentes",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 47
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0G665GZK3",
+      "title": "Bosch Aspirateur Eau et poussière PAS15-220 (Tubes rallonges, Flexible d’Aspiration 2,2 m, poignée-Tuyau coudé, suceurs pour sols et suceurs Droits, Sac en Non-tissé (Uni), Filtre plissé Plat)",
+      "reason": "needs_review:household_floor_washer_not_confirmed",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 48
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B09MD7RZ8D",
+      "title": "KÄRCHER Aspirateur Eau et Poussières WD 5 V-25/5/22, Filtre Plissé Plat, Fonction de Nettoyage du Filtre, Cassette Filtrante, 1100 W, Cuve : 25 l, Tube d'Aspiration : 2,2 m, Fonction Soufflerie",
+      "reason": "title_pattern:\\b(?:WD|NT)\\s*[- ]?\\d+\\b|\\b(?:TC|TE)-VC\\s*\\d+\\b|\\bScheppach\\s+DC\\d+\\b|\\b(?:cuve|soufflerie|soufflage|prise\\s+outils|aspirateur\\s+de\\s+jardin|industriel|professionnel)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 49
+      }
+    },
+    {
+      "marketplace": "FR",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0B5HGW11C",
+      "title": "Varo Powerplus Vide Cendres POWX3013 - Aspirateur de Cendre de 1600 W - avec Réservoir de 20 l, Filtre Exclusif",
+      "reason": "title_pattern:\\b(?:aspirateur\\s+[àa]\\s+cendres?|vide\\s+cendres?|cendres?\\s+chaudes?)\\b",
+      "source": {
+        "file": "BSR_FR_Wet-Dry-Floor-Washer_Node1854941031_Top50_2026-10-21.xlsx",
+        "nodeId": "1854941031",
+        "sourceUrl": "https://www.amazon.fr/gp/bestsellers/kitchen/1854941031",
+        "rank": 50
+      }
+    },
+    {
       "marketplace": "IT",
       "category": "Mite-Vacuum",
       "date": "2026-08-31",
@@ -2959,6 +3709,51 @@
     },
     {
       "marketplace": "IT",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0FDWVV95V",
+      "title": "JIGOO T600 Aspiratore Floreale Delight (Plant Essential Oil)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_IT_Mite-Vacuum_Node13713022031_Top50_2026-10-21.xlsx",
+        "nodeId": "13713022031",
+        "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/13713022031",
+        "rank": 8
+      }
+    },
+    {
+      "marketplace": "IT",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0H6Q8KWCD",
+      "title": "Taurus - Pulitore Aspiratore ad Acqua per Tappezzerie e Tappeti, Liquidi e Solidi, Serbatoi per Acqua Pulita e Acqua Sporca",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_IT_Mite-Vacuum_Node13713022031_Top50_2026-10-21.xlsx",
+        "nodeId": "13713022031",
+        "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/13713022031",
+        "rank": 19
+      }
+    },
+    {
+      "marketplace": "IT",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0F8W81X7Y",
+      "title": "ERINGOGO Galleggiante per Lavasciuga Pavimenti Filtro per Serbatoio di Scarico Acciaio Inossidabile Parte Accessori Facile Installare Piccola Leggera",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_IT_Mite-Vacuum_Node13713022031_Top50_2026-10-21.xlsx",
+        "nodeId": "13713022031",
+        "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/13713022031",
+        "rank": 41
+      }
+    },
+    {
+      "marketplace": "IT",
       "category": "Robot-Vacuum",
       "date": "2026-09-23",
       "action": "excluded",
@@ -3015,6 +3810,21 @@
         "nodeId": "733026031",
         "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/733026031",
         "rank": 13
+      }
+    },
+    {
+      "marketplace": "IT",
+      "category": "Robot-Vacuum",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0C78DVSYP",
+      "title": "DREAME 4x Panni mocio di ricambio(×2 Paia) compatibili con X40Master/L10sUltraGen2/L50ProUltra/X50Master/L40sProUltra/L40UltraAE/D20Ultra/Matrix10Ultra/L10sUltraGen3/L10sProGen3 fino a 180 giri/min",
+      "reason": "title_pattern:^.{0,45}\\b(?:filtre|filtro|brosse|spazzola|cepillo|sacchetti|bolsas|panni\\s+mocio)\\s+(?:de\\s+rechange|di\\s+ricambio|de\\s+repuesto|compatib\\w*)\\b",
+      "source": {
+        "file": "BSR_IT_Robot-Vacuum_Node733026031_Top50_2026-10-21.xlsx",
+        "nodeId": "733026031",
+        "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/733026031",
+        "rank": 18
       }
     },
     {
@@ -3199,6 +4009,36 @@
     },
     {
       "marketplace": "IT",
+      "category": "Spot-Cleaner",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0753NXDPR",
+      "title": "BISSELL Oxygen Boost Potenziatore Detergente 1 L 1134N",
+      "reason": "title_pattern:^.{0,80}(?:panni\\s+mocio\\s+di\\s+ricambio|potenziatore\\s+detergente|detergente\\s+smacchiante|filtro\\s+de\\s+limpieza|Ersatz(?:filter|walze|bürste)|Filterbeutel|Staubbeutel)\\b",
+      "source": {
+        "file": "BSR_IT_Spot-Cleaner_Node733005031_Top50_2026-10-21.xlsx",
+        "nodeId": "733005031",
+        "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/733005031",
+        "rank": 8
+      }
+    },
+    {
+      "marketplace": "IT",
+      "category": "Spot-Cleaner",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B086Q46MMD",
+      "title": "STANHOME | Detergente Smacchiante Tappeti Carpet Cleaner, 500 ML, Pulisce e Smacchia i Tessuti d'Arredamento",
+      "reason": "title_pattern:^.{0,80}(?:panni\\s+mocio\\s+di\\s+ricambio|potenziatore\\s+detergente|detergente\\s+smacchiante|filtro\\s+de\\s+limpieza|Ersatz(?:filter|walze|bürste)|Filterbeutel|Staubbeutel)\\b",
+      "source": {
+        "file": "BSR_IT_Spot-Cleaner_Node733005031_Top50_2026-10-21.xlsx",
+        "nodeId": "733005031",
+        "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/733005031",
+        "rank": 26
+      }
+    },
+    {
+      "marketplace": "IT",
       "category": "Wet-Dry-Floor-Washer",
       "date": "2026-08-31",
       "action": "excluded",
@@ -3282,6 +4122,21 @@
       "reason": "title_pattern:\\b(?:s[óo]lidos\\s+y\\s+l[íi]quidos|solidi\\s*[- ]?liquidi|vacuums?\\s+for\\s+car\\s+and\\s+garage|aspirateur\\s+eau\\s+et\\s+poussière\\s+\\d{2}\\s*L)\\b",
       "source": {
         "file": "BSR_IT_Wet-Dry-Floor-Washer_Node218944968031_Top50_2026-10-19.xlsx",
+        "nodeId": "218944968031",
+        "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/218944968031",
+        "rank": 4
+      }
+    },
+    {
+      "marketplace": "IT",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0G66L48KD",
+      "title": "Bosch Aspiratore solidi-liquidi PAS20-220P (Tubi di prolunga, tubo di aspirazione 2,2 m, tubo a gomito/impugnatura, bocchette, borsa in tessuto (Uni), filtro plissettato piatto, UniversalAdapter)",
+      "reason": "title_pattern:\\b(?:s[óo]lidos\\s+y\\s+l[íi]quidos|solidi\\s*[- ]?liquidi|vacuums?\\s+for\\s+car\\s+and\\s+garage|aspirateur\\s+eau\\s+et\\s+poussière\\s+\\d{2}\\s*L)\\b",
+      "source": {
+        "file": "BSR_IT_Wet-Dry-Floor-Washer_Node218944968031_Top50_2026-10-21.xlsx",
         "nodeId": "218944968031",
         "sourceUrl": "https://www.amazon.it/gp/bestsellers/kitchen/218944968031",
         "rank": 4
@@ -9964,6 +10819,681 @@
     },
     {
       "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B07KG2X2GZ",
+      "title": "BLACK+DECKER dustbuster Cordless Handheld Vacuum, Portable Car Vacuum Cordless Rechargeable, Wall Mount, Strong Suction QuickClean (HNVC215B10)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 1
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B006LXOJC0",
+      "title": "BLACK+DECKER dustbuster AdvancedClean Handheld Vacuum Cordless, Compact Home and Car Vacuum with Crevice Tool, Rotating Nozzle and Charging Station, Large Dust Bowl (CHV1410L)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 2
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0GV1LH78Y",
+      "title": "Shark UltraCyclone Pet Pro Plus Cordless Handheld Vacuum, Brown, CH951BR1",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 3
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0CBSV2TNM",
+      "title": "Shark WANDVAC Cordless Hand Vac, Black, WV201BK",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 4
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B07CB6RBSP",
+      "title": "Bissell Pet Hair Eraser Cordless Hand Vacuum, Home, Auto & Pet, 2390A",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 5
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0CQYTNNW7",
+      "title": "Fanttik Slim V8 APEX Cordless Car Vacuum & Air Duster, 4-in-1 Portable Mini Vacuum with 19000pa Suction Power for Pet Hair, Type-C Charge, One-Touch Empty for Car, Office Desk, Keyboards (Black)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 6
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0F8QG3MH9",
+      "title": "Blestan Handheld Vacuum Cordless Portable Car Vacuum with LED Light, High Power Suction, 3 in 1, Lightweight Rechargeable Hand Vacuum, Hand Held Vacuum Cleaner for Car Home Office, Pet Hair, Black",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 7
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0C5T7MJBN",
+      "title": "Handheld Vacuum Cordless, car Vacuum Portable Cordless",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 8
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0DXVJ5Y39",
+      "title": "Fanttik Slim V10 APEX Cordless Car Vacuum, 4-in-1 Portable Mini Handheld Vac, Upgraded Smart Digital Display, 19kPa Suction Power, 2 Suction Modes for Small Jobs, Car, Office Desk, Keyboards (Black)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 9
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0DCZ6P4QD",
+      "title": "Gxzsk Handheld Vacuum Cordless, Hand Held Car Vacuum Cleaner, Hand Vacuum",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 10
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B00IOEFBKS",
+      "title": "BLACK+DECKER dust buster PIVOT VAC Handheld Vacuum Cordless, Car Vacuum Portable Rechargeable, Extendible Crevice Tool and 200 Degree Pivoting Nozzle, Strong Suction, Lightweight (BDH2000PL)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 11
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0DSJ4MXYY",
+      "title": "CKIKH Handheld Vacuum Cordless, 15000PA Hand Held Car Vacuum Cleaner",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 12
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0GTC14BFW",
+      "title": "Dyson V15 Detect™ Origin Cordless Vacuum",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 13
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B07KFYF8GQ",
+      "title": "BLACK+DECKER dustbuster Handheld Vacuum, 8V Cordless, Hand Vacuum for Quick Cleanup with Crevice Tool and Washable Filter (HNVC220BCZ01)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 14
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0HDNZWJRV",
+      "title": "Car Vacuum Portable Cordless, 50000Pa High Power Brushless Motor, Rechargeable Handheld Vacuum with 2 Batteries & Charger, 6-in-1 Vacuum Cleaners for Home, Pet Hair & Keyboard, Ink Black",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 15
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B008R3F0J8",
+      "title": "BLACK+DECKER dustbuster 20V Hand Vacuum Cordless Rechargeable, Car Vacuum Portable, Powerful Suction AdvancedClean Hand Vac with Extendible Crevice Tool, Flip-Up Brush and Charging Base (BDH2000L)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 16
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0H5WHSTPQ",
+      "title": "Portable Cordless Car Vacuum,4-in-1 Handheld Cordless Vacuum with 30000Pa Suction,130000 RPM,6800mAh Battery,10 Nozzles,Rubber Paint Material for Car,Home,Birthday Gifts for Men Dad Husband(Star Black",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 17
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0GZMWXD85",
+      "title": "Handheld Vacuum Cordless - Car Vacuum Cleaner with 11000Pa Powerful Suction,1.2lbs Lightweight, Type-C Charge, Multiple Accessories, Portable Hand Vacuum for Home, Pet and Car",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 18
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B07R89PJY6",
+      "title": "BLACK+DECKER dustbuster furbuster Pet Hair Vacuum with Motorized Pet Hair Brush, Handheld Vacuum Cordless for Home and Car, Rechargeable, Portable, Powerful Suction, AdvancedClean (HHVK515JP07)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 19
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B01DAI5BZ2",
+      "title": "BLACK+DECKER dustbuster Cordless Handheld Vacuum, Portable Vacuum for Car and Home Rechargeable, Powerful Suction, Wide Mouth (HHVI315JO42)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 20
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0H7X9PWGP",
+      "title": "Handheld Vacuum Cleaner, 21000Pa Cordless 4-in-1 Mini Car Vacuum",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 21
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0GXPGSH4Q",
+      "title": "Car Vacuum Portable Cordless, 50000Pa Strong Suction Brushless Motor, Handheld Vacuum with 2 Batteries & Charger, 6-in-1 Rechargeable Vacuum Cleaners for Home, Pet Hair & Keyboard - Ink Black",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 22
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0F9WTL2RP",
+      "title": "BQYPOWER Handheld Vacuum Cordless Rechargeable, Hand Held Car Vacuum",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 24
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B09YXZ4L8T",
+      "title": "DEWALT 20V Handheld Vacuum Cordless, Car Vacuum with HEPA Filter, 6 Attachments and LED Light, High Performance Dry Only Small Shop Vac, Battery Not Included (DCV501HB), Grey-Yellow",
+      "reason": "title_pattern:\\b(?:industrial\\s+(?:vacuum|dust\\s+extractor)|commercial\\s+(?:wet.?dry\\s+)?vacuum|shop\\s+vac(?:uum)?|dust\\s+extractor|workshop\\s+vacuum|ash\\s+vacuum|Industriesauger|Werkstattsauger|Baustellensauger|Aschesauger|aspirateur\\s+(?:industriel|de\\s+chantier|à\\s+cendres)|aspiratore\\s+(?:industriale|per\\s+ceneri|da\\s+cantiere)|aspirador(?:a)?\\s+(?:industrial|de\\s+cenizas|de\\s+taller))\\b",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 25
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0GYKR3654",
+      "title": "Barista Coffee Vacuum Cleaner for Coffee Grinders & Espresso Machines",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 26
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0DLXGDHBX",
+      "title": "Dyson Car+Boat Handheld Vacuum, Cordless and Lightweight, Cleans Hard Surfaces and Upholstery, 115AW, 2 Power Modes, Up to 50 Minutes²",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 27
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0HB4F28VM",
+      "title": "Handheld Vacuum Cordless, 9000PA Strong Suction, 2 Suction Modes, Type-C Charging, Lightweight, Portable Car Vacuum Cleaner for Home Office Pet.",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 28
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B07R9GP85M",
+      "title": "BLACK+DECKER Dust Buster Hand Held Vacuum Cordless Rechargeable, Portable Vacuum for Car, Extended Runtime, Powerful Suction, Extra Long Crevice Tool, AdvancedClean+ (HHVK320J10)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 29
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B09DKPT7G4",
+      "title": "V06 Cordless Handheld Vacuum, 400g Mini Vacuum Portable for Car & Home",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 30
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0GS84C2VF",
+      "title": "Shop-Vac Wet/Dry Handheld Vacuum Cordless, Wall-Mounted Hand Vac, Black",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 31
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0F53HMTX5",
+      "title": "HOTO Car Vacuum Portable Cordless, 4-in-1 Mini Handheld Vacuum, 20000Pa",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 34
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0H5HY2ZTJ",
+      "title": "Cordless Handheld Car Vacuum, 4-in-1 Portable Mini Vacuum with 22 kPa High Suction Power, USB Type-C Rechargeable Hand held Vacuum Cleaner for Car, Home, Office, Pet Hair & Keyboard Cleaning",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 36
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0D5LCYL5H",
+      "title": "Horsepower Duck Compact Cordless Vacuum, Ultra-Powerful Upgraded Battery for Extra-Long Run Time, AS SEEN ON TV, Strong Suction, Easy to Store, Portable & Rechargeable. Home & Auto (Duck Gold)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 37
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0GVSFV8RF",
+      "title": "Mini Cordless Handheld Vacuum for Car, Sofa, Desk, Drawers & Crumbs, Mint",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 38
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0HDNTJFFB",
+      "title": "Car Handheld Vacuum Cordless 13000 PA Suction Power, Portable Mini Vacuum Cleaner for Car Home Office and Pet Hair, Black, 2 Filters",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 39
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0F8LJD1MR",
+      "title": "Car Vacuum Portable Cordless Handheld Vacuum Cleaner 4-in-1 Mini Cordless Vacuum with 2 Suction Modes and 16800pa Suction Power Blowing & Inflating 2 Modes Handheld Vacuum for Car, Desk, Keyboards",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 40
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0D7QMMD1P",
+      "title": "Dirt Devil Scorpion Plus Handheld Vacuum, Powerful Suction, Lightweight",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 41
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0H2V7C9XQ",
+      "title": "Car Vacuum 4-in-1 Small Handheld Vacuum w/ 25000Pa Suction, Cordless Hand Held Vacuum Rechargeable w/ Power Display, Portable Cordless Mini Car Vacuum with Led Light for Car Home Office Desk Keyboard",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 42
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0FB3PXT1G",
+      "title": "Pet Hair Handheld Vacuum Cordless: 20000PA Rechargeable Car Vacuum Cleaner",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 43
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B002D47XOM",
+      "title": "Dirt Devil Scorpion Plus QuickFlip Handheld Vacuum Cleaner",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 44
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0HCZY27CX",
+      "title": "Hand Held Vacuum Cordless 24KPa, Lightweight for Pet Hair and Home",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 46
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B07T17TDLR",
+      "title": "BLACK+DECKER dustbuster Portable Vacuum Cordless Handheld, Small Hand Vacuum Cleaner for Dorm Home and Car, Powerful 20V AdvancedClean+ (HHVK515J00FF)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 47
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0FCXLH944",
+      "title": "Car Vacuum Cordless, 35000PA Strong Suction Handheld Vacuum with 2 Detachable Batteries, 60Min Runtime Portable Vacuum Cleaner for Car Detailing, Pet Hair, Home Couch & Office, 350ML XL Dust Cup",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 48
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B0F32DWK2T",
+      "title": "Mini Handheld Vacuum for Home&Car, Cordless Portable Rechargeable Pink",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 49
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Mite-Vacuum",
+      "date": "2026-10-21",
+      "action": "review",
+      "asin": "B01DAI5CF6",
+      "title": "BLACK+DECKER dustbuster Handheld Vacuum, Cordless Car Vacuum Portable 12V, with Rotating and Extendable Nozzle (HHVI320JR02)",
+      "reason": "needs_review:mite_vacuum_not_confirmed",
+      "source": {
+        "file": "BSR_US_Mite-Vacuum_Node510114_Top50_2026-10-21.xlsx",
+        "nodeId": "510114",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/510114",
+        "rank": 50
+      }
+    },
+    {
+      "marketplace": "US",
       "category": "Robot-Vacuum",
       "date": "2026-08-31",
       "action": "excluded",
@@ -10144,6 +11674,36 @@
     },
     {
       "marketplace": "US",
+      "category": "Robot-Vacuum",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0C7C7PLLG",
+      "title": "eufy RoboVac Hard Floor Cleaning Solution (2 Bottles), Dilution Ratio 1:200, 473 ml, Floor Cleaner, Plant-Based,Compatible with Omni C20, X8 Pro, X10 Omni, G series, L Series",
+      "reason": "title_pattern:^.{0,45}\\b(?:cleaning solution|carpet cleaner formula|cleaning formula|formula booster|detergent refill|refill cartridge|disposable .{0,35} pads? .{0,20} refill)\\b",
+      "source": {
+        "file": "BSR_US_Robot-Vacuum_Node3743561_Top50_2026-10-21.xlsx",
+        "nodeId": "3743561",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/3743561",
+        "rank": 20
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Robot-Vacuum",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0BCF8N3B4",
+      "title": "ECOVACS Multi-Surface Floor Cleaning Solution, Compatible with DEEBOT X11 OMNI Cyclone / X9 PRO OMNI / T80 OMNI / T50 PRO OMNI / N30 Series / N20 Series and all other Robot Vacuum Cleaners, 1L",
+      "reason": "title_pattern:^.{0,45}\\b(?:cleaning solution|carpet cleaner formula|cleaning formula|formula booster|detergent refill|refill cartridge|disposable .{0,35} pads? .{0,20} refill)\\b",
+      "source": {
+        "file": "BSR_US_Robot-Vacuum_Node3743561_Top50_2026-10-21.xlsx",
+        "nodeId": "3743561",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/3743561",
+        "rank": 23
+      }
+    },
+    {
+      "marketplace": "US",
       "category": "Spot-Cleaner",
       "date": "2026-09-09",
       "action": "excluded",
@@ -10215,6 +11775,21 @@
         "nodeId": "1063922",
         "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/1063922",
         "rank": 36
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Spot-Cleaner",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0000DF0RB",
+      "title": "McCulloch MC1275 Heavy-Duty Steam Cleaner, 45 Min Runtime, 18 Accessories",
+      "reason": "title_pattern:^(?!.*(?:carpet|upholster|spot|stain|shampoo|shampouineuse|polster|teppich|waschsauger|lavatapp|tappezzer|canap|divan|tissu|sofa|布|地毯|沙发|シミ|リンサー)).*\\b(?:steam\\s+cleaner|Dampfreiniger|nettoyeur\\s+vapeur|pulitore\\s+a\\s+vapore|limpiador\\s+de\\s+vapor|スチームクリーナー)\\b",
+      "source": {
+        "file": "BSR_US_Spot-Cleaner_Node1063922_Top50_2026-10-21.xlsx",
+        "nodeId": "1063922",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/1063922",
+        "rank": 35
       }
     },
     {
@@ -10530,6 +12105,66 @@
         "nodeId": "218819671011",
         "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
         "rank": 45
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0GP1DH22S",
+      "title": "Shark EveryMess 3-in-1 Wet/Dry Vac & Stain Eliminator, 3 Tools VX102BRN",
+      "reason": "title_pattern:^.{0,80}\\b(?:EveryMess|Spot\\s+Cleaner|Upholstery\\s+Cleaner|Stain\\s+Eliminator|Portable\\s+Carpet\\s+Cleaner)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Node218819671011_Top50_2026-10-21.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 12
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B003R3JFJO",
+      "title": "Bissell Garage Pro Wall-Mounted Wet Dry Vacuum/Blower, 18P03",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Node218819671011_Top50_2026-10-21.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 14
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B0GY5Z5BT4",
+      "title": "Dyson V16 Piston Animal Submarine™ Cordless Wet and Dry Vacuum",
+      "reason": "title_pattern:\\bDyson\\b.{0,40}\\bV\\d+\\w*\\b.{0,60}\\bSubmarine\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Node218819671011_Top50_2026-10-21.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 25
+      }
+    },
+    {
+      "marketplace": "US",
+      "category": "Wet-Dry-Floor-Washer",
+      "date": "2026-10-21",
+      "action": "excluded",
+      "asin": "B07B4853N8",
+      "title": "BISSELL MultiClean Wet/Dry Garage and Auto Vacuum, 2035M",
+      "reason": "title_pattern:\\b(?:Garage\\s+Pro|Garage\\s+and\\s+Auto\\s+Vacuum|Wall[- ]Mounted\\s+Wet\\s+Dry\\s+Vacuum)\\b",
+      "source": {
+        "file": "BSR_US_Wet-Dry-Floor-Washer_Node218819671011_Top50_2026-10-21.xlsx",
+        "nodeId": "218819671011",
+        "sourceUrl": "https://www.amazon.com/gp/bestsellers/home-garden/218819671011",
+        "rank": 44
       }
     }
   ],
